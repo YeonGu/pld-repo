@@ -1,0 +1,42 @@
+Time resolution is 1 ps
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ITCM 0x00: 3040507330047073
+ITCM 0x01: 8581819310001197
+ITCM 0x02: ff01011310010117
+ITCM 0x03: 0d02829300000297
+ITCM 0x04: 3051f07330529073
+ITCM 0x05: 08c5051300000517
+ITCM 0x06: 0845859300000597
+ITCM 0x07: 0000261702b50063
+ITCM 0x16: c4221141a00129b5
+ITCM 0x20: c2f6c0f2de46dc42
+HummingBird SDK Build Time: Sep 21 2023, 21:23:43
+
+
+Download Mode: FLASHXIP
+
+
+CPU Frequency 540672 Hz
+
+
+0: Hello World From RISC-V Processor!
+
+
+1: Hello World From RISC-V Processor!
+
+
+2: Hello World From RISC-V Processor!
+
+
+3: Hello World From RISC-V Processor!
+
+
+4: Hello World From RISC-V Processor!
+
+
+5: Hello World From RISC-V Processor!
+
+
+6: Hello World From RISC-V Processor!
+
+

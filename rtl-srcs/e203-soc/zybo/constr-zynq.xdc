@@ -22,12 +22,12 @@ set_property PACKAGE_PIN Y16 [get_ports fpga_rst  ]
 set_property PACKAGE_PIN V16 [get_ports mcu_rst   ]
 
 #####                spi0 define               #####
-set_property PACKAGE_PIN W16 [get_ports  qspi0_cs    ]
-set_property PACKAGE_PIN W15 [get_ports  qspi0_sck   ]
-set_property PACKAGE_PIN U16 [get_ports {qspi0_dq[3]}]
-set_property PACKAGE_PIN T16 [get_ports {qspi0_dq[2]}]
-set_property PACKAGE_PIN T14 [get_ports {qspi0_dq[1]}]
-set_property PACKAGE_PIN T15 [get_ports {qspi0_dq[0]}]
+# set_property PACKAGE_PIN W16 [get_ports  qspi0_cs    ]
+# set_property PACKAGE_PIN W15 [get_ports  qspi0_sck   ]
+# set_property PACKAGE_PIN U16 [get_ports {qspi0_dq[3]}]
+# set_property PACKAGE_PIN T16 [get_ports {qspi0_dq[2]}]
+# set_property PACKAGE_PIN T14 [get_ports {qspi0_dq[1]}]
+# set_property PACKAGE_PIN T15 [get_ports {qspi0_dq[0]}]
 
 #####               MCU JTAG define           #####
 set_property PACKAGE_PIN N15 [get_ports mcu_TDO]
@@ -37,9 +37,9 @@ set_property PACKAGE_PIN K14 [get_ports mcu_TMS]
 set_property KEEPER true [get_ports mcu_TMS]
 
 #####                PMU define               #####
-# set_property PACKAGE_PIN U15 [get_ports pmu_paden ]
-# set_property PACKAGE_PIN V15 [get_ports pmu_padrst]
-# set_property PACKAGE_PIN N15 [get_ports mcu_wakeup]
+set_property PACKAGE_PIN D18 [get_ports pmu_paden ]
+set_property PACKAGE_PIN M15 [get_ports pmu_padrst]
+set_property PACKAGE_PIN P16 [get_ports mcu_wakeup]
 
 
 #####                gpioA define              #####
@@ -150,12 +150,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports mcu_rst   ]
 
 
 #####                spi0 define               #####
-set_property IOSTANDARD LVCMOS33 [get_ports  qspi0_cs    ]
-set_property IOSTANDARD LVCMOS33 [get_ports  qspi0_sck   ]
-set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[0]}]
+# set_property IOSTANDARD LVCMOS33 [get_ports  qspi0_cs    ]
+# set_property IOSTANDARD LVCMOS33 [get_ports  qspi0_sck   ]
+# set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[3]}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[2]}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[1]}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {qspi0_dq[0]}]
 
 
 #####               MCU JTAG define           #####
@@ -165,9 +165,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports mcu_TDI]
 set_property IOSTANDARD LVCMOS33 [get_ports mcu_TMS]
 
 #####                PMU define               #####
-# set_property IOSTANDARD LVCMOS33 [get_ports pmu_paden ]
-# set_property IOSTANDARD LVCMOS33 [get_ports pmu_padrst]
-# set_property IOSTANDARD LVCMOS33 [get_ports mcu_wakeup]
+set_property IOSTANDARD LVCMOS33 [get_ports pmu_paden ]
+set_property IOSTANDARD LVCMOS33 [get_ports pmu_padrst]
+set_property IOSTANDARD LVCMOS33 [get_ports mcu_wakeup]
 
 #####                gpioA define              #####
 # set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[31]}]
@@ -239,9 +239,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gpioA[16]}]
 
 
 #####         SPI Configurate Setting        #######
-set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design] 
-set_property CONFIG_MODE SPIx4 [current_design] 
-set_property BITSTREAM.CONFIG.CONFIGRATE 50 [current_design]
+# set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design] 
+# set_property CONFIG_MODE SPIx4 [current_design] 
+# set_property BITSTREAM.CONFIG.CONFIGRATE 50 [current_design]
 
 
 
