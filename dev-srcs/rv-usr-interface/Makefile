@@ -18,3 +18,4 @@ rv:
 	@cp ./$(TARGET).verilog $(SIM_FILE_ROOT)
 	@mkdir rv-build || cp soc-main.hex rv-build/
 	# @make clean
+	
