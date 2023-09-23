@@ -4,5 +4,4 @@
 int main()
 {
     printf( "Hello!\n" );
-    a();
 }
