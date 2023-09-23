@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 run:
-	@cd build && cmake .. && ./rv_user_interface
+	@cd build && cmake .. && make && ./rv_user_interface
 
 TARGET = soc-main
 
@@ -14,5 +14,7 @@ INCDIRS = . soc core
 include $(HBIRD_SDK_ROOT)/Build/Makefile.base
 
 rv:
-	make dasm -j20
-	cp ./$(TARGET).verilog $(SIM_FILE_ROOT)
+	@make dasm -j20
+	@cp ./$(TARGET).verilog $(SIM_FILE_ROOT)
+	@mkdir rv-build || cp soc-main.hex rv-build/
+	@make clean

@@ -1,0 +1,28 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/core",
+      "-c",
+      "-o",
+      "CMakeFiles/rv_user_interface.dir/sim/main.c.o",
+      "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/sim/main.c"
+    ],
+    "directory": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/build",
+    "file": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/sim/main.c",
+    "output": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/build/CMakeFiles/rv_user_interface.dir/sim/main.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-I/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/core",
+      "-c",
+      "-o",
+      "CMakeFiles/rv_user_interface.dir/core/core.cpp.o",
+      "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/core/core.cpp"
+    ],
+    "directory": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/build",
+    "file": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/core/core.cpp",
+    "output": "/home/kasaki/projects/pld/pld-repo/dev-srcs/rv-usr-interface/build/CMakeFiles/rv_user_interface.dir/core/core.cpp.o"
+  }
+]
