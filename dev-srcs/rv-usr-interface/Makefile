@@ -17,4 +17,4 @@ rv:
 	@make dasm -j20
 	@cp ./$(TARGET).verilog $(SIM_FILE_ROOT)
 	@mkdir rv-build || cp soc-main.hex rv-build/
-	@make clean
+	# @make clean
