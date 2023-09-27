@@ -1,5 +1,12 @@
 # RISCV-USER-INTERFACE Project
 
+## Build
+
+为了快速验证与仿真，UI做了前后端解耦。`Makefile`中有两个目标可供Build：
+
+- `make run`调用CMake，在Linux-x86_64下编译链接`core`和`sim`中的内容。
+- `make rv`调用Nuclei-Tools，为Risc-V SoC编译.hex文件和一些反汇编文件、.verilog仿真文件。.verilog仿真文件会被放到`RTL-SRCS`中。
+
 ## core
 
 core包含所有核心的代码，但是和顶层的接口需要在sim中或者port中实现。例如：
