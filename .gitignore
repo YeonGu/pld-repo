@@ -1,3 +1,4 @@
 .obsidian/*
 dev-srcs/rv-usr-interface/build/CMakeCache.txt
 dev-srcs/rv-usr-interface/build/CMakeFiles/CMakeOutput.log
+projects/e203-zybo/e203-zybo.cache/*

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1695392633" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/system.dcp">
   <File Type="PA-TCL" Name="system.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="system_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="system_reports.tcl"/>
   <File Type="RDS-RDS" Name="system.vds"/>
   <File Type="RDS-UTIL" Name="system_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="system_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="system.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="system_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="system_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../rtl-srcs/e203/core/config.v">
@@ -1012,9 +1009,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="reset_sys"/>

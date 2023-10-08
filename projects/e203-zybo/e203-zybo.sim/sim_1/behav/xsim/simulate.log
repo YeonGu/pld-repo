@@ -3,40 +3,32 @@ Time resolution is 1 ps
 ITCM 0x00: 3040507330047073
 ITCM 0x01: 8581819310001197
 ITCM 0x02: ff01011310010117
-ITCM 0x03: 0d02829300000297
+ITCM 0x03: 1a82829300000297
 ITCM 0x04: 3051f07330529073
-ITCM 0x05: 08c5051300000517
-ITCM 0x06: 0845859300000597
-ITCM 0x07: 0000261702b50063
-ITCM 0x16: c4221141a00129b5
-ITCM 0x20: c2f6c0f2de46dc42
-HummingBird SDK Build Time: Sep 21 2023, 21:23:43
+ITCM 0x05: 0945051300000517
+ITCM 0x06: 08c5859300000597
+ITCM 0x07: 0000d61702b50063
+ITCM 0x16: 279000ef2ab000ef
+ITCM 0x20: 0000d59784660613
+HummingBird SDK Build Time: Sep 23 2023, 17:47:43
 
 
-Download Mode: FLASHXIP
+Download Mode: ILM
 
 
-CPU Frequency 540672 Hz
+CPU Frequency 540016 Hz
 
 
-0: Hello World From RISC-V Processor!
+Hello World!
 
 
-1: Hello World From RISC-V Processor!
+Hello from CPP!
 
+2
 
-2: Hello World From RISC-V Processor!
+3
 
+4
 
-3: Hello World From RISC-V Processor!
-
-
-4: Hello World From RISC-V Processor!
-
-
-5: Hello World From RISC-V Processor!
-
-
-6: Hello World From RISC-V Processor!
-
+HELLO FROM Lambda expr
 
