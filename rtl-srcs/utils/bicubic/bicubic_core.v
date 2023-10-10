@@ -165,8 +165,8 @@ module bicubic_core(
 
 
     assign o_res_pix11={red11[13:6],gre11[13:6],blu11[13:6]};
-    assign o_res_pix12={red12[13:6],gre12[13:6],blu12[13:6]};
-    assign o_res_pix21={red21[13:6],gre21[13:6],blu21[13:6]};
-    assign o_res_pix22={red22[13:6],gre22[13:6],blu22[13:6]};
+    assign o_res_pix12={red12[10:3],gre12[10:3],blu12[10:3]};
+    assign o_res_pix21={red21[10:3],gre21[10:3],blu21[10:3]};
+    assign o_res_pix22={red22[7:0],gre22[7:0],blu22[7:0]};
 
 endmodule

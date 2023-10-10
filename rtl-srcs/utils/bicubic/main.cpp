@@ -8,7 +8,7 @@
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 
-#define MAX_SIM_TIME 15000
+#define MAX_SIM_TIME 18000
 #define RESET_TIME 20
 #define DUT Vbicubic_core
 Vbicubic_core *dut;
