@@ -1,4 +1,9 @@
 .obsidian/*
-dev-srcs/rv-usr-interface/build/CMakeCache.txt
-dev-srcs/rv-usr-interface/build/CMakeFiles/CMakeOutput.log
+dev-srcs/rv-usr-interface/.cache/*
+dev-srcs/rv-usr-interface/build/*
 projects/e203-zybo/e203-zybo.cache/*
+rtl-srcs/utils/*/.cache/*
+rtl-srcs/utils/*/.vscode/*
+rtl-srcs/utils/*/obj_dir/*
+rtl-srcs/utils/*/waveform.vcd
+
