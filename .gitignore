@@ -7,3 +7,5 @@ rtl-srcs/utils/*/.vscode/*
 rtl-srcs/utils/*/obj_dir/*
 rtl-srcs/utils/*/waveform.vcd
 
+rtl-srcs/utils/tests/memc-sims/obj_dir/*
+rtl-srcs/utils/tests/memc-sims/.cache/*
