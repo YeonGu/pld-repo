@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+`timescale 1us / 1us
 
 module memc #(
     parameter ADDR_WIDTH     = 32,
@@ -39,15 +39,13 @@ module memc #(
     /**********************************************************************/
     reg user_clk=0;
     reg user_rst=0;
-	initial begin
-		forever #1 user_clk = ~user_clk;
-	end
+	
+	// ================================================SIM ONLY
+	always #1 user_clk = ~user_clk;
+	
 	initial begin
 		user_rst = 1;
 		#10 user_rst = 0;
-	end
-	initial begin
-		#100 $finish(2);
 	end
 
 
@@ -55,17 +53,34 @@ module memc #(
     wire [               2:0] app_cmd;
     wire [    ADDR_WIDTH-1:0] app_addr;
     wire                      app_en;
-    wire                      app_rdy;
     /* APP Write */
     wire [APP_DATA_WIDTH-1:0] app_wdf_data;
     wire                      app_wdf_end;
     wire                      app_wdf_wren;
     wire [APP_MASK_WIDTH-1:0] app_wdf_mask;
-    wire                      app_wdf_rdy;
     /* APP Read */
-    wire                      app_rd_data_valid;
     wire [APP_DATA_WIDTH-1:0] app_rd_data;
     wire                      app_rd_data_end;
+
+
+	reg [2:0] cnt1;
+	reg [2:0] cnt2;
+	always @(posedge user_clk) begin
+		cnt1<= (cnt1 == 0)? 4: cnt1-1;
+		cnt2<= (cnt2 == 0)? 5: cnt2-1;
+	end
+    wire app_rdy=(cnt1 != 0);
+    wire app_wdf_rdy=(cnt2 != 0);
+    reg app_rd_data_valid, rd2;
+	reg rd1;
+	// assign rd1 = (app_cmd==0) && (app_rdy);
+	always @(posedge user_clk) begin
+		rd1 <= (app_cmd==0) && (app_rdy);
+		rd2 <= rd1;
+		app_rd_data_valid <= rd2;
+	end
+
+	// ================================================SIM END
 
     /**********************************************************************/
     // MEMC STATE MACHINE
@@ -106,7 +121,7 @@ module memc #(
         endcase
     end
     always @(posedge user_clk) begin
-        state_current <= state_next;
+        state_current <= (user_rst)? 0: state_next;
     end
 
     /** -3- MEMC Status Behavior **/
@@ -133,14 +148,20 @@ module memc #(
     end
     always @(posedge user_clk) begin
         if (state_current == MEMC_TEST_RD) begin
-            memc_rd_addr <= (app_rdy) ? memc_rd_addr + 8 : memc_rd_addr;
+			if( memc_rd_addr == MEMC_TEST_END_ADDR ) // Reach the end
+            	memc_rd_addr <= memc_rd_addr;
+			else
+            	memc_rd_addr <= (app_rdy) ? memc_rd_addr + 8 : memc_rd_addr;
+
         end else memc_rd_addr <= MEMC_TEST_START_ADDR;
     end
     always @(posedge user_clk) begin
-        if (app_rd_addr == MEMC_TEST_END_ADDR) begin
-            app_rd_addr <= app_rd_data_valid ? 0 : app_rd_addr;
+        // if (app_rd_addr == MEMC_TEST_END_ADDR) begin
+            // app_rd_addr <= app_rd_data_valid ? 0 : app_rd_addr;
+		if(state_current != MEMC_TEST_RD && state_next == MEMC_TEST_WR) begin
+			app_rd_addr <= MEMC_TEST_START_ADDR;
         end else begin
-            app_rd_addr <= app_rd_data_valid ? app_rd_addr + 1 : app_rd_addr;
+            app_rd_addr <= app_rd_data_valid ? app_rd_addr + 8 : app_rd_addr;
         end
     end
 

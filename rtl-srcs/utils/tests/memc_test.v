@@ -92,7 +92,7 @@ module memc_test #(
         endcase
     end
     always @(posedge user_clk) begin
-        state_current <= state_next;
+        state_current <= (user_rst)? 0: state_next;
     end
 
     /** -3- MEMC Status Behavior **/
@@ -119,14 +119,17 @@ module memc_test #(
     end
     always @(posedge user_clk) begin
         if (state_current == MEMC_TEST_RD) begin
-            memc_rd_addr <= (app_rdy) ? memc_rd_addr + 8 : memc_rd_addr;
+			if( memc_rd_addr == MEMC_TEST_END_ADDR ) // Reach the end.
+            	memc_rd_addr <= memc_rd_addr;
+			else
+            	memc_rd_addr <= (app_rdy) ? memc_rd_addr + 8 : memc_rd_addr;
         end else memc_rd_addr <= MEMC_TEST_START_ADDR;
     end
     always @(posedge user_clk) begin
-        if (app_rd_addr == MEMC_TEST_END_ADDR) begin
-            app_rd_addr <= app_rd_data_valid ? 0 : app_rd_addr;
+		if(state_current != MEMC_TEST_RD && state_next == MEMC_TEST_WR) begin
+			app_rd_addr <= MEMC_TEST_START_ADDR;
         end else begin
-            app_rd_addr <= app_rd_data_valid ? app_rd_addr + 1 : app_rd_addr;
+            app_rd_addr <= app_rd_data_valid ? app_rd_addr + 8 : app_rd_addr;
         end
     end
 

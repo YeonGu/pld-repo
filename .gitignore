@@ -5,7 +5,6 @@ projects/e203-zybo/e203-zybo.cache/*
 rtl-srcs/utils/*/.cache/*
 rtl-srcs/utils/*/.vscode/*
 rtl-srcs/utils/*/obj_dir/*
-rtl-srcs/utils/*/waveform.vcd
 
-rtl-srcs/utils/tests/memc-sims/obj_dir/*
-rtl-srcs/utils/tests/memc-sims/.cache/*
+rtl-srcs/utils/tests/*/obj_dir/*
+rtl-srcs/utils/tests/*/.cache/*

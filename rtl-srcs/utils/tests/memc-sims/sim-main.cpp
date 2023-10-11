@@ -5,41 +5,33 @@
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 
-#define MAX_SIM_TIME 4000
-#define RESET_TIME 20
 #define DUT Vmemc
+
 DUT *dut;
 
 vluint64_t sim_time = 0;
 
-// void sim_init();
-// void sim_behav();
 int main( int argc, char **argv, char **env )
 {
-    // 新建需要仿真的对象
-    dut = new DUT;
+    VerilatedContext *Contextp = new VerilatedContext;
+    Contextp->commandArgs( argc, argv );
+    Contextp->traceEverOn( true );
 
-    // 生成仿真波形, "vcd"文件
-    Verilated::traceEverOn( true );
+    dut = new DUT{ Contextp };
+
     VerilatedVcdC *m_trace = new VerilatedVcdC;
     dut->trace( m_trace, 5 );
     m_trace->open( "waveform.vcd" );
 
-    // sim_init();
-
-    while ( sim_time < MAX_SIM_TIME )
+    int max_time = 3000;
+    while ( max_time-- )
     {
-        // 翻转时钟
-        // dut->sys_clk_p ^= 1;
-        // if ( sim_time >= RESET_TIME )
-        //{
-        //    dut->rst_n = 1;
-        //}
-        // sim_behav();
         dut->eval();
-        m_trace->dump( sim_time );
-        sim_time++;
+        m_trace->dump( Contextp->time() );
+        Contextp->timeInc( 1 );
     }
+
+    dut->final();
 
     m_trace->close();
     delete dut;

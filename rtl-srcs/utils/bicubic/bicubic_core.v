@@ -134,8 +134,8 @@ output[23:0] o_res_pix22
     
 
     assign o_res_pix11={red11[14]?255:red11[13:6],gre11[14]?255:gre11[13:6],blu11[14]?255:blu11[13:6]};
-    assign o_res_pix12={red12[14:11]?255:red12[10:3],red12[14:11]?255:gre12[10:3],blu12[14:11]?255:blu12[10:3]};
-    assign o_res_pix21={red21[14:11]?255:red21[10:3],red21[14:11]?255:gre21[10:3],blu21[14:11]?255:blu21[10:3]};
+    assign o_res_pix12={red12[14:11]?255:red12[10:3],gre12[14:11]?255:gre12[10:3],blu12[14:11]?255:blu12[10:3]};
+    assign o_res_pix21={red21[14:11]?255:red21[10:3],gre21[14:11]?255:gre21[10:3],blu21[14:11]?255:blu21[10:3]};
     assign o_res_pix22={red22[14:8]?255:red22[7:0],gre22[14:8]?255:gre22[7:0],blu22[14:8]?255:blu22[7:0]};
     
 endmodule
