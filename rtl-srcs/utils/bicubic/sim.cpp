@@ -22,7 +22,7 @@ cv::Vec3b to_point( uint32_t rgb )
 cv::Mat imageMat;
 void    sim_init()
 {
-    imageMat = cv::imread( "img.bmp", cv::IMREAD_COLOR );
+    imageMat = cv::imread( "img2.bmp", cv::IMREAD_COLOR );
     std::cout << "=============================\nSIM INIT..." << std::endl;
     if ( imageMat.empty() )
     {
@@ -60,6 +60,6 @@ void    sim_behav()
         for ( int j = 0; j < 2; ++j )
             res.at<cv::Vec3b>( row * 2 + i, col * 2 + j ) = to_point( *output_interfaces[ i ][ j ] );
 
-    col = ( col == 99 - 4 ) ? 0 : col + 1;
+    col = ( col == 99 - 3 ) ? 0 : col + 1;
     row = ( col == 0 ) ? row + 1 : row;
 }
