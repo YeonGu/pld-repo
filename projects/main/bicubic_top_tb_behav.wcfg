@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="bicubic_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="bicubic_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="20.034 ns"></ZoomStartTime>
+      <ZoomEndTime time="49.835 ns"></ZoomEndTime>
+      <Cursor1Time time="25.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="480"></NameColumnWidth>
+      <ValueColumnWidth column_width="161"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/bicubic_top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/config_x" type="array">
+      <obj_property name="ElementShortName">config_x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">config_x[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/config_y" type="array">
+      <obj_property name="ElementShortName">config_y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">config_y[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/state_current" type="array">
+      <obj_property name="ElementShortName">state_current[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_current[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_proc_unit_req_en" type="logic">
+      <obj_property name="ElementShortName">o_proc_unit_req_en</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_proc_unit_req_addr" type="array">
+      <obj_property name="ElementShortName">o_proc_unit_req_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wraddr" type="array">
+      <obj_property name="ElementShortName">o_res_wraddr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_wraddr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wrdata" type="array">
+      <obj_property name="ElementShortName">o_res_wrdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_wrdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wren" type="logic">
+      <obj_property name="ElementShortName">o_res_wren</obj_property>
+      <obj_property name="ObjectShortName">o_res_wren</obj_property>
+   </wvobject>
+</wave_config>

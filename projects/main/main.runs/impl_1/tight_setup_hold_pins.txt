@@ -1,0 +1,36 @@
++====================+====================+============================================================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                                                        |
++====================+====================+============================================================+
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[11]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[12]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[13]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[14]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[23]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[24]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[25]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[26]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[7]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[10]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[8]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[9]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[22]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[19]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[20]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[21]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[3]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[4]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[5]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[6]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[17]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[15]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[16]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[18]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[0]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[1]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[2]/R  |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[31]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[27]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[28]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[29]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[30]/R |
++--------------------+--------------------+------------------------------------------------------------+

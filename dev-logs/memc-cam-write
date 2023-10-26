@@ -1,0 +1,7 @@
+{signal: [
+  {name: 'clk', wave: 'ppppppppppppppppppppp'},
+  {name: 'state', wave:'2.3333..4.....', data:'IDLE RD WR RD WR'},
+  {name: 'cam_fifo_empty', wave:'0....1......'},
+  {name:'cam_fifo_rden', wave:'0.1010......'},
+  {name: 'cam_fifo_rddata', wave:'x'}
+]}

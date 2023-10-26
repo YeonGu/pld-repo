@@ -1,0 +1,2 @@
+bicubic_2x_buffer.v,verilog,xil_defaultlib,../../../../main.gen/sources_1/ip/bicubic_2x_buffer/sim/bicubic_2x_buffer.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

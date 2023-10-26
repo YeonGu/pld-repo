@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="bicubic_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="bicubic_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="261.200001 us"></ZoomEndTime>
+      <Cursor1Time time="44.079000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="480"></NameColumnWidth>
+      <ValueColumnWidth column_width="161"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="35" />
+   <wvobject fp_name="/bicubic_top_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/config_x" type="array">
+      <obj_property name="ElementShortName">config_x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">config_x[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/config_y" type="array">
+      <obj_property name="ElementShortName">config_y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">config_y[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/state_current" type="array">
+      <obj_property name="ElementShortName">state_current[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_current[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/v_cnt" type="array">
+      <obj_property name="ElementShortName">v_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">v_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/pixel_load_cnt" type="array">
+      <obj_property name="ElementShortName">pixel_load_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_load_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_proc_unit_req_addr" type="array">
+      <obj_property name="ElementShortName">o_proc_unit_req_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_proc_unit_req_en" type="logic">
+      <obj_property name="ElementShortName">o_proc_unit_req_en</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wraddr" type="array">
+      <obj_property name="ElementShortName">o_res_wraddr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_wraddr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wrdata" type="array">
+      <obj_property name="ElementShortName">o_res_wrdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_wrdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/o_res_wren" type="logic">
+      <obj_property name="ElementShortName">o_res_wren</obj_property>
+      <obj_property name="ObjectShortName">o_res_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="group2712" type="group">
+      <obj_property name="label">buf0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/din" type="array">
+         <obj_property name="ElementShortName">din[31:0]</obj_property>
+         <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/dout" type="array">
+         <obj_property name="ElementShortName">dout[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/empty" type="logic">
+         <obj_property name="ElementShortName">empty</obj_property>
+         <obj_property name="ObjectShortName">empty</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/full" type="logic">
+         <obj_property name="ElementShortName">full</obj_property>
+         <obj_property name="ObjectShortName">full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/rd_en" type="logic">
+         <obj_property name="ElementShortName">rd_en</obj_property>
+         <obj_property name="ObjectShortName">rd_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/srst" type="logic">
+         <obj_property name="ElementShortName">srst</obj_property>
+         <obj_property name="ObjectShortName">srst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_2x_buffer0/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/din" type="array">
+         <obj_property name="ElementShortName">din[127:0]</obj_property>
+         <obj_property name="ObjectShortName">din[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/wr_en" type="logic">
+         <obj_property name="ElementShortName">wr_en</obj_property>
+         <obj_property name="ObjectShortName">wr_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/rd_en" type="logic">
+         <obj_property name="ElementShortName">rd_en</obj_property>
+         <obj_property name="ObjectShortName">rd_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/calc_cnt" type="array">
+      <obj_property name="ElementShortName">calc_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/calc_cnt" type="array">
+      <obj_property name="ElementShortName">calc_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group727" type="group">
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/loaded_pixel[3]" type="array">
+         <obj_property name="ElementShortName">[3][127:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][127:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/loaded_pixel[2]" type="array">
+         <obj_property name="ElementShortName">[2][127:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][127:0][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/loaded_pixel[1]" type="array">
+         <obj_property name="ElementShortName">[1][127:0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][127:0][15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group726" type="group">
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix11" type="array">
+         <obj_property name="ElementShortName">i_raw_pix11[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix11[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix12" type="array">
+         <obj_property name="ElementShortName">i_raw_pix12[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix12[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix13" type="array">
+         <obj_property name="ElementShortName">i_raw_pix13[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix13[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix14" type="array">
+         <obj_property name="ElementShortName">i_raw_pix14[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix14[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix21" type="array">
+         <obj_property name="ElementShortName">i_raw_pix21[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix21[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix22" type="array">
+         <obj_property name="ElementShortName">i_raw_pix22[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix22[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix23" type="array">
+         <obj_property name="ElementShortName">i_raw_pix23[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix23[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix24" type="array">
+         <obj_property name="ElementShortName">i_raw_pix24[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix24[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix31" type="array">
+         <obj_property name="ElementShortName">i_raw_pix31[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix31[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix32" type="array">
+         <obj_property name="ElementShortName">i_raw_pix32[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix32[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix33" type="array">
+         <obj_property name="ElementShortName">i_raw_pix33[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix33[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix34" type="array">
+         <obj_property name="ElementShortName">i_raw_pix34[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix34[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix41" type="array">
+         <obj_property name="ElementShortName">i_raw_pix41[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix41[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix42" type="array">
+         <obj_property name="ElementShortName">i_raw_pix42[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix42[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix43" type="array">
+         <obj_property name="ElementShortName">i_raw_pix43[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix43[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/i_raw_pix44" type="array">
+         <obj_property name="ElementShortName">i_raw_pix44[23:0]</obj_property>
+         <obj_property name="ObjectShortName">i_raw_pix44[23:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/o_res_pix11" type="array">
+      <obj_property name="ElementShortName">o_res_pix11[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_pix11[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/o_res_pix12" type="array">
+      <obj_property name="ElementShortName">o_res_pix12[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_pix12[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/o_res_pix21" type="array">
+      <obj_property name="ElementShortName">o_res_pix21[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_pix21[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/bicubic_core_2x/o_res_pix22" type="array">
+      <obj_property name="ElementShortName">o_res_pix22[23:0]</obj_property>
+      <obj_property name="ObjectShortName">o_res_pix22[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/rd_clk" type="logic">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/rd_rst_busy" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/wr_clk" type="logic">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_data_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/raw_fifo_rddata" type="array">
+      <obj_property name="ElementShortName">raw_fifo_rddata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">raw_fifo_rddata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/pixel_load_cnt" type="array">
+      <obj_property name="ElementShortName">pixel_load_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_load_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bicubic_top_tb/bicubic_2x/loaded_pixel[0]" type="array">
+      <obj_property name="ElementShortName">[0][127:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][127:0][15:0]</obj_property>
+   </wvobject>
+</wave_config>

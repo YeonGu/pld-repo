@@ -1,0 +1,931 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Oct 22 18:08:51 2023
+# Process ID: 17612
+# Current directory: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1
+# Command line: vivado.exe -log sys_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sys_top.tcl
+# Log file: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/sys_top.vds
+# Journal file: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1\vivado.jou
+# Running On: Kasaki352, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16782 MB
+#-----------------------------------------------------------
+source sys_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/utils_1/imports/synth_1/sys_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/utils_1/imports/synth_1/sys_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top sys_top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29512
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'ena', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:12]
+INFO: [Synth 8-11241] undeclared symbol 'wea', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:13]
+INFO: [Synth 8-11241] undeclared symbol 'addra', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:14]
+INFO: [Synth 8-11241] undeclared symbol 'dina', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:15]
+INFO: [Synth 8-11241] undeclared symbol 'clkb', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:16]
+INFO: [Synth 8-11241] undeclared symbol 'enb', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:17]
+INFO: [Synth 8-11241] undeclared symbol 'addrb', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:18]
+INFO: [Synth 8-11241] undeclared symbol 'doutb', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:19]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2256.914 ; gain = 409.391
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sys_top' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/soc/sys_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'video_sys' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Camera_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/camera/Camera_Interface.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Camera_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/camera/Camera_Interface.v:3]
+INFO: [Synth 8-6157] synthesizing module 'OV5640_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:54]
+	Parameter CLOCK_FREQ_MHZ bound to: 13'b0000001000001 
+	Parameter IIC_Clock_KHz bound to: 13'b0000001100100 
+INFO: [Synth 8-6157] synthesizing module 'OV5640_Config' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:207]
+	Parameter CLOCK_FREQ_MHZ bound to: 13'b0000001000001 
+	Parameter WAIT_TIME_MS bound to: 500 - type: integer 
+	Parameter COLD_TIME_MS bound to: 5000 - type: integer 
+	Parameter DEVICE_ADDRESS bound to: 8'b01111000 
+	Parameter IMAGE_MODE bound to: 1'b0 
+	Parameter IMAGE_SIZE_H bound to: 16'b0000001010000000 
+	Parameter IMAGE_SIZE_V bound to: 16'b0000000111100000 
+	Parameter IMAGE_OFFEST_H bound to: 16'b0000000000000100 
+	Parameter IMAGE_OFFEST_V bound to: 16'b0000000000000000 
+	Parameter AUTO_FOCUS_MODE bound to: 1'b0 
+	Parameter AUTO_FOCUS_CONFIG_NUM bound to: 16'b0000111111110101 
+	Parameter WHITE_BALANCE_MODE bound to: 3'b000 
+	Parameter SATURATION_MODE bound to: 3'b011 
+	Parameter BRIGHTNESS_MODE bound to: 4'b0100 
+	Parameter CONTRAST_MODE bound to: 3'b011 
+	Parameter SHARPNESS_MODE bound to: 8'b00100001 
+	Parameter SPECIAL_EFECTS_MODE bound to: 3'b000 
+	Parameter EXPOSURE_MODE bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_White_Balance' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1277]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_White_Balance' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1277]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Saturation' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1302]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Saturation' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1302]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Brightness' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1328]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Brightness' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1328]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Contrast' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1356]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Contrast' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1356]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Special_Effects' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1382]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Special_Effects' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1382]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Exposure' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1408]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Exposure' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1408]
+INFO: [Synth 8-6157] synthesizing module 'ROM_OV5640_Auto_Focus' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1434]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_OV5640_Auto_Focus' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:1434]
+INFO: [Synth 8-6155] done synthesizing module 'OV5640_Config' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:207]
+INFO: [Synth 8-6157] synthesizing module 'IIC_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:57]
+	Parameter CLOCK_FREQ_MHZ bound to: 13'b0000001000001 
+	Parameter IIC_Clock_KHz bound to: 13'b0000001100100 
+INFO: [Synth 8-6157] synthesizing module 'IIC_Write_Ctrl' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:503]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Write_Ctrl' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:503]
+INFO: [Synth 8-6157] synthesizing module 'IIC_Write_Data' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:797]
+INFO: [Synth 8-6157] synthesizing module 'IIC_Send_Byte' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:1164]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Send_Byte' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:1164]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Write_Data' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:797]
+INFO: [Synth 8-6157] synthesizing module 'IIC_Read_Data' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:992]
+INFO: [Synth 8-6157] synthesizing module 'IIC_Recv_Byte' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:1359]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Recv_Byte' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:1359]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Read_Data' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:992]
+INFO: [Synth 8-6157] synthesizing module 'Clock_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:70]
+	Parameter FACTOR_BIT bound to: 5'b10000 
+	Parameter CLOCK_MODE bound to: 1'b1 
+	Parameter NEGEDGE_ENABLE bound to: 1'b0 
+	Parameter DIVIDER_MODE bound to: 4'b0010 
+INFO: [Synth 8-6157] synthesizing module 'Clock_Divider_Even' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:435]
+	Parameter FACTOR_BIT bound to: 5'b10000 
+INFO: [Synth 8-6155] done synthesizing module 'Clock_Divider_Even' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'Clock_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'IIC_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'OV5640_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:54]
+INFO: [Synth 8-6157] synthesizing module 'video_generator' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:3]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:47]
+INFO: [Synth 8-6157] synthesizing module 'video_proc_unit' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vpu_result_ram' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/vpu_result_ram_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vpu_result_ram' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/vpu_result_ram_stub.v:5]
+WARNING: [Synth 8-689] width (1) of port connection 'doutb' does not match port width (16) of module 'vpu_result_ram' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'video_proc_unit' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_timing_gen' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:58]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_timing_gen' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'video_generator' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:3]
+WARNING: [Synth 8-7071] port 'i_proc_unit_clk' of module 'video_generator' is unconnected for instance 'video_generator_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:111]
+WARNING: [Synth 8-7071] port 'o_proc_unit_clk' of module 'video_generator' is unconnected for instance 'video_generator_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:111]
+WARNING: [Synth 8-7071] port 'o_proc_unit_req_addr' of module 'video_generator' is unconnected for instance 'video_generator_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:111]
+WARNING: [Synth 8-7071] port 'o_proc_unit_req_en' of module 'video_generator' is unconnected for instance 'video_generator_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:111]
+WARNING: [Synth 8-7023] instance 'video_generator_inst' of module 'video_generator' has 12 connections declared, but only 8 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:111]
+INFO: [Synth 8-6157] synthesizing module 'HDMI_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:48]
+INFO: [Synth 8-6157] synthesizing module 'TMDS_Encoder_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:384]
+INFO: [Synth 8-6155] done synthesizing module 'TMDS_Encoder_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:384]
+INFO: [Synth 8-6157] synthesizing module 'Serializer_Interface' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:186]
+	Parameter IDE_MODE bound to: 2'b00 
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: FAST - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6155] done synthesizing module 'Serializer_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_Interface' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v:48]
+INFO: [Synth 8-6157] synthesizing module 'debug_sim_cam' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/debug/debug_sim_cam.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'debug_sim_cam' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/debug/debug_sim_cam.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ddr_streaming_top' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v:2]
+INFO: [Synth 8-6157] synthesizing module 'camera_wr_fifo' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/camera_wr_fifo_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'camera_wr_fifo' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/camera_wr_fifo_stub.v:5]
+WARNING: [Synth 8-689] width (8) of port connection 'rd_data_count' does not match port width (7) of module 'camera_wr_fifo' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v:163]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v:2]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_rd_fifo' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/video_rd_fifo_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'video_rd_fifo' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/video_rd_fifo_stub.v:5]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'video_rd_fifo' is unconnected for instance 'video_fifo_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:162]
+WARNING: [Synth 8-7023] instance 'video_fifo_inst' of module 'video_rd_fifo' has 12 connections declared, but only 11 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:162]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/fifo_generator_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/fifo_generator_0_stub.v:5]
+WARNING: [Synth 8-689] width (33) of port connection 'dout' does not match port width (32) of module 'fifo_generator_0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:188]
+WARNING: [Synth 8-7071] port 'full' of module 'fifo_generator_0' is unconnected for instance 'bypass_rd_req_fifo' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:179]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'fifo_generator_0' is unconnected for instance 'bypass_rd_req_fifo' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:179]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'fifo_generator_0' is unconnected for instance 'bypass_rd_req_fifo' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:179]
+WARNING: [Synth 8-7023] instance 'bypass_rd_req_fifo' of module 'fifo_generator_0' has 11 connections declared, but only 8 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:179]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_0' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_0' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-17612-Kasaki352/realtime/mig_7series_0_stub.v:5]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (30) of module 'mig_7series_0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:212]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (30) of module 'mig_7series_0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:235]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'mig_7series_0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:239]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'mig_7series_0' is unconnected for instance 'mig_inst' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:175]
+WARNING: [Synth 8-7023] instance 'mig_inst' of module 'mig_7series_0' has 67 connections declared, but only 66 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:175]
+INFO: [Synth 8-6155] done synthesizing module 'ddr_streaming_top' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'video_sys' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sys_top' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/soc/sys_top.v:3]
+WARNING: [Synth 8-6014] Unused sequential element debug_vscnt_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/camera/Camera_Interface.v:22]
+WARNING: [Synth 8-6014] Unused sequential element cold_cnt_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:445]
+WARNING: [Synth 8-6014] Unused sequential element mbus_wready_i_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:496]
+WARNING: [Synth 8-6014] Unused sequential element mbus_rwack_err_i_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v:498]
+WARNING: [Synth 8-6014] Unused sequential element resetn_even_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:127]
+WARNING: [Synth 8-6014] Unused sequential element resetn_odd_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:135]
+WARNING: [Synth 8-6014] Unused sequential element factor_odd_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:251]
+WARNING: [Synth 8-6014] Unused sequential element factor_even_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:252]
+WARNING: [Synth 8-6014] Unused sequential element factor_odd_num_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:253]
+WARNING: [Synth 8-6014] Unused sequential element factor_even_num_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:254]
+WARNING: [Synth 8-6014] Unused sequential element factor_cal_num_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:255]
+WARNING: [Synth 8-6014] Unused sequential element mbus_rready_i_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:491]
+WARNING: [Synth 8-3848] Net o_proc_unit_clk in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:4]
+WARNING: [Synth 8-3848] Net o_proc_unit_req_addr in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:5]
+WARNING: [Synth 8-3848] Net o_proc_unit_req_en in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:6]
+WARNING: [Synth 8-3848] Net ena in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:12]
+WARNING: [Synth 8-3848] Net wea in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:13]
+WARNING: [Synth 8-3848] Net addra in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:14]
+WARNING: [Synth 8-3848] Net dina in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:15]
+WARNING: [Synth 8-3848] Net clkb in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:16]
+WARNING: [Synth 8-3848] Net enb in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:17]
+WARNING: [Synth 8-3848] Net addrb in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:18]
+WARNING: [Synth 8-6014] Unused sequential element H_ACTIVE_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:280]
+WARNING: [Synth 8-6014] Unused sequential element V_ACTIVE_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:286]
+WARNING: [Synth 8-6014] Unused sequential element VS_POL_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:291]
+WARNING: [Synth 8-3848] Net o_proc_unit_clk in module/entity video_generator does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:16]
+WARNING: [Synth 8-3848] Net o_proc_unit_req_addr in module/entity video_generator does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:17]
+WARNING: [Synth 8-3848] Net o_proc_unit_req_en in module/entity video_generator does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:18]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'debug_cam'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:143]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'camera_axi_write'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:101]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'cam_wr_fifo_inst'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v:151]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_read_m'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:136]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'video_fifo_inst'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:162]
+WARNING: [Synth 8-6014] Unused sequential element rd_cnt_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:72]
+WARNING: [Synth 8-7129] Port M_AXI_RID[3] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module axi_master_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[3] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[1] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module axi_master_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_odd[4] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_odd[3] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_odd[2] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_odd[1] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_odd[0] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_even[4] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_even[3] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_even[2] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_even[1] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_parallel_even[0] in module Serializer_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_clk in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[31] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[30] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[29] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[28] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[27] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[26] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[25] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[24] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[23] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[22] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[21] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[20] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[19] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[18] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[17] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[16] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[15] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[14] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[13] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[12] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[11] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[10] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[9] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[8] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[7] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[6] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[5] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[4] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[3] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[2] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[1] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[0] in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_en in module video_proc_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_clk in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[31] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[30] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[29] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[28] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[27] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[26] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[25] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[24] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[23] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[22] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[21] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[20] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[19] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[18] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[17] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[16] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[15] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[14] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[13] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[12] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[11] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[10] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[9] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[8] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[7] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[6] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[5] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[4] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[3] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[2] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[1] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_addr[0] in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_proc_unit_req_en in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_proc_unit_clk in module video_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[15] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[14] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[13] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[12] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[11] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[10] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[9] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[8] in module Clock_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk_divisor[7] in module Clock_Interface is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2382.414 ; gain = 534.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2400.316 ; gain = 552.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2400.316 ; gain = 552.793
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2412.344 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo/camera_wr_fifo_in_context.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo/camera_wr_fifo_in_context.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo/video_rd_fifo_in_context.xdc] for cell 'video_system/memory_top/axi_read_m/video_fifo_inst'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo/video_rd_fifo_in_context.xdc] for cell 'video_system/memory_top/axi_read_m/video_fifo_inst'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'video_system/memory_top/mig_inst'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc] for cell 'video_system/memory_top/mig_inst'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'video_system/memory_top/axi_read_m/bypass_rd_req_fifo'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'video_system/memory_top/axi_read_m/bypass_rd_req_fifo'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'soc_clk'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'soc_clk'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'video_system/video_sys_clk'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'video_system/video_sys_clk'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram/vpu_result_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/vpu_ram'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram/vpu_result_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/vpu_ram'
+Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
+WARNING: [Vivado 12-507] No nets matched 'i_camera_pclk_IBUF'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:10]
+Finished Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/sys_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sys_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sys_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2482.770 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2482.770 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[16]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[17]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[18]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[19]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[20]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[21]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[22]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[23]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[24]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[25]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[26]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[27]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[28]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[29]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[30]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[31]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[2]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[3]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for i_soc_clk. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for i_soc_clk. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/camera_axi_write/cam_wr_fifo_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/axi_read_m/video_fifo_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/mig_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/axi_read_m/bypass_rd_req_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for soc_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_sys_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/vpu_ram. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'OV5640_Config'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Write_Ctrl'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Send_Byte'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Write_Data'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Recv_Byte'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Read_Data'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'IIC_Interface'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'debug_sim_cam'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'axi_master_write'
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'axi_master_read'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              ST_WR_IDLE |                             0001 |                              000
+              ST_WR_WAIT |                             0010 |                              001
+             ST_WR_START |                             0100 |                              010
+               ST_WR_END |                             1000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'OV5640_Config'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              ST_WR_IDLE |                          0000001 |                          0000001
+             ST_WR_SADDR |                          0000010 |                          0000010
+            ST_WR_ADDR_H |                          0000100 |                          0000100
+            ST_WR_ADDR_L |                          0001000 |                          0001000
+              ST_WR_DATA |                          0010000 |                          0010000
+              ST_WR_WAIT |                          0100000 |                          0100000
+               ST_WR_END |                          1000000 |                          1000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_current_reg' in module 'IIC_Write_Ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              ST_WR_IDLE |                           000001 |                           000001
+             ST_WR_START |                           000010 |                           000010
+              ST_WR_DATA |                           000100 |                           000100
+               ST_WR_ACK |                           001000 |                           001000
+              ST_WR_STOP |                           010000 |                           010000
+               ST_WR_END |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_current_reg' in module 'IIC_Send_Byte'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              ST_WR_IDLE |                               00 |                               00
+              ST_WR_DATA |                               01 |                               01
+              ST_WR_WAIT |                               10 |                               10
+               ST_WR_END |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'IIC_Write_Data'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              ST_RD_IDLE |                            00001 |                            00001
+              ST_RD_DATA |                            00010 |                            00010
+               ST_RD_ACK |                            00100 |                            00100
+              ST_RD_STOP |                            01000 |                            01000
+               ST_RD_END |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_current_reg' in module 'IIC_Recv_Byte'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              ST_RD_IDLE |                               00 |                               00
+              ST_RD_DATA |                               01 |                               01
+              ST_RD_WAIT |                               10 |                               10
+               ST_RD_END |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'IIC_Read_Data'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                          0000001 |                              000
+              ST_WR_WAIT |                          0000010 |                              001
+              ST_RD_ADDR |                          0000100 |                              010
+             ST_RD_START |                          0001000 |                              011
+              ST_RD_DATA |                          0010000 |                              100
+              ST_RD_WAIT |                          0100000 |                              101
+                  ST_END |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'IIC_Interface'
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_next_reg' in module 'debug_sim_cam', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  S_IDLE |                              000 |                              000
+                    S_WR |                              001 |                              001
+                  S_WAIT |                              010 |                              010
+                  S_SYNC |                              011 |                              011
+                 S_WAIT2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'state_current_reg' in module 'debug_sim_cam', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  S_IDLE |                              000 |                              000
+                    S_WR |                              001 |                              001
+                  S_WAIT |                              010 |                              010
+                  S_SYNC |                              011 |                              011
+                 S_WAIT2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               S_WR_IDLE |                               00 |                              000
+                    S_WA |                               11 |                              001
+                    S_WD |                               10 |                              010
+              S_WAIT_ANS |                               01 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'axi_master_write'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               S_RD_IDLE |                              001 |                               00
+                 S_RD_WA |                              100 |                               01
+               S_RD_DATA |                              010 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'axi_master_read'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 11    
+	   3 Input   32 Bit       Adders := 2     
+	   3 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 2     
+	   5 Input   12 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 3     
+	   5 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 5     
+	   8 Input    4 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 46    
++---Registers : 
+	               32 Bit    Registers := 3     
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 22    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 18    
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 77    
++---Muxes : 
+	   7 Input   46 Bit        Muxes := 1     
+	   7 Input   43 Bit        Muxes := 1     
+	   6 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   7 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 4     
+	   7 Input   14 Bit        Muxes := 1     
+	  10 Input   11 Bit        Muxes := 1     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 16    
+	   4 Input    8 Bit        Muxes := 4     
+	  10 Input    8 Bit        Muxes := 2     
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 9     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 12    
+	   4 Input    6 Bit        Muxes := 4     
+	   7 Input    6 Bit        Muxes := 5     
+	  10 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 28    
+	   3 Input    5 Bit        Muxes := 3     
+	   6 Input    5 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 19    
+	   3 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 18    
+	   6 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 28    
+	   4 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 88    
+	   5 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+	  10 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (video_system/camera_controller/IIC_Interface_Inst/IIC_Read_Data_Inst/FSM_sequential_state_current_reg[1]) is unused and will be removed from module sys_top.
+WARNING: [Synth 8-3332] Sequential element (video_system/camera_controller/IIC_Interface_Inst/IIC_Read_Data_Inst/FSM_sequential_state_current_reg[0]) is unused and will be removed from module sys_top.
+WARNING: [Synth 8-3332] Sequential element (video_system/camera_controller/IIC_Interface_Inst/FSM_onehot_state_current_reg[5]) is unused and will be removed from module sys_top.
+WARNING: [Synth 8-3332] Sequential element (video_system/camera_controller/IIC_Interface_Inst/FSM_onehot_state_current_reg[3]) is unused and will be removed from module sys_top.
+WARNING: [Synth 8-3332] Sequential element (video_system/camera_controller/IIC_Interface_Inst/FSM_onehot_state_current_reg[2]) is unused and will be removed from module sys_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|ROM_OV5640_Auto_Focus | lut_data_o | 4096x23       | LUT            | 
+|ROM_OV5640_Auto_Focus | lut_data_o | 4096x23       | LUT            | 
++----------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin ena
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin wea[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin addra[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin dina[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin clkb
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin enb
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \video_system/video_generator_inst/vpu/vpu_ram  has unconnected pin addrb[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |clk_wiz_0        |         1|
+|2     |clk_wiz_1        |         1|
+|3     |camera_wr_fifo   |         1|
+|4     |video_rd_fifo    |         1|
+|5     |fifo_generator_0 |         1|
+|6     |mig_7series_0    |         1|
+|7     |vpu_result_ram   |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |camera_wr_fifo |     1|
+|2     |clk_wiz        |     2|
+|4     |fifo_generator |     1|
+|5     |mig_7series    |     1|
+|6     |video_rd_fifo  |     1|
+|7     |vpu_result_ram |     1|
+|8     |BUFG           |     1|
+|9     |CARRY4         |    98|
+|10    |LUT1           |    61|
+|11    |LUT2           |   160|
+|12    |LUT3           |   141|
+|13    |LUT4           |   113|
+|14    |LUT5           |    69|
+|15    |LUT6           |   330|
+|16    |MUXF7          |    44|
+|17    |MUXF8          |    10|
+|18    |OSERDESE2      |     8|
+|20    |FDCE           |   394|
+|21    |FDPE           |     9|
+|22    |FDRE           |   201|
+|23    |IBUF           |    13|
+|24    |OBUF           |     5|
+|25    |OBUFDS         |     4|
+|26    |OBUFT          |     1|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 7 critical warnings and 64 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 2482.770 ; gain = 552.793
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2482.770 ; gain = 635.246
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2482.770 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 156 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2484.000 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 4 instances
+
+Synth Design complete, checksum: 3bac1235
+INFO: [Common 17-83] Releasing license: Synthesis
+141 Infos, 157 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:34 . Memory (MB): peak = 2484.000 ; gain = 1034.891
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/sys_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sys_top_utilization_synth.rpt -pb sys_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 22 18:09:36 2023...

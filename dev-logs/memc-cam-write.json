@@ -1,0 +1,27 @@
+{signal: [
+  
+  {name: 'ACLK', wave: 'pppppppppppp'},
+  {name: 'state', wave:'24.3......72', data:'IDLE AW WDATA WAIT IDLE'},
+  {name:'AWVALID',wave:'04.0........', data:'Ctrl_Signals'},
+  {name:'AWRDY',wave:'0.1x........'},
+  {name:'WR_ADDR',wave:'5....5..555.', data:'A0 A1 A2 A3 A4'},
+  ['Write',
+   {name:'WDATA',wave:'xxx3.3..33xx', data:'D0 D1 D2 D3'},
+   {name:'WLAST',wave:'0........10.'},
+   {name:'WVALID', wave:'0..1......0.'},
+   {name:'WRDY',wave:'0...10.1110.'},
+  ],
+   
+  ['WR FIFO',
+   {name:'FIFO_RDEN', wave:'0.1010.110..'},
+   {name:'FIFO_RDDT', wave:'0..3.3..33xx', data:'D0 D1 D2 D3'},
+  ],
+   
+  ['WR ANS',
+   {name:'M_BREADY',wave:'0..1.......0'},
+   {name:'M_BVALID',wave:'0.........10'},
+  ],
+],
+  config: { hscale: 2 }
+
+}

@@ -1,0 +1,11 @@
+{signal: [
+  {name: 'clk', wave: 'ppppppppppppppppppppp'},
+  {name: 'state', wave: '0.3.........3.......', data:'WR RD'},
+  {name: 'cmd', wave: 'x.4.........4.......', data:'WR RD'},
+  {name:'cmd_addr',wave: '3..3333..3338.......', data:'A0 A1 A2 A3 A4 A5 A6 A7 A8'},
+  {name: 'cmd_en', wave:'0.1.........0......'},
+  {name: 'cmd_rdy', wave:'x.1...01.........'},
+  {name: 'wr_en', wave: '0.1.........0.......'},
+  {name: 'wr_rdy', wave: '1.....0.1...0........'},
+  {name:'wr_cnt', wave: '2.23333..3338.......', data:'0 0 1 2 3 4 5 6 7 8 0 0 0 0'},
+]}

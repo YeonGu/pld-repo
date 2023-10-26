@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1697969326">
+  <File Type="ROUTE-PWR" Name="sys_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="sys_top.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="sys_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="sys_top_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="sys_top.msk"/>
+  <File Type="ROUTE-CLK" Name="sys_top_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="sys_top.vdi"/>
+  <File Type="BG-BIT" Name="sys_top.bit"/>
+  <File Type="BG-DRC" Name="sys_top.drc"/>
+  <File Type="BG-BGN" Name="sys_top.bgn"/>
+  <File Type="BG-BIN" Name="sys_top.bin"/>
+  <File Type="BITSTR-RBT" Name="sys_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="sys_top.nky"/>
+  <File Type="BITSTR-BMM" Name="sys_top_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="sys_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="sys_top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="sys_top.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sys_top_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sys_top.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="sys_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="sys_top.hwdef"/>
+  <File Type="PLACE-IO" Name="sys_top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="sys_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="sys_top_utilization_placed.pb"/>
+  <File Type="ROUTE-RQS" Name="sys_top_routed.rqs"/>
+  <File Type="PLACE-CTRL" Name="sys_top_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sys_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-DRC" Name="sys_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="sys_top_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="sys_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="sys_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="sys_top_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="sys_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sys_top_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sys_top_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="sys_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="sys_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="sys_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="sys_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="sys_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="sys_top_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="sys_top_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="sys_top_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="sys_top_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sys_top_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="sys_top_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sys_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sys_top_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="sys_top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sys_top_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="sys_top.pdi"/>
+  <File Type="RCFI_FILE" Name="sys_top.rcfi"/>
+  <File Type="CFI_FILE" Name="sys_top.cfi"/>
+  <File Type="RNPI_FILE" Name="sys_top.rnpi"/>
+  <File Type="NPI_FILE" Name="sys_top.npi"/>
+  <File Type="RBD_FILE" Name="sys_top.rbd"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="sys_top_postroute_physopted.rqs"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/camera/Camera_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/HDMI_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/memc/axi_master_read.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/memc/axi_master_write.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/memc/ddr_streaming_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/debug/debug_sim_cam.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/hdmi_timing_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/video_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/video_proc_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/video_sys.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/soc/sys_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/memc/stream_memc_axi.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fifo-test.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mig_7series_0/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mig_7series_0"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mig_7series_0/mig_b.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mig_7series_0"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sys_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../rtl-srcs/system/constr/soc.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../rtl-srcs/system/constr/soc.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/sys_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="video_rd_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mig_7series_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="vpu_result_ram"/>
+</GenRun>

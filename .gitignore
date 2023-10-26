@@ -8,3 +8,6 @@ rtl-srcs/utils/*/obj_dir/*
 
 rtl-srcs/utils/tests/*/obj_dir/*
 rtl-srcs/utils/tests/*/.cache/*
+
+projects/main/main.cache/*
+projects/ddr-test/ddr-test.cache/*

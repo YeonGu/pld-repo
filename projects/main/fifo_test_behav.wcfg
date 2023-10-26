@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="axi_sim_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_sim_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="14.820000000001 ms"></ZoomEndTime>
+      <Cursor1Time time="0.457300977000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="480"></NameColumnWidth>
+      <ValueColumnWidth column_width="169"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/axi_sim_top/ddr_sys_clk" type="logic">
+      <obj_property name="ElementShortName">ddr_sys_clk</obj_property>
+      <obj_property name="ObjectShortName">ddr_sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/ddr_ref_clk" type="logic">
+      <obj_property name="ElementShortName">ddr_ref_clk</obj_property>
+      <obj_property name="ObjectShortName">ddr_ref_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/cam_pclk" type="logic">
+      <obj_property name="ElementShortName">cam_pclk</obj_property>
+      <obj_property name="ObjectShortName">cam_pclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/hdmi_pclk" type="logic">
+      <obj_property name="ElementShortName">hdmi_pclk</obj_property>
+      <obj_property name="ObjectShortName">hdmi_pclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/pll_locked" type="logic">
+      <obj_property name="ElementShortName">pll_locked</obj_property>
+      <obj_property name="ObjectShortName">pll_locked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/init_calib_complete" type="logic">
+      <obj_property name="ElementShortName">init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">init_calib_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/u_app_top/ui_clk" type="logic">
+      <obj_property name="ElementShortName">ui_clk</obj_property>
+      <obj_property name="ObjectShortName">ui_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/axi_sim_top/u_app_top/ui_rst" type="logic">
+      <obj_property name="ElementShortName">ui_rst</obj_property>
+      <obj_property name="ObjectShortName">ui_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="group58" type="group">
+      <obj_property name="label">CAM WRITE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/state_current" type="array">
+         <obj_property name="ElementShortName">state_current[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state_current[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wren" type="logic">
+         <obj_property name="ElementShortName">cam_wren</obj_property>
+         <obj_property name="ObjectShortName">cam_wren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_data" type="array">
+         <obj_property name="ElementShortName">cam_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">cam_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_frame_sync" type="logic">
+         <obj_property name="ElementShortName">cam_frame_sync</obj_property>
+         <obj_property name="ObjectShortName">cam_frame_sync</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/rd_data_count" type="array">
+         <obj_property name="ElementShortName">rd_data_count[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data_count[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/fifo_need_write" type="logic">
+         <obj_property name="ElementShortName">fifo_need_write</obj_property>
+         <obj_property name="ObjectShortName">fifo_need_write</obj_property>
+      </wvobject>
+      <wvobject fp_name="group90" type="group">
+         <obj_property name="label">FIFO</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/wr_clk" type="logic">
+            <obj_property name="ElementShortName">wr_clk</obj_property>
+            <obj_property name="ObjectShortName">wr_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/rd_clk" type="logic">
+            <obj_property name="ElementShortName">rd_clk</obj_property>
+            <obj_property name="ObjectShortName">rd_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/din" type="array">
+            <obj_property name="ElementShortName">din[15:0]</obj_property>
+            <obj_property name="ObjectShortName">din[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/wr_en" type="logic">
+            <obj_property name="ElementShortName">wr_en</obj_property>
+            <obj_property name="ObjectShortName">wr_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/rd_en" type="logic">
+            <obj_property name="ElementShortName">rd_en</obj_property>
+            <obj_property name="ObjectShortName">rd_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/dout" type="array">
+            <obj_property name="ElementShortName">dout[127:0]</obj_property>
+            <obj_property name="ObjectShortName">dout[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/full" type="logic">
+            <obj_property name="ElementShortName">full</obj_property>
+            <obj_property name="ObjectShortName">full</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/empty" type="logic">
+            <obj_property name="ElementShortName">empty</obj_property>
+            <obj_property name="ObjectShortName">empty</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_wr_fifo_inst/rd_data_count" type="array">
+         <obj_property name="ElementShortName">rd_data_count[6:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_data_count[6:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_fifo_rden" type="logic">
+         <obj_property name="ElementShortName">cam_fifo_rden</obj_property>
+         <obj_property name="ObjectShortName">cam_fifo_rden</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/cam_fifo_rddata" type="array">
+         <obj_property name="ElementShortName">cam_fifo_rddata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">cam_fifo_rddata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/axi_wd_handshake" type="logic">
+         <obj_property name="ElementShortName">axi_wd_handshake</obj_property>
+         <obj_property name="ObjectShortName">axi_wd_handshake</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/wr_cnt" type="array">
+         <obj_property name="ElementShortName">wr_cnt[9:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_cnt[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/wr_addr" type="array">
+         <obj_property name="ElementShortName">wr_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wr_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/ui_clk" type="logic">
+         <obj_property name="ElementShortName">ui_clk</obj_property>
+         <obj_property name="ObjectShortName">ui_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_AWADDR" type="array">
+         <obj_property name="ElementShortName">M_AXI_AWADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_AWADDR[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_AWVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_AWVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_AWVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_AWREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_AWREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_AWREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_WDATA" type="array">
+         <obj_property name="ElementShortName">M_AXI_WDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_WLAST" type="logic">
+         <obj_property name="ElementShortName">M_AXI_WLAST</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WLAST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_WVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_WREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_WREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_BVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_BVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_BVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/camera_axi_write/M_AXI_BREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_BREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_BREADY</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group59" type="group">
+      <obj_property name="label">VIDEO READ</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/state_current" type="array">
+         <obj_property name="ElementShortName">state_current[1:0]</obj_property>
+         <obj_property name="ObjectShortName">state_current[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_need_data" type="logic">
+         <obj_property name="ElementShortName">video_need_data</obj_property>
+         <obj_property name="ObjectShortName">video_need_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_need_data" type="logic">
+         <obj_property name="ElementShortName">bypass_need_data</obj_property>
+         <obj_property name="ObjectShortName">bypass_need_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/read_to" type="logic">
+         <obj_property name="ElementShortName">read_to</obj_property>
+         <obj_property name="ObjectShortName">read_to</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_pclk" type="logic">
+         <obj_property name="ElementShortName">video_pclk</obj_property>
+         <obj_property name="ObjectShortName">video_pclk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_sync_frame" type="logic">
+         <obj_property name="ElementShortName">video_sync_frame</obj_property>
+         <obj_property name="ObjectShortName">video_sync_frame</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_rden" type="logic">
+         <obj_property name="ElementShortName">video_fifo_rden</obj_property>
+         <obj_property name="ObjectShortName">video_fifo_rden</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/rd_cnt" type="array">
+         <obj_property name="ElementShortName">rd_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_cnt[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_rddata" type="array">
+         <obj_property name="ElementShortName">video_rddata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">video_rddata[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group198" type="group">
+         <obj_property name="label">FIFO</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/wr_clk" type="logic">
+            <obj_property name="ElementShortName">wr_clk</obj_property>
+            <obj_property name="ObjectShortName">wr_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/rd_clk" type="logic">
+            <obj_property name="ElementShortName">rd_clk</obj_property>
+            <obj_property name="ObjectShortName">rd_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/din" type="array">
+            <obj_property name="ElementShortName">din[127:0]</obj_property>
+            <obj_property name="ObjectShortName">din[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/wr_en" type="logic">
+            <obj_property name="ElementShortName">wr_en</obj_property>
+            <obj_property name="ObjectShortName">wr_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/rd_en" type="logic">
+            <obj_property name="ElementShortName">rd_en</obj_property>
+            <obj_property name="ObjectShortName">rd_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/dout" type="array">
+            <obj_property name="ElementShortName">dout[15:0]</obj_property>
+            <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/full" type="logic">
+            <obj_property name="ElementShortName">full</obj_property>
+            <obj_property name="ObjectShortName">full</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/empty" type="logic">
+            <obj_property name="ElementShortName">empty</obj_property>
+            <obj_property name="ObjectShortName">empty</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/wr_data_count" type="array">
+            <obj_property name="ElementShortName">wr_data_count[6:0]</obj_property>
+            <obj_property name="ObjectShortName">wr_data_count[6:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/wr_rst_busy" type="logic">
+            <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+            <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+         </wvobject>
+         <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/video_fifo_inst/rd_rst_busy" type="logic">
+            <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+            <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group90" type="group">
+         <obj_property name="label">bypass</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group102" type="group">
+            <obj_property name="label">fifo</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/rst" type="logic">
+               <obj_property name="ElementShortName">rst</obj_property>
+               <obj_property name="ObjectShortName">rst</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/wr_clk" type="logic">
+               <obj_property name="ElementShortName">wr_clk</obj_property>
+               <obj_property name="ObjectShortName">wr_clk</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/rd_clk" type="logic">
+               <obj_property name="ElementShortName">rd_clk</obj_property>
+               <obj_property name="ObjectShortName">rd_clk</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/din" type="array">
+               <obj_property name="ElementShortName">din[31:0]</obj_property>
+               <obj_property name="ObjectShortName">din[31:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/wr_en" type="logic">
+               <obj_property name="ElementShortName">wr_en</obj_property>
+               <obj_property name="ObjectShortName">wr_en</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/rd_en" type="logic">
+               <obj_property name="ElementShortName">rd_en</obj_property>
+               <obj_property name="ObjectShortName">rd_en</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/dout" type="array">
+               <obj_property name="ElementShortName">dout[31:0]</obj_property>
+               <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/full" type="logic">
+               <obj_property name="ElementShortName">full</obj_property>
+               <obj_property name="ObjectShortName">full</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/empty" type="logic">
+               <obj_property name="ElementShortName">empty</obj_property>
+               <obj_property name="ObjectShortName">empty</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/wr_rst_busy" type="logic">
+               <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+               <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_rd_req_fifo/rd_rst_busy" type="logic">
+               <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+               <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group1077" type="group">
+            <obj_property name="label">bypass</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_need_data" type="logic">
+               <obj_property name="ElementShortName">bypass_need_data</obj_property>
+               <obj_property name="ObjectShortName">bypass_need_data</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_req_en" type="logic">
+               <obj_property name="ElementShortName">bypass_req_en</obj_property>
+               <obj_property name="ObjectShortName">bypass_req_en</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_clk" type="logic">
+               <obj_property name="ElementShortName">bypass_clk</obj_property>
+               <obj_property name="ObjectShortName">bypass_clk</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_req_addr" type="array">
+               <obj_property name="ElementShortName">bypass_req_addr[31:0]</obj_property>
+               <obj_property name="ObjectShortName">bypass_req_addr[31:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_out_clk" type="logic">
+               <obj_property name="ElementShortName">bypass_out_clk</obj_property>
+               <obj_property name="ObjectShortName">bypass_out_clk</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_out_en" type="logic">
+               <obj_property name="ElementShortName">bypass_out_en</obj_property>
+               <obj_property name="ObjectShortName">bypass_out_en</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_out_data" type="array">
+               <obj_property name="ElementShortName">bypass_out_data[127:0]</obj_property>
+               <obj_property name="ObjectShortName">bypass_out_data[127:0]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/bypass_out_last" type="logic">
+               <obj_property name="ElementShortName">bypass_out_last</obj_property>
+               <obj_property name="ObjectShortName">bypass_out_last</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_ARADDR" type="array">
+         <obj_property name="ElementShortName">M_AXI_ARADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_ARADDR[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_ARVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_ARVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_ARVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_ARREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_ARREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_ARREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_RDATA" type="array">
+         <obj_property name="ElementShortName">M_AXI_RDATA[127:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RDATA[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_RRESP" type="array">
+         <obj_property name="ElementShortName">M_AXI_RRESP[1:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RRESP[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_RLAST" type="logic">
+         <obj_property name="ElementShortName">M_AXI_RLAST</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RLAST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_RVALID" type="logic">
+         <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/M_AXI_RREADY" type="logic">
+         <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/axi_sim_top/u_app_top/axi_read_m/rd_cnt" type="array">
+         <obj_property name="ElementShortName">rd_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_cnt[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

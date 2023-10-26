@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../main.gen/sources_1/ip/camera_wr_fifo/sim/camera_wr_fifo.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
