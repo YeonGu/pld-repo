@@ -1,43 +1,45 @@
 
 
 module bicubic_top_2x (
-    input          i_bicubic_clk,
-    input          i_rstn,
-    input          i_vsync,
+                          input          i_bicubic_clk,
+                          input          i_rstn,
+                          input          i_vsync,
     // bicubic配置信息输入
-    input  [  7:0] i_config_x,
-    input  [  7:0] i_config_y,
+                          input  [  7:0] i_config_x,
+                          input  [  7:0] i_config_y,
     // 数据请求输出
-    output [ 31:0] o_proc_unit_req_addr,  // 视频处理模块 数据请求地址
-    output         o_proc_unit_req_en,    // 视频处理模块 数据请求使能
+    (*mark_debug="true"*) output [ 31:0] o_proc_unit_req_addr,  // 视频处理模块 数据请求地址
+    (*mark_debug="true"*) output         o_proc_unit_req_en,    // 视频处理模块 数据请求使能
     // 请求的数据输入 (AXI CLOCK)
-    input          i_bypass_data_clk,
-    input          i_bypass_data_en,
-    input  [127:0] i_bypass_data,
-    input          i_bypass_rlast,
+                          input          i_bypass_data_clk,
+    (*mark_debug="true"*) input          i_bypass_data_en,
+    (*mark_debug="true"*) input  [127:0] i_bypass_data,
+    (*mark_debug="true"*) input          i_bypass_rlast,
     // BRAM结果输出
-    output [ 15:0] o_res_wraddr,
-    output [ 15:0] o_res_wrdata,
-    output         o_res_wren
+    (*mark_debug="true"*) output [ 15:0] o_res_wraddr,
+    (*mark_debug="true"*) output [ 15:0] o_res_wrdata,
+    (*mark_debug="true"*) output         o_res_wren
 );
 
     /******************************************************************/
     // INTERNAL SIGNALS
     /******************************************************************/
-    reg       vsync_pulse;
+    (*mark_debug="true"*)reg       vsync_pulse;
     reg [1:0] vsync;
     always @(posedge i_bicubic_clk) begin
         vsync       <= {vsync[0], i_vsync};
         vsync_pulse <= (vsync == 2'b01);
     end
 
+    (*mark_debug="true"*)wire [ 8:0] raw_data_load_cnt;
+
     reg  [ 7:0] pixel_load_cnt;
     reg  [15:0] loaded_pixel          [3:0] [127:0];
 
-    reg  [ 7:0] v_cnt = 0;
-    reg  [ 7:0] calc_cnt;
-    reg  [ 7:0] write_cnt;
-    reg  [31:0] vram_rd_p;
+    (*mark_debug="true"*)reg  [ 7:0] v_cnt = 0;
+    (*mark_debug="true"*)reg  [ 7:0] calc_cnt;
+    (*mark_debug="true"*)reg  [ 7:0] write_cnt;
+    (*mark_debug="true"*)reg  [31:0] vram_rd_p;
 
     /** RAW DATA LOAD FIFO **/
     wire [15:0] raw_fifo_rddata;
@@ -59,7 +61,6 @@ module bicubic_top_2x (
     wire [23:0] o_bicubic_res_pix12;
     wire [23:0] o_bicubic_res_pix21;
     wire [23:0] o_bicubic_res_pix22;
-    assign bicubic_res_pix11 = {o_bicubic_res_pix11};
 
     assign bicubic_res_pix11 = {o_bicubic_res_pix11[23:19], o_bicubic_res_pix11[15:10], o_bicubic_res_pix11[7:3]};
     assign bicubic_res_pix12 = {o_bicubic_res_pix12[23:19], o_bicubic_res_pix12[15:10], o_bicubic_res_pix12[7:3]};
@@ -88,14 +89,14 @@ module bicubic_top_2x (
     localparam S_NEXT = 9;
     localparam S_FINAL = 10;
 
-    reg [3:0] state_current, state_next;
+    (*mark_debug="true"*) reg [3:0] state_current, state_next;
     always @(*) begin
         state_next = state_current;
         case (state_current)
             S_IDLE: state_next = S_INIT;
             S_INIT: state_next = S_REQ;
             S_REQ: state_next = S_WAIT;
-            S_WAIT: state_next = (i_bypass_rlast) ? S_LOAD : S_WAIT;
+            S_WAIT: state_next = (raw_data_load_cnt == 128) ? S_LOAD : S_WAIT;
             S_LOAD: state_next = (pixel_load_cnt == RAW_PIXEL_COUNT - 1) ? S_CALC : S_LOAD;
             S_CALC: state_next = (calc_cnt == RAW_PIXEL_COUNT - 1) ? S_WRITE_1 : S_CALC;
             S_WRITE_1: state_next = (write_cnt == 255) ? S_WRITE_SWITCH : S_WRITE_1;
@@ -160,7 +161,7 @@ module bicubic_top_2x (
     /** LOAD 加载读取到的一行数据 **/
     assign raw_fifo_rden        = state_current == S_LOAD;
 
-    always @(posedge i_bicubic_clk or negedge i_rstn) begin
+    always @(posedge i_bicubic_clk) begin
         if (state_current == S_LOAD) begin
             loaded_pixel[0][pixel_load_cnt] <= raw_fifo_rddata;
         end else loaded_pixel[0][pixel_load_cnt] <= loaded_pixel[0][pixel_load_cnt];
@@ -205,22 +206,22 @@ module bicubic_top_2x (
 
     // {i_video_fifo_data[15:11], 3'd0, i_video_fifo_data[10:5], 2'd0, i_video_fifo_data[4:0], 3'd0};
 
-    assign i_raw_pix11 = {loaded_pixel[3][calc_cnt+0][15:11], 3'd0, loaded_pixel[3][calc_cnt+0], 2'd0, loaded_pixel[3][calc_cnt+0], 3'd0};
-    assign i_raw_pix12 = {loaded_pixel[3][calc_cnt+1][15:11], 3'd0, loaded_pixel[3][calc_cnt+1], 2'd0, loaded_pixel[3][calc_cnt+1], 3'd0};
-    assign i_raw_pix13 = {loaded_pixel[3][calc_cnt+2][15:11], 3'd0, loaded_pixel[3][calc_cnt+2], 2'd0, loaded_pixel[3][calc_cnt+2], 3'd0};
-    assign i_raw_pix14 = {loaded_pixel[3][calc_cnt+3][15:11], 3'd0, loaded_pixel[3][calc_cnt+3], 2'd0, loaded_pixel[3][calc_cnt+3], 3'd0};
-    assign i_raw_pix21 = {loaded_pixel[2][calc_cnt+0][15:11], 3'd0, loaded_pixel[2][calc_cnt+0], 2'd0, loaded_pixel[2][calc_cnt+0], 3'd0};
-    assign i_raw_pix22 = {loaded_pixel[2][calc_cnt+1][15:11], 3'd0, loaded_pixel[2][calc_cnt+1], 2'd0, loaded_pixel[2][calc_cnt+1], 3'd0};
-    assign i_raw_pix23 = {loaded_pixel[2][calc_cnt+2][15:11], 3'd0, loaded_pixel[2][calc_cnt+2], 2'd0, loaded_pixel[2][calc_cnt+2], 3'd0};
-    assign i_raw_pix24 = {loaded_pixel[2][calc_cnt+3][15:11], 3'd0, loaded_pixel[2][calc_cnt+3], 2'd0, loaded_pixel[2][calc_cnt+3], 3'd0};
-    assign i_raw_pix31 = {loaded_pixel[1][calc_cnt+0][15:11], 3'd0, loaded_pixel[1][calc_cnt+0], 2'd0, loaded_pixel[1][calc_cnt+0], 3'd0};
-    assign i_raw_pix32 = {loaded_pixel[1][calc_cnt+1][15:11], 3'd0, loaded_pixel[1][calc_cnt+1], 2'd0, loaded_pixel[1][calc_cnt+1], 3'd0};
-    assign i_raw_pix33 = {loaded_pixel[1][calc_cnt+2][15:11], 3'd0, loaded_pixel[1][calc_cnt+2], 2'd0, loaded_pixel[1][calc_cnt+2], 3'd0};
-    assign i_raw_pix34 = {loaded_pixel[1][calc_cnt+3][15:11], 3'd0, loaded_pixel[1][calc_cnt+3], 2'd0, loaded_pixel[1][calc_cnt+3], 3'd0};
-    assign i_raw_pix41 = {loaded_pixel[0][calc_cnt+0][15:11], 3'd0, loaded_pixel[0][calc_cnt+0], 2'd0, loaded_pixel[0][calc_cnt+0], 3'd0};
-    assign i_raw_pix42 = {loaded_pixel[0][calc_cnt+1][15:11], 3'd0, loaded_pixel[0][calc_cnt+1], 2'd0, loaded_pixel[0][calc_cnt+1], 3'd0};
-    assign i_raw_pix43 = {loaded_pixel[0][calc_cnt+2][15:11], 3'd0, loaded_pixel[0][calc_cnt+2], 2'd0, loaded_pixel[0][calc_cnt+2], 3'd0};
-    assign i_raw_pix44 = {loaded_pixel[0][calc_cnt+3][15:11], 3'd0, loaded_pixel[0][calc_cnt+3], 2'd0, loaded_pixel[0][calc_cnt+3], 3'd0};
+    assign i_raw_pix11 = {loaded_pixel[3][calc_cnt+0][15:11], 3'd0, loaded_pixel[3][calc_cnt+0][10:5], 2'd0, loaded_pixel[3][calc_cnt+0][4:0], 3'd0};
+    assign i_raw_pix12 = {loaded_pixel[3][calc_cnt+1][15:11], 3'd0, loaded_pixel[3][calc_cnt+1][10:5], 2'd0, loaded_pixel[3][calc_cnt+1][4:0], 3'd0};
+    assign i_raw_pix13 = {loaded_pixel[3][calc_cnt+2][15:11], 3'd0, loaded_pixel[3][calc_cnt+2][10:5], 2'd0, loaded_pixel[3][calc_cnt+2][4:0], 3'd0};
+    assign i_raw_pix14 = {loaded_pixel[3][calc_cnt+3][15:11], 3'd0, loaded_pixel[3][calc_cnt+3][10:5], 2'd0, loaded_pixel[3][calc_cnt+3][4:0], 3'd0};
+    assign i_raw_pix21 = {loaded_pixel[2][calc_cnt+0][15:11], 3'd0, loaded_pixel[2][calc_cnt+0][10:5], 2'd0, loaded_pixel[2][calc_cnt+0][4:0], 3'd0};
+    assign i_raw_pix22 = {loaded_pixel[2][calc_cnt+1][15:11], 3'd0, loaded_pixel[2][calc_cnt+1][10:5], 2'd0, loaded_pixel[2][calc_cnt+1][4:0], 3'd0};
+    assign i_raw_pix23 = {loaded_pixel[2][calc_cnt+2][15:11], 3'd0, loaded_pixel[2][calc_cnt+2][10:5], 2'd0, loaded_pixel[2][calc_cnt+2][4:0], 3'd0};
+    assign i_raw_pix24 = {loaded_pixel[2][calc_cnt+3][15:11], 3'd0, loaded_pixel[2][calc_cnt+3][10:5], 2'd0, loaded_pixel[2][calc_cnt+3][4:0], 3'd0};
+    assign i_raw_pix31 = {loaded_pixel[1][calc_cnt+0][15:11], 3'd0, loaded_pixel[1][calc_cnt+0][10:5], 2'd0, loaded_pixel[1][calc_cnt+0][4:0], 3'd0};
+    assign i_raw_pix32 = {loaded_pixel[1][calc_cnt+1][15:11], 3'd0, loaded_pixel[1][calc_cnt+1][10:5], 2'd0, loaded_pixel[1][calc_cnt+1][4:0], 3'd0};
+    assign i_raw_pix33 = {loaded_pixel[1][calc_cnt+2][15:11], 3'd0, loaded_pixel[1][calc_cnt+2][10:5], 2'd0, loaded_pixel[1][calc_cnt+2][4:0], 3'd0};
+    assign i_raw_pix34 = {loaded_pixel[1][calc_cnt+3][15:11], 3'd0, loaded_pixel[1][calc_cnt+3][10:5], 2'd0, loaded_pixel[1][calc_cnt+3][4:0], 3'd0};
+    assign i_raw_pix41 = {loaded_pixel[0][calc_cnt+0][15:11], 3'd0, loaded_pixel[0][calc_cnt+0][10:5], 2'd0, loaded_pixel[0][calc_cnt+0][4:0], 3'd0};
+    assign i_raw_pix42 = {loaded_pixel[0][calc_cnt+1][15:11], 3'd0, loaded_pixel[0][calc_cnt+1][10:5], 2'd0, loaded_pixel[0][calc_cnt+1][4:0], 3'd0};
+    assign i_raw_pix43 = {loaded_pixel[0][calc_cnt+2][15:11], 3'd0, loaded_pixel[0][calc_cnt+2][10:5], 2'd0, loaded_pixel[0][calc_cnt+2][4:0], 3'd0};
+    assign i_raw_pix44 = {loaded_pixel[0][calc_cnt+3][15:11], 3'd0, loaded_pixel[0][calc_cnt+3][10:5], 2'd0, loaded_pixel[0][calc_cnt+3][4:0], 3'd0};
 
     /** WRITE **/
     reg [15:0] res_wraddr;
@@ -252,6 +253,13 @@ module bicubic_top_2x (
                 loaded_pixel[2][i] <= 16'b0;
                 loaded_pixel[1][i] <= 16'b0;
             end
+        end else if (state_current == S_IDLE) begin
+            v_cnt <= 0;
+            for (i = 0; i < 16; i = i + 1) begin
+                loaded_pixel[3][i] <= 16'b0;
+                loaded_pixel[2][i] <= 16'b0;
+                loaded_pixel[1][i] <= 16'b0;
+            end
         end else if (state_current == S_NEXT) begin
             v_cnt <= v_cnt + 1;
             for (i = 0; i < 128; i = i + 1) begin
@@ -271,18 +279,26 @@ module bicubic_top_2x (
 
 
     // 原始数据加载FIFO
+    (*mark_debug="true"*)wire         raw_fifo_full;
+    (*mark_debug="true"*)wire         raw_fifo_empty;
+    (*mark_debug="true"*)wire         raw_fifo_wr_rst_busy;
+    (*mark_debug="true"*)wire         raw_fifo_rd_rst_busy;
+    (*mark_debug="true"*)wire [5 : 0] wr_data_count;
     bicubic_raw_cache raw_data_fifo (
-        .rst   (~i_rstn),            // input wire rst
-        .wr_clk(i_bypass_data_clk),  // input wire wr_clk
-        .din   (i_bypass_data),      // input wire [127 : 0] din
-        .wr_en (i_bypass_data_en),   // input wire wr_en
-        .rd_clk(i_bicubic_clk),      // input wire rd_clk
-        .rd_en (raw_fifo_rden),      // input wire rd_en
-        .dout  (raw_fifo_rddata)     // output wire [15 : 0] dout
-        // .full       (full),               // output wire full
-        // .empty      (empty),              // output wire empty
-        // .wr_rst_busy(wr_rst_busy),        // output wire wr_rst_busy
-        // .rd_rst_busy(rd_rst_busy)         // output wire rd_rst_busy
+        .rst          (~i_rstn),               // input wire rst
+        .wr_clk       (i_bypass_data_clk),     // input wire wr_clk
+        .din          (i_bypass_data),         // input wire [127 : 0] din
+        .wr_en        (i_bypass_data_en),      // input wire wr_en
+        /** FIFO READ PORT **/
+        .rd_clk       (i_bicubic_clk),         // input wire rd_clk
+        .rd_en        (raw_fifo_rden),         // input wire rd_en
+        .dout         (raw_fifo_rddata),       // output wire [15 : 0] dout
+        .full         (raw_fifo_full),         // output wire full
+        .empty        (raw_fifo_empty),        // output wire empty
+        .wr_rst_busy  (raw_fifo_wr_rst_busy),  // output wire wr_rst_busy
+        .rd_rst_busy  (raw_fifo_rd_rst_busy),  // output wire rd_rst_busy
+        .rd_data_count(raw_data_load_cnt),     // output wire [8 : 0] rd_data_count
+        .wr_data_count(wr_data_count)          // output wire [5 : 0] wr_data_count
     );
 
     // Bicubic计算缓存

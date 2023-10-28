@@ -5,3 +5,9 @@
 
 # IP: ip/camera_wr_fifo/camera_wr_fifo.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==camera_wr_fifo || ORIG_REF_NAME==camera_wr_fifo} -quiet] -quiet
+
+# IP: ip/vpu_result_ram/vpu_result_ram.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vpu_result_ram || ORIG_REF_NAME==vpu_result_ram} -quiet] -quiet
+
+# IP: ip/bicubic_2x_buffer/bicubic_2x_buffer.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bicubic_2x_buffer || ORIG_REF_NAME==bicubic_2x_buffer} -quiet] -quiet

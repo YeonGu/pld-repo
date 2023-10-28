@@ -144,12 +144,14 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/sys_top.dcp
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci
+  read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
+  read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xci
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/video_rd_fifo/video_rd_fifo.xci
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-  read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
+  read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc
 OPTRACE "read constraints: implementation" END { }

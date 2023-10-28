@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Oct 22 18:09:36 2023
+| Date         : Fri Oct 27 22:05:13 2023
 | Host         : Kasaki352 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file sys_top_utilization_synth.rpt -pb sys_top_utilization_synth.pb
 | Design       : sys_top
@@ -28,18 +28,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+------------+-----------+-------+
-|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  766 |     0 |          0 |     63400 |  1.21 |
-|   LUT as Logic          |  766 |     0 |          0 |     63400 |  1.21 |
-|   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |  604 |     0 |          0 |    126800 |  0.48 |
-|   Register as Flip Flop |  604 |     0 |          0 |    126800 |  0.48 |
-|   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
-| F7 Muxes                |   44 |     0 |          0 |     31700 |  0.14 |
-| F8 Muxes                |   10 |     0 |          0 |     15850 |  0.06 |
-+-------------------------+------+-------+------------+-----------+-------+
++-------------------------+-------+-------+------------+-----------+-------+
+|        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
++-------------------------+-------+-------+------------+-----------+-------+
+| Slice LUTs*             | 12673 |     0 |          0 |     63400 | 19.99 |
+|   LUT as Logic          | 12673 |     0 |          0 |     63400 | 19.99 |
+|   LUT as Memory         |     0 |     0 |          0 |     19000 |  0.00 |
+| Slice Registers         |  9100 |     0 |          0 |    126800 |  7.18 |
+|   Register as Flip Flop |  9100 |     0 |          0 |    126800 |  7.18 |
+|   Register as Latch     |     0 |     0 |          0 |    126800 |  0.00 |
+| F7 Muxes                |  4610 |     0 |          0 |     31700 | 14.54 |
+| F8 Muxes                |  1974 |     0 |          0 |     15850 | 12.45 |
++-------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
 
@@ -57,9 +57,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 9     |          Yes |           - |          Set |
-| 394   |          Yes |           - |        Reset |
+| 1531  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 201   |          Yes |       Reset |            - |
+| 7560  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -79,11 +79,12 @@ Warning! LUT value is adjusted to account for LUT combining.
 3. DSP
 ------
 
-+-----------+------+-------+------------+-----------+-------+
-| Site Type | Used | Fixed | Prohibited | Available | Util% |
-+-----------+------+-------+------------+-----------+-------+
-| DSPs      |    0 |     0 |          0 |       240 |  0.00 |
-+-----------+------+-------+------------+-----------+-------+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| DSPs           |    1 |     0 |          0 |       240 |  0.42 |
+|   DSP48E1 only |    1 |       |            |           |       |
++----------------+------+-------+------------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -92,7 +93,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   27 |     0 |          0 |       285 |  9.47 |
+| Bonded IOB                  |   34 |     0 |          0 |       285 | 11.93 |
 | Bonded IPADs                |    0 |     0 |          0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
@@ -107,8 +108,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       300 |  0.00 |
 | IBUFDS_GTE2                 |    0 |     0 |          0 |         2 |  0.00 |
 | ILOGIC                      |    0 |     0 |          0 |       285 |  0.00 |
-| OLOGIC                      |    8 |     0 |          0 |       285 |  2.81 |
-|   OSERDES                   |    8 |       |          0 |       285 |       |
+| OLOGIC                      |   16 |     0 |          0 |       285 |  5.61 |
+|   OSERDES                   |   16 |       |          0 |       285 |       |
 +-----------------------------+------+-------+------------+-----------+-------+
 
 
@@ -149,45 +150,48 @@ Warning! LUT value is adjusted to account for LUT combining.
 7. Primitives
 -------------
 
-+-----------+------+---------------------+
-|  Ref Name | Used | Functional Category |
-+-----------+------+---------------------+
-| FDCE      |  394 |        Flop & Latch |
-| LUT6      |  330 |                 LUT |
-| FDRE      |  201 |        Flop & Latch |
-| LUT2      |  160 |                 LUT |
-| LUT3      |  141 |                 LUT |
-| LUT4      |  113 |                 LUT |
-| CARRY4    |   98 |          CarryLogic |
-| LUT5      |   69 |                 LUT |
-| LUT1      |   61 |                 LUT |
-| MUXF7     |   44 |               MuxFx |
-| IBUF      |   13 |                  IO |
-| MUXF8     |   10 |               MuxFx |
-| FDPE      |    9 |        Flop & Latch |
-| OSERDESE2 |    8 |                  IO |
-| OBUFDS    |    8 |                  IO |
-| OBUF      |    5 |                  IO |
-| INV       |    4 |                 LUT |
-| OBUFT     |    1 |                  IO |
-| BUFG      |    1 |               Clock |
-+-----------+------+---------------------+
++-----------+-------+---------------------+
+|  Ref Name |  Used | Functional Category |
++-----------+-------+---------------------+
+| LUT6      | 10111 |                 LUT |
+| FDRE      |  7560 |        Flop & Latch |
+| MUXF7     |  4610 |               MuxFx |
+| MUXF8     |  1974 |               MuxFx |
+| FDCE      |  1531 |        Flop & Latch |
+| LUT5      |  1179 |                 LUT |
+| LUT2      |   688 |                 LUT |
+| LUT3      |   613 |                 LUT |
+| LUT4      |   497 |                 LUT |
+| CARRY4    |   426 |          CarryLogic |
+| LUT1      |   128 |                 LUT |
+| OSERDESE2 |    16 |                  IO |
+| OBUFDS    |    16 |                  IO |
+| IBUF      |    12 |                  IO |
+| FDPE      |     9 |        Flop & Latch |
+| INV       |     8 |                 LUT |
+| OBUF      |     5 |                  IO |
+| OBUFT     |     1 |                  IO |
+| DSP48E1   |     1 |    Block Arithmetic |
+| BUFG      |     1 |               Clock |
++-----------+-------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+------------------+------+
-|     Ref Name     | Used |
-+------------------+------+
-| vpu_result_ram   |    1 |
-| video_rd_fifo    |    1 |
-| mig_7series_0    |    1 |
-| fifo_generator_0 |    1 |
-| clk_wiz_1        |    1 |
-| clk_wiz_0        |    1 |
-| camera_wr_fifo   |    1 |
-+------------------+------+
++-------------------+------+
+|      Ref Name     | Used |
++-------------------+------+
+| bicubic_2x_buffer |    2 |
+| vpu_result_ram    |    1 |
+| video_rd_fifo     |    1 |
+| mig_7series_0     |    1 |
+| fifo_generator_0  |    1 |
+| clk_wiz_1         |    1 |
+| clk_wiz_0         |    1 |
+| camera_wr_fifo    |    1 |
+| bicubic_raw_cache |    1 |
++-------------------+------+
 
 
 9. Instantiated Netlists

@@ -15,88 +15,118 @@
    </zoom_setting>
    <column_width_setting>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="video_system/memory_top/camera_axi_write/rd_data_count" type="array">
+   <WVObjectSize size="15" />
+   <wvobject fp_name="video_system/video_generator_inst/vpu/vrr_wraddr" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/camera_axi_write/rd_data_count[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_data_count[7:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/vrr_wraddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vrr_wraddr[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/camera_axi_write/wr_addr" type="array">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/state_current" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/camera_axi_write/wr_addr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_addr[31:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/state_current[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_current[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/camera_axi_write/wr_cnt" type="array">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/vrr_wrdata" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/camera_axi_write/wr_cnt[9:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_cnt[9:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/vrr_wrdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">vrr_wrdata[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/camera_axi_write/M_AXI_AWADDR" type="array">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/vrr_wren" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/camera_axi_write/M_AXI_AWADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/vrr_wren</obj_property>
+      <obj_property name="ObjectShortName">vrr_wren</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_addr[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/camera_axi_write/M_AXI_AWVALID" type="logic">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/camera_axi_write/M_AXI_AWVALID</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_AWVALID</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_en</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/M_AXI_ARADDR" type="array">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/M_AXI_ARADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_cnt[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/M_AXI_RVALID" type="logic">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/M_AXI_RVALID</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/video_fifo_cnt" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/video_fifo_cnt[6:0]</obj_property>
-      <obj_property name="ObjectShortName">video_fifo_cnt[6:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">v_cnt[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/video_fifo_full" type="logic">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/vsync_pulse" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/video_fifo_full</obj_property>
-      <obj_property name="ObjectShortName">video_fifo_full</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/vsync_pulse</obj_property>
+      <obj_property name="ObjectShortName">vsync_pulse</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/video_rd_addr" type="array">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/video_rd_addr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">video_rd_addr[31:0]</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_addr[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="video_system/memory_top/axi_read_m/wr_rst_busy" type="logic">
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">video_system/memory_top/axi_read_m/wr_rst_busy</obj_property>
-      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en</obj_property>
+      <obj_property name="ObjectShortName">o_proc_unit_req_en</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[8:0]</obj_property>
+      <obj_property name="ObjectShortName">raw_data_load_cnt[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_empty" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">raw_fifo_empty</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_rd_rst_busy" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">raw_fifo_rd_rst_busy</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">v_cnt[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

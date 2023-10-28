@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Sun Oct 15 20:34:26 2023
+// Date        : Fri Oct 27 19:47:36 2023
 // Host        : Kasaki352 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo_stub.v
@@ -16,7 +16,7 @@
 (* x_core_info = "fifo_generator_v13_2_7,Vivado 2022.2" *)
 module video_rd_fifo(rst, wr_clk, rd_clk, din, wr_en, rd_en, dout, full, 
   empty, wr_data_count, wr_rst_busy, rd_rst_busy)
-/* synthesis syn_black_box black_box_pad_pin="rst,wr_clk,rd_clk,din[127:0],wr_en,rd_en,dout[15:0],full,empty,wr_data_count[6:0],wr_rst_busy,rd_rst_busy" */;
+/* synthesis syn_black_box black_box_pad_pin="rst,wr_clk,rd_clk,din[127:0],wr_en,rd_en,dout[15:0],full,empty,wr_data_count[8:0],wr_rst_busy,rd_rst_busy" */;
   input rst;
   input wr_clk;
   input rd_clk;
@@ -26,7 +26,7 @@ module video_rd_fifo(rst, wr_clk, rd_clk, din, wr_en, rd_en, dout, full,
   output [15:0]dout;
   output full;
   output empty;
-  output [6:0]wr_data_count;
+  output [8:0]wr_data_count;
   output wr_rst_busy;
   output rd_rst_busy;
 endmodule

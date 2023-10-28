@@ -145,8 +145,8 @@ module video_sys (
         .o_s_hdmi_video_vsync(s_hdmi_rgb_vsync),  // output         o_s_hdmi_video_vsync,
         // Video Processor Unit
         .o_proc_unit_clk     (req_clk),           // output         o_proc_unit_clk,
-        .o_proc_unit_req_addr(req_req_addr),      // output [ 31:0] o_proc_unit_req_addr,
-        .o_proc_unit_req_en  (req_req_en),        // output         o_proc_unit_req_en,
+        .o_proc_unit_req_addr(req_addr),          // output [ 31:0] o_proc_unit_req_addr,
+        .o_proc_unit_req_en  (req_en),            // output         o_proc_unit_req_en,
         // Video Processor Data in
         .i_bypass_data_clk   (bypass_data_clk),   // input          i_bypass_data_clk,
         .i_bypass_data_en    (bypass_data_en),    // input          i_bypass_data_en,
@@ -214,7 +214,7 @@ module video_sys (
         .o_bypass_data_clk  (bypass_data_clk),       // output         o_bypass_data_clk,
         .o_bypass_data_en   (bypass_data_en),        // output         o_bypass_data_en,
         .o_bypass_data      (bypass_data),           // output [127:0] o_bypass_data,
-        .o_bypass_last      (bypass_last),           // output         o_bypass_last,
+        .o_bypass_last      (bypass_rlast),          // output         o_bypass_last,
         /** Video Read Data **/
         .i_video_pclk       (clk_hdmi_pixel),        // input          i_video_pclk,
         .i_video_sync_frame (~hdmi_rgb_vsync),       // input          i_video_sync_frame,
