@@ -3,38 +3,54 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_render.h>
+#include <SDL2/SDL_video.h>
 #include <assert.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <sys/time.h>
+#include <time.h>
 
 // A - Left - 4
 // W - 26
 // S - 22
 // D - 7
-// Enter - 40
-// Backspace - 42
 enum Keys
 {
     UP    = 26,
     DOWN  = 22,
     LEFT  = 4,
     RIGHT = 7,
-    ENTER = 40,
-    BACK  = 42,
+    // ENTER = 40,
+    // BACK  = 42,
 };
-int         key_lut[]      = { UP, DOWN, LEFT, RIGHT, ENTER, BACK };
-const char *key_name_lut[] = { "UP", "DOWN", "LEFT", "RIGHT", "ENTER", "BACK" };
+int         key_lut[]      = { UP, DOWN, LEFT, RIGHT };
+const char *key_name_lut[] = { "UP", "DOWN", "LEFT", "RIGHT" };
 
-uint32_t   vmem[ 1024 * 768 ];
+uint32_t   vmem[ 640 * 480 ];
+uint32_t   blank[ 640 * 480 ];
 ui_event_t input_event;
 
 SDL_Renderer *renderer;
 SDL_Texture  *texture;
 
 int  scan_input();
-void render();
+void render( bool en );
 void cycle_entry();
-int  main()
+void draw_rec( uint16_t xlt, uint16_t ylt, uint16_t xrb, uint16_t yrb );
+
+bool update_frame();
+void init_ui();
+
+uint64_t get_time_ms()
+{
+    struct timeval tv;
+    gettimeofday( &tv, NULL );
+    uint64_t milliseconds = ( tv.tv_sec * 1000 ) + ( tv.tv_usec / 1000 );
+    return milliseconds;
+}
+
+int main()
 {
     if ( SDL_Init( SDL_INIT_VIDEO ) != 0 )
     {
@@ -46,8 +62,8 @@ int  main()
         "RISCV UI EMULATOR",     // 窗口标题
         SDL_WINDOWPOS_UNDEFINED, // 窗口的初始位置
         SDL_WINDOWPOS_UNDEFINED,
-        1024,            // 窗口的宽度
-        768,             // 窗口的高度
+        640,             // 窗口的宽度
+        480,             // 窗口的高度
         SDL_WINDOW_SHOWN // 窗口的显示标志
     );
 
@@ -57,37 +73,35 @@ int  main()
         return 1;
     }
     renderer = SDL_CreateRenderer( sdlwindow, -1, SDL_RENDERER_ACCELERATED );
-    texture  = SDL_CreateTexture( renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_STREAMING, 1024, 768 );
+    texture  = SDL_CreateTexture( renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_STREAMING, 640, 480 );
     assert( texture && renderer );
 
+    init_ui();
     while ( 1 )
     {
-        static int i;
-
-        if ( i == 1024 * 768 )
-        {
-            return 0;
-        }
-        vmem[ i ] = -1;
+        static uint64_t timer;
+        while ( get_time_ms() - timer < 1000 / 30 )
+            ;
+        timer = get_time_ms();
 
         if ( scan_input() == -1 )
         {
+            SDL_DestroyWindow( sdlwindow );
             return 0;
         }
 
-        cycle_entry();
-        render();
+        render( update_frame( &input_event ) );
 
-        i++;
+        // i++;
     }
 
     int c = getchar();
     printf( "Hello!\n" );
 }
 
-void render()
+void render( bool en )
 {
-    SDL_UpdateTexture( texture, NULL, vmem, 1024 * 4 );
+    SDL_UpdateTexture( texture, NULL, en ? vmem : blank, 2560 );
     SDL_RenderClear( renderer );
     SDL_RenderCopy( renderer, texture, NULL, NULL );
     SDL_RenderPresent( renderer );
