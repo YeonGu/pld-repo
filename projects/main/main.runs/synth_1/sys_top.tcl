@@ -101,6 +101,8 @@ read_verilog -library xil_defaultlib {
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v}
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/utils/bicubic/bicubic_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/debug/debug_sim_cam.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v
@@ -113,6 +115,13 @@ read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/camer
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer_ooc.xdc]
 
 read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/video_rd_fifo/video_rd_fifo.xci
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo.xdc]
@@ -138,8 +147,10 @@ set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
 
-read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram_ooc.xdc]
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_clocks.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Oct 22 18:12:44 2023
+| Date         : Fri Oct 27 22:10:33 2023
 | Host         : Kasaki352 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file sys_top_methodology_drc_routed.rpt -pb sys_top_methodology_drc_routed.pb -rpx sys_top_methodology_drc_routed.rpx
 | Design       : sys_top
@@ -23,19 +23,19 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 115
+             Violations found: 112
 +-----------+------------------+-----------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                               | Violations |
 +-----------+------------------+-----------------------------------------------------------+------------+
-| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 2          |
-| TIMING-7  | Critical Warning | No common node between related clocks                     | 2          |
-| TIMING-8  | Critical Warning | No common period between related clocks                   | 3          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks                     | 1          |
+| TIMING-8  | Critical Warning | No common period between related clocks                   | 2          |
 | TIMING-51 | Critical Warning | No common phase between related clocks from parallel CMBs | 1          |
 | HPDR-1    | Warning          | Port pin direction inconsistency                          | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                              | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                              | 3          |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain           | 25         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                         | 1          |
-| TIMING-16 | Warning          | Large setup violation                                     | 35         |
+| TIMING-16 | Warning          | Large setup violation                                     | 34         |
 | TIMING-18 | Warning          | Missing input or output delay                             | 10         |
 | XDCB-5    | Warning          | Runtime inefficient way to find pin objects               | 1          |
 | REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                         | 32         |
@@ -48,19 +48,9 @@ No common primary clock between related clocks
 The clocks camera_clock and clk_pll_i are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks camera_clock] -to [get_clocks clk_pll_i]
 Related violations: <none>
 
-TIMING-6#2 Critical Warning
-No common primary clock between related clocks  
-The clocks camera_clock and hdmi_pix_clk_wiz_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks camera_clock] -to [get_clocks hdmi_pix_clk_wiz_1]
-Related violations: <none>
-
 TIMING-7#1 Critical Warning
 No common node between related clocks  
 The clocks camera_clock and clk_pll_i are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks camera_clock] -to [get_clocks clk_pll_i]
-Related violations: <none>
-
-TIMING-7#2 Critical Warning
-No common node between related clocks  
-The clocks camera_clock and hdmi_pix_clk_wiz_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks camera_clock] -to [get_clocks hdmi_pix_clk_wiz_1]
 Related violations: <none>
 
 TIMING-8#1 Critical Warning
@@ -69,11 +59,6 @@ The clocks camera_clock and clk_pll_i are found related (timed together) but hav
 Related violations: <none>
 
 TIMING-8#2 Critical Warning
-No common period between related clocks  
-The clocks camera_clock and hdmi_pix_clk_wiz_1 are found related (timed together) but have no common (expandable) period
-Related violations: <none>
-
-TIMING-8#3 Critical Warning
 No common period between related clocks  
 The clocks hdmi_pix_clk_wiz_1 and clk_pll_i are found related (timed together) but have no common (expandable) period
 Related violations: <none>
@@ -110,132 +95,152 @@ Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
+LUT cell video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[25]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[26]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[27]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[28]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[29]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[2]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[30]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[31]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[3]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[4]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[5]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[6]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[7]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[8]/CLR,
+video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p_reg[9]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
 LUT cell video_system/video_sys_clk_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) video_system/video_sys_clk/inst/mmcm_adv_inst/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X34Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X57Y62 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X32Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X56Y64 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X31Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X56Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X33Y85 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X56Y62 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X30Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X53Y62 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X34Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X55Y63 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X33Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X55Y65 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X32Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X54Y66 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X31Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X59Y60 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X29Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X58Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X28Y83 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X59Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X54Y115 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X69Y108 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#13 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X51Y105 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X29Y105 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#14 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X33Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X32Y110 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#15 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X31Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X32Y106 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#16 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X30Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X28Y109 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#17 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X32Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X28Y111 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#18 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X29Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X31Y108 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#19 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X31Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X31Y110 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#20 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X29Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X29Y109 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#21 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X30Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X28Y107 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#22 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X29Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X34Y108 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#23 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X28Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X30Y112 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#24 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X31Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X30Y107 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#25 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X28Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell video_system/memory_top/mig_inst/u_mig_7series_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X45Y95 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -245,177 +250,172 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -4.249 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[11]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.706 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/vsyncs_reg[0]/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -4.249 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[12]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.676 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[0]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -4.249 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[13]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.676 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[1]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -4.249 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[14]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.676 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[2]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -4.378 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[3]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.676 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[31]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -4.378 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[4]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.826 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[23]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -4.378 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[5]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.826 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[24]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -4.378 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[6]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.826 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[25]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -4.388 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[15]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.826 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[26]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -4.388 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[16]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.912 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[10]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -4.388 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[17]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.912 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[7]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -4.388 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[18]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.912 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[8]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -4.413 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[23]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.912 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[9]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -4.413 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[24]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.956 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[19]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -4.413 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[25]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.956 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[20]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -4.413 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[26]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.956 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[21]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -4.424 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[0]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.956 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[22]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -4.424 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[1]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.966 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[15]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -4.424 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[2]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.966 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[16]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -4.427 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[19]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.966 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[17]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -4.427 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[20]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.966 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[18]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -4.427 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[21]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.999 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[27]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -4.427 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[22]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.999 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[28]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -4.428 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[31]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.999 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[29]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -4.443 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[27]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.999 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[30]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -4.443 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[28]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.051 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[11]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -4.443 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[29]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.051 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[12]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -4.443 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[30]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.051 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[13]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -4.642 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[10]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.051 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[14]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -4.642 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[7]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.194 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[3]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -4.642 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[8]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.194 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[4]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -4.642 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[9]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.194 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[5]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -5.933 ns between video_system/camera_data_interface/camera_vsync_i_reg[1]/C (clocked by camera_clock) and video_system/memory_top/camera_axi_write/vsync_reg/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.194 ns between video_system/video_generator_inst/r_vsync_reg[1]/C (clocked by hdmi_pix_clk_wiz_1) and video_system/memory_top/axi_read_m/video_rd_addr_reg[6]/R (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -8.763 ns between video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg/C (clocked by camera_clock) and u_ila_1/inst/ila_core_inst/shifted_data_in_reg[7][19]_srl8_srlopt/D (clocked by hdmi_pix_clk_wiz_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#35 Warning
-Large setup violation  
-There is a large setup violation of -9.095 ns between video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i_reg/C (clocked by camera_clock) and u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by hdmi_pix_clk_wiz_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -6.112 ns between video_system/camera_data_interface/camera_vsync_i_reg[1]_replica/C (clocked by camera_clock) and video_system/memory_top/camera_axi_write/vsync_reg/D (clocked by clk_pll_i). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

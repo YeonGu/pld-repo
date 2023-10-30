@@ -38,9 +38,9 @@ module video_generator (
     /************************************************************/
     // Internal Signal
     /************************************************************/
-    wire        vpu_ram_rden;
-    reg  [15:0] vpu_ram_rdaddr;
-    wire [15:0] vpu_ram_rddata;
+    (*mark_debug="true"*)wire        vpu_ram_rden;
+    (*mark_debug="true"*)reg  [15:0] vpu_ram_rdaddr;
+    (*mark_debug="true"*)wire [15:0] vpu_ram_rddata;
 
 
     /** Main Screen Output **/

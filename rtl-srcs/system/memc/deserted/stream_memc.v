@@ -96,7 +96,7 @@ module stream_memc #(
     localparam MEMC_CAM_DATA_WR = 4'd4;  // See memc-cam-write.json
     localparam MEMC_VIDEO_RD = 4'd5;
 
-    (* mark_debug = "true" *)reg [3:0] state_current;
+    reg [3:0] state_current;
     reg [3:0] state_next;
     always @(*) begin
         state_next = state_current;

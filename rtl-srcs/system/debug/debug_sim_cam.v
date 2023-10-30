@@ -1,12 +1,12 @@
 
 
 module debug_sim_cam (
-                          input         i_clk_pix,
-                          input         i_rstn,
-                          input         i_use_color,
-    (*mark_debug="true"*) output [15:0] sim_data,
-    (*mark_debug="true"*) output        sim_data_wren,
-    (*mark_debug="true"*) output        sim_vsync
+    input         i_clk_pix,
+    input         i_rstn,
+    input         i_use_color,
+    output [15:0] sim_data,
+    output        sim_data_wren,
+    output        sim_vsync
 );
 
     localparam all_pix = 1024 * 768;
@@ -16,7 +16,7 @@ module debug_sim_cam (
     reg [31:0] pix_cnt;
     reg [31:0] wait_cnt;
 
-    (*mark_debug="true"*) reg [2:0] state_current = 0, state_next;
+    reg [2:0] state_current = 0, state_next;
 
     localparam S_IDLE = 0, S_WR = 1, S_WAIT = 2, S_SYNC = 3, S_WAIT2 = 4;
     always @(*) begin

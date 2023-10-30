@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1697969326" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sys_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698415428" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sys_top.dcp">
   <File Type="PA-TCL" Name="sys_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="sys_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sys_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="sys_top.vds"/>
   <File Type="RDS-UTIL" Name="sys_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="sys_top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="sys_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="sys_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="sys_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/vpu_result_ram/vpu_result_ram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -58,6 +75,20 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../rtl-srcs/system/memc/axi_master_write.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/utils/bicubic/bicubic_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/bicubic/bicubic_top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -178,10 +209,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="video_rd_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="video_rd_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="mig_7series_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vpu_result_ram"/>
+  <BlockFileSet Type="BlockSrcs" Name="bicubic_raw_cache"/>
 </GenRun>

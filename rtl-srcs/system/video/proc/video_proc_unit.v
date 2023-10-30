@@ -18,9 +18,11 @@ module video_proc_unit (
     // Video Processor Configs
 );
 
-    wire        vrr_wren;
-    wire [15:0] vrr_wraddr;
-    wire [15:0] vrr_wrdata;
+    assign o_proc_unit_clk = i_proc_unit_clk;
+
+    (*mark_debug="true"*)wire        vrr_wren;
+    (*mark_debug="true"*)wire [15:0] vrr_wraddr;
+    (*mark_debug="true"*)wire [15:0] vrr_wrdata;
 
     /** Configs **/
     wire [ 7:0] config_x;
@@ -38,8 +40,8 @@ module video_proc_unit (
         .i_bicubic_clk       (i_proc_unit_clk),       // input          i_bicubic_clk,
         .i_rstn              (bicubic_2x_rstn),       // input          i_rstn,
         .i_vsync             (~i_video_vsyncn),       // input          i_vsync,
-        .i_config_x          (config_x),                  // input  [  7:0] i_config_x,
-        .i_config_y          (config_y),                  // input  [  7:0] i_config_y,
+        .i_config_x          (config_x),              // input  [  7:0] i_config_x,
+        .i_config_y          (config_y),              // input  [  7:0] i_config_y,
         .o_proc_unit_req_addr(o_proc_unit_req_addr),  // output [ 31:0] o_proc_unit_req_addr,  // 视频处理模块 数据请求地址
         .o_proc_unit_req_en  (o_proc_unit_req_en),    // output         o_proc_unit_req_en,    // 视频处理模块 数据请求使能
         // 请求的数据输入 (AXI CLOCK)

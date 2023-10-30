@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Oct 22 18:09:45 2023
-# Process ID: 24128
+# Start of session at: Fri Oct 27 22:05:21 2023
+# Process ID: 27508
 # Current directory: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1
 # Command line: vivado.exe -log sys_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sys_top.tcl -notrace
 # Log file: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top.vdi
@@ -22,13 +22,19 @@ INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects
 INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo.dcp' for cell 'video_system/memory_top/axi_read_m/video_fifo_inst'
 INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.dcp' for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst'
 INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram.dcp' for cell 'video_system/video_generator_inst/vpu/vpu_ram'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.248 . Memory (MB): peak = 1910.504 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 723 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.dcp' for cell 'video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0'
+INFO: [Project 1-454] Reading design checkpoint 'e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.dcp' for cell 'video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1948.605 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7595 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0/U0'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0/U0'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1/U0'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1/U0'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo.xdc] for cell 'video_system/memory_top/axi_read_m/video_fifo_inst/U0'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo.xdc] for cell 'video_system/memory_top/axi_read_m/video_fifo_inst/U0'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'video_system/memory_top/mig_inst'
@@ -40,13 +46,129 @@ Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'soc_clk/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2646.805 ; gain = 543.195
+get_clocks: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2707.375 ; gain = 556.633
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'soc_clk/inst'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'video_system/video_sys_clk/inst'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'video_system/video_sys_clk/inst'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'video_system/video_sys_clk/inst'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'video_system/video_sys_clk/inst'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0'
 Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[0]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[1]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[2]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[3]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[4]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[5]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[6]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[7]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[8]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[9]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[10]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[11]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[12]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[13]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[14]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[15]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[16]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[17]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[18]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[19]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[20]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[21]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[22]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[23]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[24]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[25]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[26]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[27]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[28]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[29]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[30]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_addr[31]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:74]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[0]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[1]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[2]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[3]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[4]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[5]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[6]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[7]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[8]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/wr_cnt[9]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:75]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[0]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[1]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[2]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[3]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[4]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[5]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[6]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[7]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[8]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[9]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[10]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[11]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[12]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[13]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[14]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[15]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[16]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[17]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[18]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[19]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[20]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[21]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[22]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[23]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[24]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[25]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[26]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[27]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[28]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[29]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[30]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWADDR[31]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:76]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/M_AXI_AWVALID'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:77]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:77]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[0]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[1]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[2]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[3]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[4]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[5]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[6]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[7]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[8]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[9]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[10]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[11]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[12]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[13]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[14]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data[15]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/state_current[0]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/state_current[1]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/state_current[2]'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:79]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:79]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/camera_axi_write/cam_fifo_full'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:80]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:80]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_data_wren'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:81]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:81]
+WARNING: [Vivado 12-507] No nets matched 'video_system/debug_cam/sim_vsync'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:82]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:82]
+WARNING: [Vivado 12-507] No nets matched 'video_system/video_generator_inst/vpu/bicubic_2x/p_0_in'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:93]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:93]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/axi_read_m/video_fifo_empty'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:99]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:99]
+WARNING: [Vivado 12-507] No nets matched 'video_system/memory_top/axi_read_m/video_fifo_full'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:100]
+INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:100]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:100]
+CRITICAL WARNING: [Chipscope 16-577] u_ila_1_CLK is a flow generated net. This net cannot be used in connect_debug_port command for dbg_hub core. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:269]
 Finished Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0'
@@ -54,22 +176,24 @@ Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vid
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo_clocks.xdc] for cell 'video_system/memory_top/axi_read_m/video_fifo_inst/U0'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0'
-INFO: [Project 1-1714] 18 XPM XDC files have been applied to the design.
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_clocks.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_clocks.xdc] for cell 'video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0'
+INFO: [Project 1-1714] 24 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2658.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2723.781 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 244 instances were transformed.
+  A total of 248 instances were transformed.
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 4 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 32 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 26 instances
-  OBUFDS => OBUFDS: 4 instances
+  OBUFDS => OBUFDS: 8 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 167 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
 
-17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+20 Infos, 100 Warnings, 13 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2658.641 ; gain = 1207.918
+link_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 2723.781 ; gain = 1272.965
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 Command: opt_design
@@ -82,13 +206,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors, 1 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.852 . Memory (MB): peak = 2658.641 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.958 . Memory (MB): peak = 2723.781 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1465becb2
+Ending Cache Timing Information Task | Checksum: 22b012254
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.437 . Memory (MB): peak = 2658.641 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.874 . Memory (MB): peak = 2723.781 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -100,47 +224,16 @@ INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
 INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_1 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_1_CV.
 INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = a9a43a5d72b8b975.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 714ba78376688dbe.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = afb9420e4b50a364.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 3019.695 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 153b33d2c
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 091ee268addabcfd.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = d3b085bb25e635c3.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 3103.309 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1820cce4e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 3019.695 ; gain = 42.109
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:36 . Memory (MB): peak = 3103.309 ; gain = 57.508
 
 Phase 2 Retarget
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/ena is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__10
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__11
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__3
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__4
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__5
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__6
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__7
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__8
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__9
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/enb is driving LUT input pin I1 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__10
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__11
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__3
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I3 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__4
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__5
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__6
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__7
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I4 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__8
-WARNING: [Opt 31-155] Driverless net video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/enb is driving LUT input pin I2 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: video_system/video_generator_inst/vpu/vpu_ram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_b.bindec_inst_b/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__9
-INFO: [Opt 31-1287] Pulled Inverter u_ila_0/inst/ila_core_inst/xsdb_memory_read_inst/current_state[0]_i_1 into driver instance u_ila_0/inst/ila_core_inst/xsdb_memory_read_inst/read_addr[11]_i_3, which resulted in an inversion of 14 pins
+INFO: [Opt 31-1287] Pulled Inverter u_ila_0/inst/ila_core_inst/xsdb_memory_read_inst/current_state[0]_i_1 into driver instance u_ila_0/inst/ila_core_inst/xsdb_memory_read_inst/read_addr[10]_i_3, which resulted in an inversion of 15 pins
+INFO: [Opt 31-1287] Pulled Inverter u_ila_1/inst/ila_core_inst/xsdb_memory_read_inst/current_state[0]_i_1 into driver instance u_ila_1/inst/ila_core_inst/xsdb_memory_read_inst/read_addr[10]_i_3, which resulted in an inversion of 15 pins
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_tempmon_0/tempmon_state[0]_i_1 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_tempmon_0/tempmon_state[10]_i_6, which resulted in an inversion of 14 pins
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/gen_no_mirror.div_clk_loop[0].phy_address[10]_i_1 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/gen_no_mirror.div_clk_loop[0].phy_address[10]_i_2, which resulted in an inversion of 4 pins
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/mc0/bank_mach0/arb_mux0/arb_row_col0/col_arb0/col_mux.col_rd_wr_r_i_1 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/mem_intfc0/mc0/bank_mach0/arb_mux0/arb_row_col0/col_arb0/i___14_i_1, which resulted in an inversion of 10 pins
@@ -154,49 +247,51 @@ INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7seri
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/USE_UPSIZER.upsizer_d2/si_register_slice_inst/ar_pipe/USE_FPGA_FIFO.DATA_GEN[16].USE_32.SRLC32E_inst_i_1__0 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/USE_UPSIZER.upsizer_d2/si_register_slice_inst/ar_pipe/USE_FPGA.and2b1l_inst_i_2__2, which resulted in an inversion of 5 pins
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/USE_UPSIZER.upsizer_d2/si_register_slice_inst/aw_pipe/USE_FPGA_FIFO.DATA_GEN[38].USE_32.SRLC32E_inst_i_1 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/USE_UPSIZER.upsizer_d2/si_register_slice_inst/aw_pipe/USE_FPGA_FIFO.DATA_GEN[38].USE_32.SRLC32E_inst_i_2, which resulted in an inversion of 4 pins
 INFO: [Opt 31-1287] Pulled Inverter video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/axi_mc_cmd_arbiter_0/r_push_i_1 into driver instance video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_memc_ui_top_axi/u_axi_mc/axi_mc_cmd_arbiter_0/axready_i_3, which resulted in an inversion of 13 pins
-INFO: [Opt 31-138] Pushed 7 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-1287] Pulled Inverter video_system/video_generator_inst/vpu/bicubic_2x/blu22[14]_i_348 into driver instance video_system/video_generator_inst/vpu/bicubic_2x/blu12[11]_i_137, which resulted in an inversion of 10 pins
+INFO: [Opt 31-1287] Pulled Inverter video_system/video_generator_inst/vpu/bicubic_2x/blu22[14]_i_436 into driver instance video_system/video_generator_inst/vpu/bicubic_2x/blu12[11]_i_138, which resulted in an inversion of 10 pins
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 21 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 158625317
+Phase 2 Retarget | Checksum: 229089513
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:33 . Memory (MB): peak = 3019.695 ; gain = 42.109
-INFO: [Opt 31-389] Phase Retarget created 405 cells and removed 484 cells
-INFO: [Opt 31-1021] In phase Retarget, 192 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:38 . Memory (MB): peak = 3108.246 ; gain = 62.445
+INFO: [Opt 31-389] Phase Retarget created 419 cells and removed 510 cells
+INFO: [Opt 31-1021] In phase Retarget, 198 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
-INFO: [Opt 31-138] Pushed 3 inverter(s) to 20 load pin(s).
-Phase 3 Constant propagation | Checksum: 1a1197d95
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 19 load pin(s).
+Phase 3 Constant propagation | Checksum: 1a2a2be4b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:33 . Memory (MB): peak = 3019.695 ; gain = 42.109
-INFO: [Opt 31-389] Phase Constant propagation created 122 cells and removed 487 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 139 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:38 . Memory (MB): peak = 3108.246 ; gain = 62.445
+INFO: [Opt 31-389] Phase Constant propagation created 139 cells and removed 457 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 157 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: ae9816db
+Phase 4 Sweep | Checksum: 14bcb967c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 3019.695 ; gain = 42.109
-INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 355 cells
-INFO: [Opt 31-1021] In phase Sweep, 1677 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:39 . Memory (MB): peak = 3108.246 ; gain = 62.445
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 234 cells
+INFO: [Opt 31-1021] In phase Sweep, 2214 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
 INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
-Phase 5 BUFG optimization | Checksum: aeca334d
+Phase 5 BUFG optimization | Checksum: 16b0cd664
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 3019.695 ; gain = 42.109
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:39 . Memory (MB): peak = 3108.246 ; gain = 62.445
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 1 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: aeca334d
+Phase 6 Shift Register Optimization | Checksum: 16b0cd664
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 3019.695 ; gain = 42.109
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:39 . Memory (MB): peak = 3108.246 ; gain = 62.445
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: cb0f92b3
+Phase 7 Post Processing Netlist | Checksum: 1d1b4973c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:34 . Memory (MB): peak = 3019.695 ; gain = 42.109
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:39 . Memory (MB): peak = 3108.246 ; gain = 62.445
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 126 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 155 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -204,59 +299,59 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             405  |             484  |                                            192  |
-|  Constant propagation         |             122  |             487  |                                            139  |
-|  Sweep                        |               2  |             355  |                                           1677  |
+|  Retarget                     |             419  |             510  |                                            198  |
+|  Constant propagation         |             139  |             457  |                                            157  |
+|  Sweep                        |               2  |             234  |                                           2214  |
 |  BUFG optimization            |               0  |               1  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                            126  |
+|  Post Processing Netlist      |               0  |               0  |                                            155  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 3019.695 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 21df075f9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 3108.246 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1160884ff
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:34 . Memory (MB): peak = 3019.695 ; gain = 42.109
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:40 . Memory (MB): peak = 3108.246 ; gain = 62.445
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 3 BRAM(s) out of a total of 26 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 13 BRAM(s) out of a total of 64 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
-Number of BRAM Ports augmented: 25 newly gated: 2 Total Ports: 52
-Ending PowerOpt Patch Enables Task | Checksum: 222541700
+INFO: [Pwropt 34-201] Structural ODC has moved 11 WE to EN ports
+Number of BRAM Ports augmented: 61 newly gated: 11 Total Ports: 128
+Ending PowerOpt Patch Enables Task | Checksum: 1631a349c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.712 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 222541700
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1631a349c
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3337.434 ; gain = 317.738
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 3659.484 ; gain = 551.238
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 222541700
+Ending Final Cleanup Task | Checksum: 1631a349c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1db324f5e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1af75d5dc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-79 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 144 Warnings, 13 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:43 . Memory (MB): peak = 3337.434 ; gain = 678.793
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:53 . Memory (MB): peak = 3659.484 ; gain = 935.703
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -264,8 +359,9 @@ INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file sys_top_drc_opted.rpt -pb sys_top_drc_opted.pb -rpx sys_top_drc_opted.rpx
 Command: report_drc -file sys_top_drc_opted.rpt -pb sys_top_drc_opted.pb -rpx sys_top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -281,7 +377,7 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 22 Warnings
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 43 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
@@ -290,11 +386,11 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13c47c12a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14bc63add
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
@@ -302,51 +398,51 @@ WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. T
 	i_camera_pclk_IBUF_inst (IBUF.O) is locked to IOB_X0Y57
 	i_camera_pclk_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y7
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1a17c4084
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e592cd71
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1ca327da4
+Phase 1.3 Build Placer Netlist Model | Checksum: 17b3d858d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1ca327da4
+Phase 1.4 Constrain Clocks/Macros | Checksum: 17b3d858d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1ca327da4
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 17b3d858d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1b5504c8c
+Phase 2.1 Floorplanning | Checksum: 16e7a845a
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e85d2a9f
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1e039d124
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1d3f78617
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 11641e7de
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 5a4008ac
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 16963297e
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 1260 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 1636 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 561 nets or LUTs. Breaked 0 LUT, combined 561 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 723 nets or LUTs. Breaked 0 LUT, combined 723 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -354,15 +450,15 @@ INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 1 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3337.434 ; gain = 0.000
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -371,78 +467,78 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            561  |                   561  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            723  |                   723  |           0  |           1  |  00:00:01  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Shift Register                                   |            1  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            1  |            561  |                   562  |           0  |           9  |  00:00:01  |
+|  Total                                            |            0  |            723  |                   723  |           0  |           9  |  00:00:01  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 63564c73
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: c38e13c3
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: d5f2fc5d
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 1281dbbb9
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 2 Global Placement | Checksum: d5f2fc5d
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1281dbbb9
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 659acb78
+Phase 3.1 Commit Multi Column Macros | Checksum: d2eb5f41
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:31 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14ad30616
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19a8c0c6e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 18dcc255b
+Phase 3.3 Area Swap Optimization | Checksum: 203d76afc
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 188eea2f8
+Phase 3.4 Pipeline Register Optimization | Checksum: 15f0f8838
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:36 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: fe4b653d
+Phase 3.5 Fast Optimization | Checksum: 1616f0818
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: ce727dc5
+Phase 3.6 Small Shape Detail Placement | Checksum: 14a1e5529
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:56 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 406bbba0
+Phase 3.7 Re-assign LUT pins | Checksum: 1304ce379
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 17eb8a883
+Phase 3.8 Pipeline Register Optimization | Checksum: 14bf7eb33
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:59 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: dedee81f
+Phase 3.9 Fast Optimization | Checksum: 16994a7f8
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: dedee81f
+Time (s): cpu = 00:00:25 ; elapsed = 00:01:05 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 16994a7f8
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:25 ; elapsed = 00:01:05 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -450,7 +546,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 199e785e9
+Post Placement Optimization Initialization | Checksum: 1a8b9ebda
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -458,33 +554,35 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.566 | TNS=-59.511 |
-Phase 1 Physical Synthesis Initialization | Checksum: 20d31deb9
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.337 | TNS=-37.204 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a9d08db9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.706 . Memory (MB): peak = 3337.434 ; gain = 0.000
-INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1e5b971e8
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 3659.484 ; gain = 0.000
+INFO: [Place 46-33] Processed net video_system/video_generator_inst/vpu/bicubic_2x/loaded_pixel[2][125][15]_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net video_system/video_generator_inst/vpu/bicubic_2x/bicubic_core_2x/rst0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 18258a7fe
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.825 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 199e785e9
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a8b9ebda
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:01:14 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-9.379. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 282c5ea55
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-6.329. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1b408de27
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 282c5ea55
+Time (s): cpu = 00:00:28 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1b408de27
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:28 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 282c5ea55
+Phase 4.2 Post Placement Cleanup | Checksum: 1b408de27
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -494,98 +592,113 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Short Congestion  |
 | Direction | Region Size       | Region Size       |
 |___________|___________________|___________________|
-|      North|                1x1|                2x2|
+|      North|                1x1|                4x4|
 |___________|___________________|___________________|
-|      South|                1x1|                1x1|
+|      South|                1x1|                4x4|
 |___________|___________________|___________________|
-|       East|                1x1|                1x1|
+|       East|                1x1|                2x2|
 |___________|___________________|___________________|
-|       West|                1x1|                1x1|
+|       West|                1x1|                2x2|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 282c5ea55
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1b408de27
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 282c5ea55
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1b408de27
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1f5c8594f
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:17 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1017fd6aa
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Ending Placer Task | Checksum: 1246a94fe
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:18 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Ending Placer Task | Checksum: db3e606d
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:37 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:29 ; elapsed = 00:01:18 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-120 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+129 Infos, 145 Warnings, 13 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:38 . Memory (MB): peak = 3337.434 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:30 ; elapsed = 00:01:19 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file sys_top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 3337.434 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file sys_top_utilization_placed.rpt -pb sys_top_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file sys_top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 3337.434 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 3659.484 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3337.434 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 2.00s |  WALL: 2.20s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3659.484 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 3.00s |  WALL: 4.86s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.379 | TNS=-52.615 |
-Phase 1 Physical Synthesis Initialization | Checksum: fcb07362
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.329 | TNS=-24.045 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1afc4d1d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3337.434 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.379 | TNS=-52.615 |
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.329 | TNS=-24.045 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: fcb07362
+Phase 2 DSP Register Optimization | Checksum: 1afc4d1d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.379 | TNS=-52.615 |
-INFO: [Physopt 32-702] Processed net u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/all_dly1[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net u_ila_1/inst/ila_core_inst/u_trig/U_TM/probe_data[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.329 | TNS=-24.045 |
+INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/vsync. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net video_system/camera_data_interface/Q[0]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net video_system/camera_data_interface/Q[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.318 | TNS=-24.034 |
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/Q[0]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i_reg[1]_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i_camera_pclk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i_camera_pclk. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/vsync. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/cam_frame_sync. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net u_ila_1/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/all_dly1[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net u_ila_1/inst/ila_core_inst/u_trig/U_TM/probe_data[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/Q[0]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i_reg[1]_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i_camera_pclk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net i_camera_pclk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/vsync. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/cam_frame_sync. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-9.379 | TNS=-52.615 |
-Phase 3 Critical Path Optimization | Checksum: fcb07362
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.318 | TNS=-24.034 |
+Phase 3 Critical Path Optimization | Checksum: 1afc4d1d4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-9.379 | TNS=-52.615 |
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.318 | TNS=-24.034 |
+INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/vsync. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/Q[0]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i_reg[1]_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i_camera_pclk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i_camera_pclk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/memory_top/camera_axi_write/vsync. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/Q[0]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net video_system/camera_data_interface/camera_vsync_i_reg[1]_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i_camera_pclk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net i_camera_pclk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.318 | TNS=-24.034 |
+Phase 4 Critical Path Optimization | Checksum: 1afc4d1d4
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3659.484 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-6.318 | TNS=-24.034 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -595,27 +708,32 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  Critical Path  |          0.011  |          0.011  |            1  |              0  |                     1  |           0  |           2  |  00:00:00  |
+|  Total          |          0.011  |          0.011  |            1  |              0  |                     1  |           0  |           3  |  00:00:00  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3337.434 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 2aa159890
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3659.484 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 1c526538b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-152 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+170 Infos, 145 Warnings, 13 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3337.434 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3659.484 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3659.484 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
@@ -626,43 +744,43 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: fc47ff76 ConstDB: 0 ShapeSum: dbdbc705 RouteDB: 0
-Post Restoration Checksum: NetGraph: 26897258 NumContArr: fd047eb5 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 1238df10d
+Checksum: PlaceDB: 8c23a9dd ConstDB: 0 ShapeSum: 6245a53b RouteDB: 0
+Post Restoration Checksum: NetGraph: d7ffe5e3 NumContArr: 47fb209c Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 11ffb067f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 3397.137 ; gain = 59.703
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1238df10d
+Phase 2.1 Fix Topology Constraints | Checksum: 11ffb067f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 3402.633 ; gain = 65.199
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3659.484 ; gain = 0.000
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1238df10d
+Phase 2.2 Pre Route Cleanup | Checksum: 11ffb067f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 3402.633 ; gain = 65.199
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3659.484 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1363cabca
+Phase 2.3 Update Timing | Checksum: 22bc020c2
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 3458.176 ; gain = 120.742
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.083 | TNS=-51.306| WHS=-1.400 | THS=-563.149|
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 3708.457 ; gain = 48.973
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.112 | TNS=-23.107| WHS=-1.598 | THS=-715.672|
 
 
 Phase 2.4 Update Timing for Bus Skew
 
 Phase 2.4.1 Update Timing
-Phase 2.4.1 Update Timing | Checksum: 1b530d4f8
+Phase 2.4.1 Update Timing | Checksum: 2024473d3
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 3477.727 ; gain = 140.293
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.083 | TNS=-56.327| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 3746.918 ; gain = 87.434
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.112 | TNS=-35.937| WHS=N/A    | THS=N/A    |
 
-Phase 2.4 Update Timing for Bus Skew | Checksum: 16fb89f04
+Phase 2.4 Update Timing for Bus Skew | Checksum: 215de5ffa
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 3487.824 ; gain = 150.391
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 3746.918 ; gain = 87.434
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0.00252426 %
@@ -670,37 +788,37 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 21180
+  Number of Failed Nets               = 37866
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 21179
+  Number of Unrouted Nets             = 37865
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 11569953c
+Phase 2 Router Initialization | Checksum: 165a2795e
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 3487.824 ; gain = 150.391
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 3746.918 ; gain = 87.434
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 11569953c
+Phase 3.1 Global Routing | Checksum: 165a2795e
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 3487.824 ; gain = 150.391
-Phase 3 Initial Routing | Checksum: 19c65bed0
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 3746.918 ; gain = 87.434
+Phase 3 Initial Routing | Checksum: 191e0b9a7
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:33 . Memory (MB): peak = 3510.406 ; gain = 172.973
-INFO: [Route 35-580] Design has 32 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 3852.645 ; gain = 193.160
+INFO: [Route 35-580] Design has 33 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +====================+====================+============================================================+
 | Launch Setup Clock | Launch Hold Clock  | Pin                                                        |
 +====================+====================+============================================================+
-| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[11]/R |
-| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[12]/R |
-| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[13]/R |
-| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[14]/R |
-| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[23]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[15]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[16]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[17]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[18]/R |
+| hdmi_pix_clk_wiz_1 | hdmi_pix_clk_wiz_1 | video_system/memory_top/axi_read_m/video_rd_addr_reg[19]/R |
 +--------------------+--------------------+------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -709,80 +827,80 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1341
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 7402
+ Number of Nodes with overlaps = 130
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.094 | TNS=-165.547| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.111 | TNS=-136.523| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1a78a23c9
+Phase 4.1 Global Iteration 0 | Checksum: 13536fd69
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:19 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.094 | TNS=-165.231| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.111 | TNS=-135.136| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: d0eef79c
+Phase 4.2 Global Iteration 1 | Checksum: 18894efc4
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:35 ; elapsed = 00:01:20 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.094 | TNS=-165.231| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.111 | TNS=-135.136| WHS=N/A    | THS=N/A    |
 
-Phase 4.3 Global Iteration 2 | Checksum: 146b25da9
+Phase 4.3 Global Iteration 2 | Checksum: af562049
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 3510.406 ; gain = 172.973
-Phase 4 Rip-up And Reroute | Checksum: 146b25da9
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:22 . Memory (MB): peak = 3852.645 ; gain = 193.160
+Phase 4 Rip-up And Reroute | Checksum: af562049
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:22 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: c3f3ffcc
+Phase 5.1.1 Update Timing | Checksum: bbdfe749
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 3510.406 ; gain = 172.973
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.094 | TNS=-165.231| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:23 . Memory (MB): peak = 3852.645 ; gain = 193.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.111 | TNS=-135.136| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 11925d277
+Phase 5.1 Delay CleanUp | Checksum: 12b71602b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:24 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 11925d277
+Phase 5.2 Clock Skew Optimization | Checksum: 12b71602b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 3510.406 ; gain = 172.973
-Phase 5 Delay and Skew Optimization | Checksum: 11925d277
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:24 . Memory (MB): peak = 3852.645 ; gain = 193.160
+Phase 5 Delay and Skew Optimization | Checksum: 12b71602b
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:40 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:36 ; elapsed = 00:01:24 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: cf1d10d8
+Phase 6.1.1 Update Timing | Checksum: ee116bf0
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 3510.406 ; gain = 172.973
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.094 | TNS=-165.231| WHS=0.022  | THS=0.000  |
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:26 . Memory (MB): peak = 3852.645 ; gain = 193.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-6.111 | TNS=-135.136| WHS=0.021  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 8f485189
+Phase 6.1 Hold Fix Iter | Checksum: 1539ae681
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 3510.406 ; gain = 172.973
-Phase 6 Post Hold Fix | Checksum: 8f485189
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:27 . Memory (MB): peak = 3852.645 ; gain = 193.160
+Phase 6 Post Hold Fix | Checksum: 1539ae681
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:27 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.2163 %
-  Global Horizontal Routing Utilization  = 3.91127 %
+  Global Vertical Routing Utilization    = 9.90186 %
+  Global Horizontal Routing Utilization  = 11.2592 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -793,10 +911,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 57.6577%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 58.8235%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 71.1712%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 79.2793%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -818,45 +936,46 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: f8e20ff5
+Phase 7 Route finalize | Checksum: b18ef37d
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:27 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: f8e20ff5
+Phase 8 Verifying routed nets | Checksum: b18ef37d
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:27 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 11124333d
+Phase 9 Depositing Routes | Checksum: b7cff296
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:42 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:37 ; elapsed = 00:01:31 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-9.094 | TNS=-165.231| WHS=0.022  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-6.111 | TNS=-135.136| WHS=0.021  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 11124333d
+Phase 10 Post Router Timing | Checksum: b7cff296
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:38 ; elapsed = 00:01:33 . Memory (MB): peak = 3852.645 ; gain = 193.160
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 3510.406 ; gain = 172.973
+Time (s): cpu = 00:00:38 ; elapsed = 00:01:33 . Memory (MB): peak = 3852.645 ; gain = 193.160
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-170 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+191 Infos, 146 Warnings, 13 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 3510.406 ; gain = 172.973
+route_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:35 . Memory (MB): peak = 3852.645 ; gain = 193.160
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3510.406 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3852.645 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 3852.645 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file sys_top_drc_routed.rpt -pb sys_top_drc_routed.pb -rpx sys_top_drc_routed.rpx
 Command: report_drc -file sys_top_drc_routed.rpt -pb sys_top_drc_routed.pb -rpx sys_top_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -869,22 +988,23 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3510.406 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 3852.645 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file sys_top_power_routed.rpt -pb sys_top_power_summary_routed.pb -rpx sys_top_power_routed.rpx
 Command: report_power -file sys_top_power_routed.rpt -pb sys_top_power_summary_routed.pb -rpx sys_top_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-182 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+203 Infos, 146 Warnings, 13 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3554.438 ; gain = 44.031
+report_power: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 3852.645 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file sys_top_route_status.rpt -pb sys_top_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file sys_top_timing_summary_routed.rpt -pb sys_top_timing_summary_routed.pb -rpx sys_top_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3861.426 ; gain = 8.781
 INFO: [runtcl-4] Executing : report_incremental_reuse -file sys_top_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
 INFO: [runtcl-4] Executing : report_clock_utilization -file sys_top_clock_utilization_routed.rpt
@@ -905,6 +1025,14 @@ WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for vi
 WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/HDMI_TMDS_Interface/Serializer_Interface_Inst_G/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
 WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/HDMI_TMDS_Interface/Serializer_Interface_Inst_R/gen_VIVADO_SERDES.OSERDESE2_Inst_Master with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
 WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/HDMI_TMDS_Interface/Serializer_Interface_Inst_R/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_B/gen_VIVADO_SERDES.OSERDESE2_Inst_Master with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_B/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_CLK/gen_VIVADO_SERDES.OSERDESE2_Inst_Master with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_CLK/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_G/gen_VIVADO_SERDES.OSERDESE2_Inst_Master with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_G/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_R/gen_VIVADO_SERDES.OSERDESE2_Inst_Master with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
+WARNING: [DRC AVAL-70] OSERDES_DataRateTqTriWidth: Unexpected programming for video_system/S_HDMI_TMDS_Interface/Serializer_Interface_Inst_R/gen_VIVADO_SERDES.OSERDESE2_Inst_Slave with TRISTATE_WIDTH. DATA_RATE_TQ set DDR expects TRISTATE_WIDTH to be set 4
 WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
 
  set_property CFGBVS value1 [current_design]
@@ -915,14 +1043,19 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
 
 Refer to the device configuration user guide for more information.
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_start output video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_start/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_start multiplier stage video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_start/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A5)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A3*A4)+(A3*(~A4)*(~A5))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A2*A1)+(A2*(~A1)*(~A5))+((~A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A3' of cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A6)*A2)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A2*A1)+(A2*(~A1)*(~A5))+((~A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
-WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A5)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A6)+((~A6)*(~A1)*A3)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A5' of cell video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A1)+((~A1)*(~A3)*A6)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A6' of cell video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A4)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violation. The signal video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out on the video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of video_system/memory_top/mig_inst/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_ENARDEN_cooolgate_en_sig_22) which is driven by a register (video_system/video_generator_inst/hdmi_timing_generator_inst/rgb_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_ENARDEN_cooolgate_en_sig_23) which is driven by a register (video_system/video_generator_inst/hdmi_timing_generator_inst/rgb_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_ENARDEN_cooolgate_en_sig_56) which is driven by a register (video_system/video_generator_inst/hdmi_timing_generator_inst/rgb_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_ENARDEN_cooolgate_en_sig_57) which is driven by a register (video_system/video_generator_inst/hdmi_timing_generator_inst/rgb_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/ENBWREN (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/WEBWE[0] (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/WEBWE[1] (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
@@ -941,8 +1074,28 @@ WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/m
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/WEBWE[5] (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/WEBWE[6] (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram has an input control pin video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC_sp.ram/WEBWE[7] (net: video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/camera_data_interface/rgb565_vde_o_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 64 net(s) have no routable loads. The problem bus(es) and/or net(s) are video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/ENA_dly_D, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[0], video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[2:0]... and (the first 15 of 48 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 37 Warnings
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/E[0]) which is driven by a register (video_system/video_generator_inst/vpu/bicubic_2x/state_current_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 87 net(s) have no routable loads. The problem bus(es) and/or net(s) are video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ENA_I, video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/ENA_dly_D, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/video_generator_inst/vpu/bicubic_2x/raw_data_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/memory_top/axi_read_m/bypass_rd_req_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], video_system/memory_top/axi_read_m/video_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, video_system/memory_top/camera_axi_write/cam_wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i... and (the first 15 of 69 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 70 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -955,7 +1108,7 @@ Writing bitstream ./sys_top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-12 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+12 Infos, 70 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 4063.344 ; gain = 495.680
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 22 18:13:07 2023...
+write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 4413.602 ; gain = 542.613
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 22:11:45 2023...

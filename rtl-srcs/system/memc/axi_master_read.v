@@ -44,13 +44,19 @@ module axi_master_read (
     /****************************************************************************/
     // Parameters & Signals & Declarations
     /****************************************************************************/
+    (*mark_debug="true"*)reg [1:0] vsyncs;
+    (*mark_debug="true"*)reg       vs_pulse;
+    always @(posedge ACLK) begin
+        vsyncs   <= {vsyncs[0], video_sync_frame};
+        vs_pulse <= (vsyncs == 2'b01);
+    end
 
     /** Video FIFO **/
-    (*mark_debug="true"*)wire       video_fifo_empty;
-    (*mark_debug="true"*)wire       video_fifo_full;
-    (*mark_debug="true"*)wire [6:0] video_fifo_cnt;
+    wire       video_fifo_empty;
+    wire       video_fifo_full;
+    (*mark_debug="true"*)wire [8:0] video_fifo_cnt;
 
-    (*mark_debug="true"*)wire       wr_rst_busy;
+    wire       wr_rst_busy;
 
     /** Bypass request event FIFO **/
     wire bypass_event_rden, bypass_req_empty;
@@ -59,15 +65,15 @@ module axi_master_read (
     wire        video_need_data;
     wire        bypass_need_data;
 
-    // FIFO在少于128个数据的时候请求新数据。
-    assign video_need_data  = (~video_fifo_cnt[6]) && (video_fifo_cnt != 7'h3f);
+    // FIFO在少于161个数据的时候请求新数据。
+    assign video_need_data  = video_fifo_cnt < 161;
 
     assign bypass_need_data = ~bypass_req_empty;
 
     /** AXI Read Address Control **/
     (*mark_debug="true"*)reg [31:0] video_rd_addr = 0;
     reg [31:0] rd_cnt;
-    localparam RD_BURST_NUM = 7'd64;
+    localparam RD_BURST_NUM = 7'd80;
     always @(posedge video_pclk) begin
         rd_cnt = video_fifo_rden ? rd_cnt + 1 : 0;
     end
@@ -97,7 +103,7 @@ module axi_master_read (
     reg read_to = 0;
     assign M_AXI_ARLEN = read_to == RD_TO_VIDEO ? RD_BURST_NUM - 1 : 7'd15;
 
-    reg [1:0] state_current, state_next;
+    (*mark_debug="true"*) reg [1:0] state_current, state_next;
     always @(*) begin
         state_next = state_current;
         case (state_current)
@@ -138,10 +144,13 @@ module axi_master_read (
     // assign bypass_event_rden = (state_current == S_RD_IDLE) && (state_next == S_RD_WA);
     assign bypass_event_rden = (read_to == RD_TO_BYPASS) && M_AXI_RLAST;
     always @(posedge ACLK) begin
+        if (~ARESETN) begin
+            video_rd_addr <= 0;
+        end
         if (video_sync_frame) begin
             video_rd_addr <= 0;
         end else begin
-            if (state_current == S_RD_DATA && M_AXI_RVALID) begin
+            if (state_current == S_RD_DATA && M_AXI_RVALID && (read_to == RD_TO_VIDEO)) begin
                 video_rd_addr <= video_rd_addr + 16;
             end else video_rd_addr <= video_rd_addr;
         end
@@ -162,9 +171,9 @@ module axi_master_read (
     video_rd_fifo video_fifo_inst (
         .rst(~sys_rstn || video_sync_frame),  // input wire rst
 
-        .wr_clk(ACLK),         // input wire wr_clk
-        .din   (M_AXI_RDATA),  // input wire [127 : 0] din
-        .wr_en (M_AXI_RVALID), // input wire wr_en
+        .wr_clk(ACLK),                                    // input wire wr_clk
+        .din   (M_AXI_RDATA),                             // input wire [127 : 0] din
+        .wr_en (M_AXI_RVALID & (read_to == RD_TO_VIDEO)), // input wire wr_en
 
         .rd_clk(video_pclk),       // input wire rd_clk
         .rd_en (video_fifo_rden),  // input wire rd_en
@@ -172,7 +181,7 @@ module axi_master_read (
 
         .full         (video_fifo_full),   // output wire full
         .empty        (video_fifo_empty),  // output wire empty
-        .wr_data_count(video_fifo_cnt),    // output wire [6 : 0] wr_data_count
+        .wr_data_count(video_fifo_cnt),    // output wire [8 : 0] wr_data_count
         .wr_rst_busy  (wr_rst_busy)        // output wire wr_rst_busy
         // .rd_rst_busy  (rd_rst_busy)     // output wire rd_rst_busy
     );

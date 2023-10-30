@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Sun Oct 22 18:12:50 2023
+| Date             : Fri Oct 27 22:10:51 2023
 | Host             : Kasaki352 running 64-bit major release  (build 9200)
 | Command          : report_power -file sys_top_power_routed.rpt -pb sys_top_power_summary_routed.pb -rpx sys_top_power_routed.rpx
 | Design           : sys_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.501        |
+| Total On-Chip Power (W)  | 1.637        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.394        |
-| Device Static (W)        | 0.107        |
+| Dynamic (W)              | 1.527        |
+| Device Static (W)        | 0.109        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 81.0         |
-| Junction Temperature (C) | 29.0         |
+| Max Ambient (C)          | 80.6         |
+| Junction Temperature (C) | 29.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.051 |       40 |       --- |             --- |
-| Slice Logic              |     0.014 |    27362 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     9087 |     63400 |           14.33 |
-|   Register               |    <0.001 |    12060 |    126800 |            9.51 |
+| Clocks                   |     0.047 |       40 |       --- |             --- |
+| Slice Logic              |     0.017 |    59862 |       --- |             --- |
+|   LUT as Logic           |     0.015 |    22063 |     63400 |           34.80 |
 |   LUT as Distributed RAM |    <0.001 |      702 |     19000 |            3.69 |
-|   CARRY4                 |    <0.001 |      380 |     15850 |            2.40 |
-|   LUT as Shift Register  |    <0.001 |      692 |     19000 |            3.64 |
-|   F7/F8 Muxes            |    <0.001 |       64 |     63400 |            0.10 |
-|   Others                 |    <0.001 |     1014 |       --- |             --- |
-| Signals                  |     0.018 |    21179 |       --- |             --- |
-| Block RAM                |     0.020 |     25.5 |       135 |           18.89 |
+|   Register               |    <0.001 |    22714 |    126800 |           17.91 |
+|   CARRY4                 |    <0.001 |      753 |     15850 |            4.75 |
+|   LUT as Shift Register  |    <0.001 |      999 |     19000 |            5.26 |
+|   F7/F8 Muxes            |    <0.001 |     6706 |     63400 |           10.58 |
+|   Others                 |    <0.001 |     1409 |       --- |             --- |
+| Signals                  |     0.023 |    37865 |       --- |             --- |
+| Block RAM                |     0.018 |       62 |       135 |           45.93 |
 | MMCM                     |     0.323 |        3 |         6 |           50.00 |
 | PLL                      |     0.116 |        1 |         6 |           16.67 |
-| I/O                      |     0.645 |       99 |       285 |           34.74 |
+| DSPs                     |     0.000 |        1 |       240 |            0.42 |
+| I/O                      |     0.776 |      106 |       285 |           37.19 |
 | PHASER                   |     0.203 |       26 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
-| Static Power             |     0.107 |          |           |                 |
-| Total                    |     1.501 |          |           |                 |
+| Static Power             |     0.109 |          |           |                 |
+| Total                    |     1.637 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,16 +80,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.182 |       0.164 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.186 |       0.166 |      0.019 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.445 |       0.426 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.045 |       0.041 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.084 |       0.080 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.220 |       0.216 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.003 |       0.001 |      0.002 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |       NA    | Unspecified | NA         |
@@ -185,28 +186,35 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| sys_top                             |     1.394 |
-|   dbg_hub                           |     0.002 |
-|     inst                            |     0.002 |
-|       BSCANID.u_xsdbm_id            |     0.002 |
+| sys_top                             |     1.527 |
+|   dbg_hub                           |     0.001 |
+|     inst                            |     0.001 |
+|       BSCANID.u_xsdbm_id            |     0.001 |
 |   soc_clk                           |     0.124 |
 |     inst                            |     0.124 |
-|   u_ila_0                           |     0.026 |
-|     inst                            |     0.026 |
-|       ila_core_inst                 |     0.026 |
-|   u_ila_1                           |     0.006 |
-|     inst                            |     0.006 |
-|       ila_core_inst                 |     0.006 |
-|   video_system                      |     1.232 |
+|   u_ila_0                           |     0.007 |
+|     inst                            |     0.007 |
+|       ila_core_inst                 |     0.007 |
+|   u_ila_1                           |     0.014 |
+|     inst                            |     0.014 |
+|       ila_core_inst                 |     0.014 |
+|   video_system                      |     1.378 |
 |     HDMI_TMDS_Interface             |     0.133 |
 |       Serializer_Interface_Inst_B   |     0.033 |
 |       Serializer_Interface_Inst_CLK |     0.033 |
 |       Serializer_Interface_Inst_G   |     0.033 |
 |       Serializer_Interface_Inst_R   |     0.033 |
-|     memory_top                      |     0.982 |
+|     S_HDMI_TMDS_Interface           |     0.132 |
+|       Serializer_Interface_Inst_B   |     0.033 |
+|       Serializer_Interface_Inst_CLK |     0.033 |
+|       Serializer_Interface_Inst_G   |     0.033 |
+|       Serializer_Interface_Inst_R   |     0.033 |
+|     memory_top                      |     0.976 |
 |       axi_read_m                    |     0.002 |
-|       camera_axi_write              |     0.006 |
-|       mig_inst                      |     0.974 |
+|       camera_axi_write              |     0.005 |
+|       mig_inst                      |     0.969 |
+|     video_generator_inst            |     0.022 |
+|       vpu                           |     0.021 |
 |     video_sys_clk                   |     0.114 |
 |       inst                          |     0.114 |
 +-------------------------------------+-----------+

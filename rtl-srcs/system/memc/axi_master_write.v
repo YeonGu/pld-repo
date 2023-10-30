@@ -1,36 +1,36 @@
 
 module axi_master_write (
     /** Camera Data In **/
-                          input          cam_pclk,
-                          input          cam_wren,
-                          input  [ 15:0] cam_data,
-                          input          cam_frame_sync,
+    input          cam_pclk,
+    input          cam_wren,
+    input  [ 15:0] cam_data,
+    input          cam_frame_sync,
     /** AXI Master **/
-                          input          ARESETN,         //axi复位
-                          input          ACLK,            //axi总时钟
+    input          ARESETN,         //axi复位
+    input          ACLK,            //axi总时钟
     //axi4写通道地址通道
-                          output [  3:0] M_AXI_AWID,      // [PARAM] 写地址ID，用来标志一组写信号。随意设置。
-    (*mark_debug="true"*) output [ 31:0] M_AXI_AWADDR,    // 写地址，给出一次写突发传输的写地址
-                          output [  7:0] M_AXI_AWLEN,     // 突发长度，给出突发传输的次数  
-                          output [  2:0] M_AXI_AWSIZE,    // [CONFIG] 突发大小，给出每次突发传输的字节数  
-                          output [  1:0] M_AXI_AWBURST,   // [PARAM] 突发类型  
-                          output         M_AXI_AWLOCK,    // [PARAM] 总线锁信号，可提供操作的原子性  
-                          output [  3:0] M_AXI_AWCACHE,   // [PARAM] 内存类型，表明一次传输是怎样通过系统的  
-                          output [  2:0] M_AXI_AWPROT,    // [PARAM] 保护类型，表明一次传输的特权级及安全等级  
-                          output [  3:0] M_AXI_AWQOS,     // [PARAM] 质量服务QoS. 4'b0000
-    (*mark_debug="true"*) output         M_AXI_AWVALID,   // 有效信号，表明此通道的地址控制信号有效
-                          input          M_AXI_AWREADY,   // 表明“从”可以接收地址和对应的控制信号
+    output [  3:0] M_AXI_AWID,      // [PARAM] 写地址ID，用来标志一组写信号。随意设置。
+    output [ 31:0] M_AXI_AWADDR,    // 写地址，给出一次写突发传输的写地址
+    output [  7:0] M_AXI_AWLEN,     // 突发长度，给出突发传输的次数  
+    output [  2:0] M_AXI_AWSIZE,    // [CONFIG] 突发大小，给出每次突发传输的字节数  
+    output [  1:0] M_AXI_AWBURST,   // [PARAM] 突发类型  
+    output         M_AXI_AWLOCK,    // [PARAM] 总线锁信号，可提供操作的原子性  
+    output [  3:0] M_AXI_AWCACHE,   // [PARAM] 内存类型，表明一次传输是怎样通过系统的  
+    output [  2:0] M_AXI_AWPROT,    // [PARAM] 保护类型，表明一次传输的特权级及安全等级  
+    output [  3:0] M_AXI_AWQOS,     // [PARAM] 质量服务QoS. 4'b0000
+    output         M_AXI_AWVALID,   // 有效信号，表明此通道的地址控制信号有效
+    input          M_AXI_AWREADY,   // 表明“从”可以接收地址和对应的控制信号
     //axi4写通道数据通道
-                          output [127:0] M_AXI_WDATA,     // 写数据
-                          output [ 15:0] M_AXI_WSTRB,     // [CONFIG] 写数据有效的字节线
-                          output         M_AXI_WLAST,     // 表明此次传输是最后一个突发传输
-                          output         M_AXI_WVALID,    // 写有效，表明此次写有效
-                          input          M_AXI_WREADY,    // 表明从机可以接收写数据
+    output [127:0] M_AXI_WDATA,     // 写数据
+    output [ 15:0] M_AXI_WSTRB,     // [CONFIG] 写数据有效的字节线
+    output         M_AXI_WLAST,     // 表明此次传输是最后一个突发传输
+    output         M_AXI_WVALID,    // 写有效，表明此次写有效
+    input          M_AXI_WREADY,    // 表明从机可以接收写数据
     //axi4写通道应答通道
-                          input  [  3:0] M_AXI_BID,       // [PARAM] 写响应ID TAG
-                          input  [  1:0] M_AXI_BRESP,     // 写响应，表明写传输的状态
-                          input          M_AXI_BVALID,    // 写响应有效
-                          output         M_AXI_BREADY     // 表明主机能够接收写响应
+    input  [  3:0] M_AXI_BID,       // [PARAM] 写响应ID TAG
+    input  [  1:0] M_AXI_BRESP,     // 写响应，表明写传输的状态
+    input          M_AXI_BVALID,    // 写响应有效
+    output         M_AXI_BREADY     // 表明主机能够接收写响应
 );
 
     /****************************************************************************/
@@ -48,8 +48,8 @@ module axi_master_write (
 
     wire         fifo_need_write;
     wire         cam_fifo_empty;
-    (*mark_debug="true"*)wire         cam_fifo_full;
-    (*mark_debug="true"*)wire [  7:0] rd_data_count;
+    wire         cam_fifo_full;
+    wire [  7:0] rd_data_count;
 
     // wire         wr_busy;
     wire         wr_rst_busy;
@@ -66,8 +66,8 @@ module axi_master_write (
     /** Write Address & Control **/
     localparam WR_BURST_NUM = 7'd64;
     localparam WR_ADDR_INCR = 32'd16;  // 128bits
-    (*mark_debug="true"*)reg [31:0] wr_addr = 0;
-    (*mark_debug="true"*)reg [ 9:0] wr_cnt;
+    reg [31:0] wr_addr = 0;
+    reg [ 9:0] wr_cnt;
 
     /****************************************************************************/
     // AXI CONFIGS / PARAMS

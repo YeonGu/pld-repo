@@ -70,6 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "video_rd_fifo_synth_1" START { ROLLUP_AUTO }
+set_msg_config  -id {Constraints 18-1055}  -string {{CRITICAL WARNING: [Constraints 18-1055] Clock 'system_clock' completely overrides clock 'i_clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 10.000 -name system_clock [get_ports i_clk], [E:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc: and 2]
+Previous: create_clock -period 10.000 [get_ports i_clk], [e:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc: and 56]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.}}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
