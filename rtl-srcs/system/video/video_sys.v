@@ -3,6 +3,15 @@ module video_sys (
     input         i_clk_ref,            // MIG REF CLK @ 200MHZ
     input         i_sys_rstn,           // pll_locked
     input         i_key1,
+    /** E203 PERIPS APB BUS **/
+    input         APB_HCLK,
+    input         APB_HRESETn,
+    input  [11:0] APB_PADDR,
+    input  [31:0] APB_PWDATA,
+    input         APB_PWRITE,
+    input         APB_PSEL,
+    input         APB_PENABLE,
+    output [31:0] APB_PRDATA,
     /** Camera **/
     /* Camera Data in*/
     input         i_camera_pclk,
@@ -130,6 +139,15 @@ module video_sys (
     video_generator video_generator_inst (
         .i_clk_hdmi_pixel    (clk_hdmi_pixel),
         .i_rstn              (video_pll_locked),
+        /** apb priphs socket **/
+        .APB_HCLK            (APB_HCLK),          // input          APB_HCLK,
+        .APB_HRESETn         (APB_HRESETn),       // input          APB_HRESETn,
+        .APB_PADDR           (APB_PADDR),         // input  [ 11:0] APB_PADDR,
+        .APB_PWDATA          (APB_PWDATA),        // input  [  7:0] APB_PWDATA,
+        .APB_PWRITE          (APB_PWRITE),        // input          APB_PWRITE,
+        .APB_PSEL            (APB_PSEL),          // input          APB_PSEL,
+        .APB_PENABLE         (APB_PENABLE),       // input          APB_PENABLE,
+        .APB_PRDATA          (APB_PRDATA),        // output         APB_PRDATA,
         // FETCH VIDEO DATA
         .o_video_fifo_rden   (video_fifo_rden),
         .i_video_fifo_data   (video_fifo_data),

@@ -1,2 +1,0 @@
-video_rd_fifo.v,verilog,xil_defaultlib,../../../../main.gen/sources_1/ip/video_rd_fifo/sim/video_rd_fifo.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

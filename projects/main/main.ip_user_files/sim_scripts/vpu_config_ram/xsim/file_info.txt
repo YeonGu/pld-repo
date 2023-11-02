@@ -1,2 +1,0 @@
-vpu_config_ram.v,verilog,xil_defaultlib,../../../../main.gen/sources_1/ip/vpu_config_ram/sim/vpu_config_ram.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

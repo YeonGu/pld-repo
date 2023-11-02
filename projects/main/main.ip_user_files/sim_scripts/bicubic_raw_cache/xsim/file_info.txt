@@ -1,2 +1,0 @@
-bicubic_raw_cache.v,verilog,xil_defaultlib,../../../../main.gen/sources_1/ip/bicubic_raw_cache/sim/bicubic_raw_cache.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

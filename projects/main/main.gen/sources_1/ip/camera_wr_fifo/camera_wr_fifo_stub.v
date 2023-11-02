@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Sat Oct 14 18:02:43 2023
+// Date        : Thu Nov  2 20:48:19 2023
 // Host        : Kasaki352 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top camera_wr_fifo -prefix
-//               camera_wr_fifo_ camera_wr_fifo_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_stub.v
 // Design      : camera_wr_fifo
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tfgg484-1

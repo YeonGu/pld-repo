@@ -1,6 +1,33 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
+	<Run Id="video_rd_fifo_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/video_rd_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mig_7series_0_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/mig_7series_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_generator_0_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/fifo_generator_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="clk_wiz_0_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="clk_wiz_1_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/clk_wiz_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bicubic_raw_cache_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/bicubic_raw_cache_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ui_ram_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/ui_ram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="font_rom_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/font_rom_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mmcm_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/mmcm_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="reset_sys_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/reset_sys_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bicubic_2x_buffer_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/bicubic_2x_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vpu_result_ram_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/vpu_result_ram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="camera_wr_fifo_synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/camera_wr_fifo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="video_rd_fifo_synth_1"/>
+		<Parent Id="mig_7series_0_synth_1"/>
+		<Parent Id="fifo_generator_0_synth_1"/>
+		<Parent Id="clk_wiz_0_synth_1"/>
+		<Parent Id="clk_wiz_1_synth_1"/>
+		<Parent Id="bicubic_raw_cache_synth_1"/>
+		<Parent Id="ui_ram_synth_1"/>
+		<Parent Id="font_rom_synth_1"/>
+		<Parent Id="mmcm_synth_1"/>
+		<Parent Id="reset_sys_synth_1"/>
+		<Parent Id="bicubic_2x_buffer_synth_1"/>
+		<Parent Id="vpu_result_ram_synth_1"/>
+		<Parent Id="camera_wr_fifo_synth_1"/>
+	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>

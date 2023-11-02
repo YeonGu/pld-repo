@@ -70,13 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 5
-set_param xicom.use_bs_reader 1
 set_msg_config  -id {Constraints 18-1055}  -string {{CRITICAL WARNING: [Constraints 18-1055] Clock 'system_clock' completely overrides clock 'i_clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
 New: create_clock -period 10.000 -name system_clock [get_ports i_clk], [E:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc: and 2]
 Previous: create_clock -period 10.000 [get_ports i_clk], [e:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc: and 56]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.}}  -suppress 
+set_msg_config  -id {Labtoolstcl 44-513}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tfgg484-1
 
@@ -93,36 +91,169 @@ set_property ip_output_repo e:/Xilinx/PLD/pld-repo/projects/main/main.cache/ip [
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/VideoGenerator.coe
+read_verilog {
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/config.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_defines.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_defines.v
+}
+set_property file_type "Verilog Header" [get_files E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/config.v]
+set_property file_type "Verilog Header" [get_files E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_defines.v]
+set_property is_global_include true [get_files E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_defines.v]
+set_property file_type "Verilog Header" [get_files E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_defines.v]
 read_verilog -library xil_defaultlib {
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/camera/Camera_Interface.v
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v}
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v}
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v}
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/adv_timer_apb_if.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/apb_adv_timer.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_gpio/apb_gpio.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/apb_i2c.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/apb_spi_master.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/apb_uart.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_write.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/utils/bicubic/bicubic_core.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/clk-div-zynq.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/comparator.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/debug/debug_sim_cam.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_biu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_clk_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_clkgate.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_cpu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_cpu_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_dtcm_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_dtcm_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_bjp.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_csrctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_dpath.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_lsuagu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_muldiv.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_alu_rglr.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_branchslv.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_commit.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_csr.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_decode.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_disp.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_excp.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_longpwbck.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_nice.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_oitf.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_regfile.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_exu_wbck.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_ifu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_ifu_ifetch.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_ifu_ift2icb.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_ifu_litebpu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_ifu_minidec.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_irq_sync.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_itcm_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_itcm_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_lsu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_lsu_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_reset_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/soc/e203_soc_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_srams.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_clint.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_gfcm.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_hclkgen.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_hclkgen_rstsync.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_main.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_mems.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_nice_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_perips.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_plic.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_pll.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_pllclkdiv.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_bit_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_byte_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/input_stage.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/io_generic_fifo.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/prescaler.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_1cyc_sram_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetReg.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetRegVec.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetRegVec_1.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetRegVec_129.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetRegVec_36.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_DeglitchShiftRegister.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_LevelGateway.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_ResetCatchAndSync.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_ResetCatchAndSync_2.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_aon.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_aon_lclkgen_regs.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_aon_porrst.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_aon_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_aon_wrapper.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_clint.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_clint_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/debug/sirv_debug_csr.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/debug/sirv_debug_module.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/debug/sirv_debug_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/debug/sirv_debug_rom.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_expl_axi_slv.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_flash_qspi.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_flash_qspi_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_gnrl_bufs.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_gnrl_dffs.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_gnrl_icbs.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_gnrl_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_hclkgen_regs.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/fab/sirv_icb1to16_bus.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/fab/sirv_icb1to2_bus.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/fab/sirv_icb1to8_bus.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/debug/sirv_jtag_dtm.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_jtaggpioport.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/mems/sirv_mrom.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/mems/sirv_mrom_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_plic_man.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_plic_top.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_pmu.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_pmu_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_qspi_arbiter.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_qspi_fifo.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_qspi_media.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_qspi_physical.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_queue.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_queue_1.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_repeater_6.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_rtc.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_sim_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_spi_flashmap.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_sram_icb_ctrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_tl_repeater_5.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_tlfragmenter_qspi_1.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_tlwidthwidget_qspi.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_wdog.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_apb_if.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_clkgen.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_controller.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_fifo.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_rx.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_spi_master/spi_master_tx.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/system.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/timer_cntrl.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/timer_module.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/uart_interrupt.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/uart_rx.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/uart_tx.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/ui_renderer.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/up_down_counter.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/vpu_ioregs.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/soc/sys_top.v
 }
-read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc]
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_ooc.xdc]
-
-read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram_ooc.xdc]
-
-read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xci
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc]
-set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer_ooc.xdc]
-
 read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/video_rd_fifo/video_rd_fifo.xci
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/video_rd_fifo/video_rd_fifo_clocks.xdc]
@@ -152,6 +283,34 @@ set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_clocks.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache_ooc.xdc]
 
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/ui_ram/ui_ram.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/ui_ram/ui_ram_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/font_rom/font_rom.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/font_rom/font_rom_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/mmcm/mmcm.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/reset_sys/reset_sys.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/reset_sys/reset_sys_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/reset_sys/reset_sys.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/reset_sys/reset_sys_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/bicubic_2x_buffer/bicubic_2x_buffer_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/vpu_result_ram/vpu_result_ram.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram_ooc.xdc]
+
+read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -164,8 +323,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc
 set_property used_in_implementation false [get_files E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/utils_1/imports/synth_1/sys_top.dcp
