@@ -8,7 +8,7 @@
 
 void screen_print( char *str, uint8_t x, uint8_t y )
 {
-    uint8_t wraddr = y * CHARS_H + x;
+    uint32_t wraddr = y * CHARS_H + x;
 
     /* On e203, to print a string on the screen,
      * We should write the wraddr register,

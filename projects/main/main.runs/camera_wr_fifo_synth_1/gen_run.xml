@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="camera_wr_fifo_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698929172">
+<GenRun Id="camera_wr_fifo_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1699547214">
   <File Type="PA-TCL" Name="camera_wr_fifo.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="camera_wr_fifo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="camera_wr_fifo_reports.tcl"/>
   <File Type="RDS-RDS" Name="camera_wr_fifo.vds"/>
   <File Type="RDS-UTIL" Name="camera_wr_fifo_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="camera_wr_fifo_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="camera_wr_fifo.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="camera_wr_fifo_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="camera_wr_fifo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/camera_wr_fifo">
     <File Path="$PSRCDIR/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xci">
       <FileInfo>
@@ -50,9 +47,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -2,7 +2,7 @@
 
 ## JTAG UART
 
-``` Plain Text
+```Plain
 #####               MCU JTAG define           #####
 
 set_property PACKAGE_PIN N15 [get_ports mcu_TDO]
@@ -22,17 +22,16 @@ set_property PACKAGE_PIN J16  [get_ports {gpioA[17]}]
 ## UART RX
 
 set_property PACKAGE_PIN J14  [get_ports {gpioA[16]}]
-
 ```
 
 ![[pmod.png]]
 On PMOD1 JA
 
-|   |   |   |   |
-|---|---|---|---|
-|4|3|2|1|
-|K14|K16|L14|N15|
-|TMS|TDI|TCK|TDO|
-|10|9|8|7|
-|J14|J16|L15|N16|
-|RXD|TXD|||
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 4   | 3   | 2   | 1   |
+| K14 | K16 | L14 | N15 |
+| TMS | TDI | TCK | TDO |
+| 10  | 9   | 8   | 7   |
+| J14 | J16 | L15 | N16 |
+| RXD | TXD |     |     |

@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Nov  2 20:50:03 2023
-# Process ID: 29236
+# Start of session at: Sat Nov 11 10:21:03 2023
+# Process ID: 32584
 # Current directory: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1
 # Command line: vivado.exe -log sys_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sys_top.tcl
 # Log file: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/sys_top.vds
 # Journal file: E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1\vivado.jou
-# Running On: Kasaki352, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16782 MB
+# Running On: Kasaki352, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 33962 MB
 #-----------------------------------------------------------
 source sys_top.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/utils_1/imports/synth_1/sys_top.dcp
@@ -21,7 +21,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17568
+INFO: [Synth 8-7075] Helper process launched with PID 30632
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11065] parameter 'RBR' becomes localparam in 'apb_uart_sv' with formal parameter declaration list [E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/apb_uart.v:35]
 WARNING: [Synth 8-11065] parameter 'THR' becomes localparam in 'apb_uart_sv' with formal parameter declaration list [E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/apb_uart.v:35]
@@ -39,20 +39,19 @@ WARNING: [Synth 8-11065] parameter 'TX_FIFO_DEPTH' becomes localparam in 'apb_ua
 WARNING: [Synth 8-11065] parameter 'RX_FIFO_DEPTH' becomes localparam in 'apb_uart_sv' with formal parameter declaration list [E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/apb_uart.v:39]
 INFO: [Synth 8-11241] undeclared symbol 'dut_io_pads_aon_pmu_vddpaden_i_ival', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/system.v:366]
 INFO: [Synth 8-11241] undeclared symbol 'bypass_rlast', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_sys.v:172]
-INFO: [Synth 8-11241] undeclared symbol 'apb_ram_wraddr', assumed default net type 'wire' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/vpu_ioregs.v:64]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2263.738 ; gain = 413.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 2265.238 ; gain = 413.719
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'sys_top' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/soc/sys_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'e203_system' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/system.v:21]
-INFO: [Synth 8-6157] synthesizing module 'mmcm' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/mmcm_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mmcm' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/mmcm_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mmcm' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/mmcm_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mmcm' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/mmcm_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'clk_div_zynq' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/clk-div-zynq.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'clk_div_zynq' (0#1) [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/e203/clk-div-zynq.v:22]
-INFO: [Synth 8-6157] synthesizing module 'reset_sys' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/reset_sys_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'reset_sys' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-29236-Kasaki352/realtime/reset_sys_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'reset_sys' [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/reset_sys_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'reset_sys' (0#1) [E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/.Xil/Vivado-32584-Kasaki352/realtime/reset_sys_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'PULLUP' [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:123418]
 INFO: [Synth 8-6155] done synthesizing module 'PULLUP' (0#1) [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:123418]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [E:/Xilinx/Vivado/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
@@ -470,7 +469,7 @@ INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instan
 	Parameter O14_BASE_ADDR bound to: 268701696 - type: integer 
 	Parameter O14_BASE_REGION_LSB bound to: 12 - type: integer 
 	Parameter O15_BASE_ADDR bound to: 268705792 - type: integer 
-	Parameter O15_BASE_REGION_LSB bound to: 12 - type: integer 
+	Parameter O15_BASE_REGION_LSB bound to: 8 - type: integer 
 	Parameter OUTS_CNT_W bound to: 1 - type: integer 
 	Parameter AW bound to: 32 - type: integer 
 	Parameter DW bound to: 32 - type: integer 
@@ -715,12 +714,15 @@ WARNING: [Synth 8-689] width (12) of port connection 'VSYS_APB_PADDR' does not m
 	Parameter NEGEDGE_ENABLE bound to: 1'b0 
 	Parameter DIVIDER_MODE bound to: 4'b0010 
 	Parameter FACTOR_BIT bound to: 5'b10000 
-WARNING: [Synth 8-7071] port 'full' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:305]
-WARNING: [Synth 8-7071] port 'empty' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:305]
-WARNING: [Synth 8-7023] instance 'bicubic_2x_buffer0' of module 'bicubic_2x_buffer' has 8 connections declared, but only 6 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:305]
-WARNING: [Synth 8-7071] port 'full' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer1' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:315]
-WARNING: [Synth 8-7071] port 'empty' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer1' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:315]
-WARNING: [Synth 8-7023] instance 'bicubic_2x_buffer1' of module 'bicubic_2x_buffer' has 8 connections declared, but only 6 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:315]
+WARNING: [Synth 8-689] width (8) of port connection 'o_config_settings' does not match port width (32) of module 'vpu_ioregs' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:78]
+WARNING: [Synth 8-689] width (8) of port connection 'o_configs_1' does not match port width (32) of module 'vpu_ioregs' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:79]
+WARNING: [Synth 8-689] width (8) of port connection 'o_configs_2' does not match port width (32) of module 'vpu_ioregs' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:80]
+WARNING: [Synth 8-7071] port 'full' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:312]
+WARNING: [Synth 8-7071] port 'empty' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer0' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:312]
+WARNING: [Synth 8-7023] instance 'bicubic_2x_buffer0' of module 'bicubic_2x_buffer' has 8 connections declared, but only 6 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:312]
+WARNING: [Synth 8-7071] port 'full' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer1' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:322]
+WARNING: [Synth 8-7071] port 'empty' of module 'bicubic_2x_buffer' is unconnected for instance 'bicubic_2x_buffer1' [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:322]
+WARNING: [Synth 8-7023] instance 'bicubic_2x_buffer1' of module 'bicubic_2x_buffer' has 8 connections declared, but only 6 given [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:322]
 INFO: [Synth 8-226] default block is never used [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:276]
 	Parameter IDE_MODE bound to: 2'b00 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
@@ -812,119 +814,136 @@ WARNING: [Synth 8-6014] Unused sequential element factor_even_num_reg was remove
 WARNING: [Synth 8-6014] Unused sequential element factor_cal_num_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v:255]
 WARNING: [Synth 8-6014] Unused sequential element mbus_rready_i_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v:491]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vpu_conf_ioregs'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:67]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ui_renderer'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:122]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ui_renderer'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:157]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ui_ram'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/ui_renderer.v:60]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_font_rom'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/ui_renderer.v:74]
 WARNING: [Synth 8-6014] Unused sequential element sety_delayed_reg[1] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/ui_renderer.v:30]
 WARNING: [Synth 8-6014] Unused sequential element sety_delayed_reg[0] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/ui_renderer.v:30]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bicubic_2x'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:44]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'raw_data_fifo'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:287]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][127] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][126] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][125] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][124] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][123] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][122] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][121] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][120] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][119] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][118] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][117] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][116] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][115] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][114] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][113] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][112] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][111] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][110] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][109] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][108] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][107] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][106] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][105] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][104] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][103] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][102] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][101] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][100] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][99] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][98] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][97] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][96] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][95] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][94] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][93] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][92] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][91] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][90] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][89] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][88] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][87] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][86] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][85] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][84] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][83] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][82] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][81] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][80] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][79] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][78] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][77] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][76] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][75] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][74] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][73] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][72] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][71] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][70] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][69] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][68] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][67] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][66] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][65] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][64] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][63] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][62] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][61] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][60] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][59] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][58] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][57] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][56] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][55] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][54] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][53] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][52] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][51] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][50] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][49] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][48] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][47] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][46] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][45] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][44] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][43] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][42] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][41] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][40] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][39] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][38] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][37] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][36] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][35] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][34] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][33] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][32] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][31] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][30] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][29] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
-WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][28] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:209]
+WARNING: [Synth 8-6014] Unused sequential element bicubic_en_delayed_reg[5] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/defog/Defog_top.v:22]
+WARNING: [Synth 8-6014] Unused sequential element wraddr_delayed_reg[5] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/defog/Defog_top.v:23]
+WARNING: [Synth 8-6014] Unused sequential element bicubic_en_delayed_reg[5] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/hist_top.v:29]
+WARNING: [Synth 8-6014] Unused sequential element wraddr_delayed_reg[5] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/hist_top.v:30]
+WARNING: [Synth 8-6014] Unused sequential element state_delayed_reg[3] was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen_top2x.v:144]
+WARNING: [Synth 8-6014] Unused sequential element write_cnt_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen_top2x.v:179]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bicubic_2x'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:203]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'raw_data_fifo'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:294]
+WARNING: [Synth 8-6014] Unused sequential element vsync_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:30]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][127] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][126] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][125] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][124] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][123] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][122] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][121] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][120] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][119] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][118] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][117] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][116] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][115] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][114] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][113] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][112] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][111] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][110] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][109] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][108] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][107] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][106] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][105] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][104] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][103] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][102] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][101] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][100] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][99] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][98] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][97] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][96] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][95] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][94] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][93] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][92] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][91] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][90] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][89] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][88] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][87] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][86] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][85] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][84] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][83] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][82] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][81] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][80] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][79] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][78] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][77] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][76] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][75] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][74] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][73] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][72] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][71] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][70] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][69] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][68] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][67] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][66] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][65] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][64] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][63] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][62] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][61] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][60] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][59] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][58] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][57] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][56] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][55] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][54] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][53] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][52] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][51] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][50] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][49] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][48] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][47] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][46] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][45] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][44] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][43] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][42] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][41] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][40] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][39] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][38] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][37] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][36] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][35] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][34] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][33] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][32] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][31] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][30] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][29] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
+WARNING: [Synth 8-7137] Register loaded_pixel_reg[3][28] in module bicubic_top_2x has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/bicubic/bicubic_top.v:219]
 INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vpu_ram'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:62]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vpu'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:199]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vpu_ram'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:238]
+WARNING: [Synth 8-6014] Unused sequential element vs_r_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:38]
+WARNING: [Synth 8-6014] Unused sequential element bcb_ctrl_vsync_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:47]
+WARNING: [Synth 8-6014] Unused sequential element bcb_ctrl_vsync_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:54]
+WARNING: [Synth 8-6014] Unused sequential element enabled_bcb_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:61]
+WARNING: [Synth 8-3848] Net bcb_res_wren[1] in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:76]
+WARNING: [Synth 8-3848] Net sharpen4x_res_wren in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:101]
+WARNING: [Synth 8-3848] Net bcb_res_wraddr[1] in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:75]
+WARNING: [Synth 8-3848] Net sharpen4x_res_wraddr in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:100]
+WARNING: [Synth 8-3848] Net bcb_res_data[1] in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:74]
+WARNING: [Synth 8-3848] Net sharpen4x_res_data in module/entity video_proc_unit does not have driver. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/video_proc_unit.v:99]
 WARNING: [Synth 8-6014] Unused sequential element H_ACTIVE_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:280]
 WARNING: [Synth 8-6014] Unused sequential element V_ACTIVE_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:286]
 WARNING: [Synth 8-6014] Unused sequential element VS_POL_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v:291]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vpu'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/video_generator.v:165]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_read_m'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/ddr_streaming_top.v:136]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'video_fifo_inst'. This will prevent further optimization [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:171]
 WARNING: [Synth 8-6014] Unused sequential element rd_cnt_reg was removed.  [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/memc/axi_master_read.v:78]
@@ -955,17 +974,12 @@ WARNING: [Synth 8-7129] Port i_config_settings[6] in module video_proc_unit is e
 WARNING: [Synth 8-7129] Port i_config_settings[5] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_config_settings[4] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_config_settings[3] in module video_proc_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_config_settings[2] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_config_settings[1] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_config_settings[0] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_1[7] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_1[6] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_1[5] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_1[4] in module video_proc_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_configs_1[3] in module video_proc_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_configs_1[2] in module video_proc_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_configs_1[1] in module video_proc_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_configs_1[0] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_2[7] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_2[6] in module video_proc_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_configs_2[5] in module video_proc_unit is either unconnected or has no load
@@ -1028,20 +1042,25 @@ WARNING: [Synth 8-7129] Port i_mbus_rdata[7] in module OV5640_Config is either u
 WARNING: [Synth 8-7129] Port i_mbus_rdata[6] in module OV5640_Config is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_mbus_rdata[5] in module OV5640_Config is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_mbus_rdata[4] in module OV5640_Config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mbus_rdata[3] in module OV5640_Config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mbus_rdata[2] in module OV5640_Config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mbus_rdata[1] in module OV5640_Config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mbus_rdata[0] in module OV5640_Config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mbus_rvalid in module OV5640_Config is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2678.801 ; gain = 828.621
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:51 . Memory (MB): peak = 3505.215 ; gain = 1653.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2695.160 ; gain = 844.980
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:53 . Memory (MB): peak = 3505.215 ; gain = 1653.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2695.160 ; gain = 844.980
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:53 . Memory (MB): peak = 3505.215 ; gain = 1653.695
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.721 . Memory (MB): peak = 2709.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 3505.215 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1076,31 +1095,41 @@ Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/vpu_result_ram/vpu_result_ram/vpu_result_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/vpu_ram'
 Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo/camera_wr_fifo_in_context.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst'
 Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo/camera_wr_fifo_in_context.xdc] for cell 'video_system/memory_top/camera_axi_write/cam_wr_fifo_inst'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram0'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram0'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram1'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram1'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram2'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram2'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram3'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram/sharpen2x_ram_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram3'
+Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/contrast_func_tab/contrast_func_tab/contrast_func_tab_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_defog/contrast_func_tab'
+Finished Parsing XDC File [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/contrast_func_tab/contrast_func_tab/contrast_func_tab_in_context.xdc] for cell 'video_system/video_generator_inst/vpu/u_defog/contrast_func_tab'
 Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
-WARNING: [Vivado 12-507] No nets matched 'i_camera_pclk_IBUF'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:12]
+WARNING: [Vivado 12-507] No nets matched 'i_camera_pclk_IBUF'. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc:14]
 Finished Parsing XDC File [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/sys_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sys_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/sys_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2835.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 3560.668 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 48 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 40 instances
   OBUFDS => OBUFDS: 8 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 2835.203 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 3560.668 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [E:/Xilinx/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:01:13 . Memory (MB): peak = 3560.668 ; gain = 1709.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:01:13 . Memory (MB): peak = 3560.668 ; gain = 1709.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1249,7 +1278,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  e:/X
 Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc, line 143).
 Applied set_property IO_BUFFER_TYPE = NONE for i_soc_clk. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for i_soc_clk. (constraint file  e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
-WARNING: set_property CLOCK_DEDICATED_ROUTE could not find object (constraint file  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc, line 85).
+WARNING: set_property CLOCK_DEDICATED_ROUTE could not find object (constraint file  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/constr/soc.xdc, line 94).
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/axi_read_m/video_fifo_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/mig_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/axi_read_m/bypass_rd_req_fifo. (constraint file  auto generated constraint).
@@ -1264,26 +1293,483 @@ Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/bicubic_2x/bicubic_2x_buffer1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/vpu_ram. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for video_system/memory_top/camera_axi_write/cam_wr_fifo_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/u_sharpen_2x/sharpen2x_ram/ram3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for video_system/video_generator_inst/vpu/u_defog/contrast_func_tab. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:01:13 . Memory (MB): peak = 3560.668 ; gain = 1709.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Preparing Guide Design
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:14 ; elapsed = 00:00:30 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished Doing Graph Differ : Time (s): cpu = 00:00:26 ; elapsed = 00:01:22 . Memory (MB): peak = 3933.195 ; gain = 2081.676
 ---------------------------------------------------------------------------------
-bicubic_top_2x__GB3Serializer_Interface__GC0video_generator__GC0video_proc_unit__GC0bicubic_top_2x__GB0HDMI_Interface__GC0bicubic_top_2x__GB4sys_top__GC0bicubic_top_2x__GB1bicubic_top_2x__GB2video_sys__GC0---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 2835.203 ; gain = 985.023
+e203_system__GC0bicubic_top_2x__GB3video_sys__GC0HDMI_Interface__GC0video_generator__GC0Serializer_Interface__GC0e203_subsys_top__GC0bicubic_top_2x__GB4e203_subsys_perips__GB0e203_subsys_main__GC0hist_top__GC0bicubic_top_2x__GB1sys_top__GC0e203_subsys_perips__GB1bicubic_top_2x__GB2bicubic_top_2x__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:26 ; elapsed = 00:01:23 . Memory (MB): peak = 3933.195 ; gain = 2081.676
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'sharpen_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0100 |                             0000
+                   S_REQ |                             0101 |                             0001
+                 S_LOAD1 |                             0011 |                             0010
+                S_SWICH1 |                             0000 |                             0011
+           S_LOAD2_CALC1 |                             0001 |                             0100
+                 S_CALC1 |                             0010 |                             1001
+                S_SWICH2 |                             0110 |                             0101
+                 S_CALC2 |                             1001 |                             0110
+                  S_NEXT |                             0111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'sharpen_top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:01:38 . Memory (MB): peak = 3933.195 ; gain = 2081.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Mimic Skeleton from Reference
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2835.203 ; gain = 985.023
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:33 ; elapsed = 00:01:40 . Memory (MB): peak = 3933.195 ; gain = 2081.676
 ---------------------------------------------------------------------------------
 RAM Pipeline Warning: Read Address Register Found For RAM mem[1].non_last.mem_r_reg. We will not be able to pipeline it. This may degrade performance. 
 RAM Pipeline Warning: Read Address Register Found For RAM mem[1].non_last.mem_r_reg. We will not be able to pipeline it. This may degrade performance. 
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : unchanged
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++------+---------------------------+------------+----------+----------+
+|      |Changed Modules            |Replication |Instances |Changed % |
++------+---------------------------+------------+----------+----------+
+|1     |Histogramequalization_core |           1|     70040|   25.6205|
+|2     |sharpen_top                |           1|      4215|    1.5418|
++------+---------------------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 273375
+   Resynthesis Design Size (number of cells) : 78328
+   Resynth % : 28.6522,  Reuse % : 71.3478
+
+3. Reference Checkpoint Information
+
++-----------------------------------------------------------------------------------------------------+
+| DCP Location:  | E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/utils_1/imports/synth_1/sys_top.dcp |
++-----------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |video_proc_unit__GC0            |           1|      5966|
+|2     |Serializer_Interface__GC0       |           1|         3|
+|3     |HDMI_Interface__GC0             |           1|      1125|
+|4     |Histogramequalization_core__GB0 |           1|     25058|
+|5     |Histogramequalization_core__GB1 |           1|      5646|
+|6     |Histogramequalization_core__GB2 |           1|     11633|
+|7     |Histogramequalization_core__GB3 |           1|     27703|
+|8     |e203_subsys_perips__GB0_#REUSE# |           1|         0|
+|9     |e203_subsys_perips__GB1_#REUSE# |           1|         0|
+|10    |e203_subsys_main__GC0_#REUSE#   |           1|         0|
+|11    |e203_subsys_top__GC0_#REUSE#    |           1|         0|
+|12    |e203_system__GC0_#REUSE#        |           1|         0|
+|13    |hist_top__GC0_#REUSE#           |           1|         0|
+|14    |bicubic_top_2x__GB0_#REUSE#     |           1|         0|
+|15    |bicubic_top_2x__GB1_#REUSE#     |           1|         0|
+|16    |bicubic_top_2x__GB2_#REUSE#     |           1|         0|
+|17    |bicubic_top_2x__GB3_#REUSE#     |           1|         0|
+|18    |bicubic_top_2x__GB4_#REUSE#     |           1|         0|
+|19    |video_generator__GC0_#REUSE#    |           1|         0|
+|20    |video_sys__GC0_#REUSE#          |           1|         0|
+|21    |sys_top__GC0_#REUSE#            |           1|         0|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   16 Bit       Adders := 1     
+	   4 Input   16 Bit       Adders := 2     
+	   7 Input   16 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 1     
+	   4 Input   15 Bit       Adders := 1     
+	   7 Input   11 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 2     
+	   4 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 2     
+	   4 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    7 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 6     
+	   5 Input    5 Bit       Adders := 6     
+	   8 Input    4 Bit       Adders := 12    
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 90    
++---Registers : 
+	               17 Bit    Registers := 256   
+	               16 Bit    Registers := 18    
+	               11 Bit    Registers := 3     
+	                9 Bit    Registers := 9     
+	                8 Bit    Registers := 27    
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 27    
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input   48 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 3     
+	   4 Input   16 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 7     
+	   2 Input   11 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 35    
+	   4 Input    8 Bit        Muxes := 6     
+	   2 Input    5 Bit        Muxes := 42    
+	   9 Input    4 Bit        Muxes := 1     
+	  15 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 12    
+	   2 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 321   
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'rd_x_d_reg' and it is trimmed from '8' to '1' bits. [E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen2x_ram.v:64]
+WARNING: [Synth 8-3917] design sys_top has port o_camera_resetn driven by constant 1
+WARNING: [Synth 8-3917] design sys_top has port o_camera_power_down driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:50 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /u_e203_soc/IOBUF_jtag_TCK
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:36 ; elapsed = 00:01:51 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:58 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:02:00 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3321] create_clock attempting to set clock on an unknown port/pin for constraint at line 1 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mig_7series_0/mig_7series_0/mig_7series_0_in_context.xdc:1]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 2 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:2]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 3 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:3]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 1 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc:1]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 2 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc:2]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 3 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc:3]
+CRITICAL WARNING: [Synth 8-3321] create_clock attempting to set clock on an unknown port/pin for constraint at line 1 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm/mmcm_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm/mmcm_in_context.xdc:1]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 2 of e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm/mmcm_in_context.xdc. [e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/mmcm/mmcm/mmcm_in_context.xdc:2]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:02:07 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB1
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+WARNING: [Synth 8-6885] IncrSyn ConnManager: module hierarchy differs for instance: /video_system/video_generator_inst/vpu/u_hist/Histogramequalization_core/Histogramequalization_core__1__GB2
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:41 ; elapsed = 00:02:08 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_4_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_4_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_6_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_6_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_itcm_ram/u_e203_itcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_e203_soc/dut/u_e203_subsys_top/u_e203_subsys_main/u_e203_cpu_top/u_e203_srams/u_e203_dtcm_ram/u_e203_dtcm_gnrl_ram/u_sirv_sim_ram/mem[1].non_last.mem_r_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:02:15 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:02:16 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:02:23 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:02:23 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:02:24 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:02:24 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|video_proc_unit | u_hist/bicubic_en_delayed_reg[2]                     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|video_proc_unit | u_hist/wraddr_delayed_reg[4][0]                      | 5      | 6     | NO           | NO                 | YES               | 6      | 0       | 
+|video_proc_unit | u_defog/wraddr_delayed_reg[4][2]                     | 5      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|sys_top         | video_system/video_generator_inst/board_hit_r_reg[4] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|sys_top         | video_system/video_generator_inst/r_video_reg[4][23] | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|sys_top         | video_system/video_generator_inst/r_vde_reg[4]       | 3      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|sys_top         | video_system/video_generator_inst/r_hsync_reg[4]     | 3      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|sys_top         | video_system/video_generator_inst/r_vsync_reg[4]     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++----------------+------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bicubic_top_2x | C+A*B       | 9      | 11     | 10     | -      | 21     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|ui_renderer    | C+A*B       | 12     | 7      | 12     | -      | 12     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |clk_wiz_0         |         1|
+|2     |mmcm              |         1|
+|3     |reset_sys         |         1|
+|4     |clk_wiz_1         |         1|
+|5     |video_rd_fifo     |         1|
+|6     |fifo_generator_0  |         1|
+|7     |mig_7series_0     |         1|
+|8     |camera_wr_fifo    |         1|
+|9     |bicubic_2x_buffer |         2|
+|10    |bicubic_raw_cache |         1|
+|11    |vpu_result_ram    |         1|
+|12    |contrast_func_tab |         1|
+|13    |sharpen2x_ram     |         4|
+|14    |ui_ram            |         1|
+|15    |font_rom          |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |bicubic_2x_buffer |     2|
+|3     |bicubic_raw_cache |     1|
+|4     |camera_wr_fifo    |     1|
+|5     |clk_wiz           |     2|
+|7     |contrast_func_tab |     1|
+|8     |fifo_generator    |     1|
+|9     |font_rom          |     1|
+|10    |mig_7series       |     1|
+|11    |mmcm              |     1|
+|12    |reset_sys         |     1|
+|13    |sharpen2x_ram     |     4|
+|17    |ui_ram            |     1|
+|18    |video_rd_fifo     |     1|
+|19    |vpu_result_ram    |     1|
+|20    |BUFG              |     3|
+|21    |CARRY4            |  2341|
+|22    |DSP48E1           |     2|
+|23    |LUT1              |   667|
+|24    |LUT2              |  6905|
+|25    |LUT3              |  2124|
+|26    |LUT4              |  2718|
+|27    |LUT5              |  4124|
+|28    |LUT6              | 18431|
+|29    |MUXF7             |  5780|
+|30    |MUXF8             |  2533|
+|31    |OSERDESE2         |    16|
+|33    |PULLUP            |     7|
+|34    |RAM32M            |     2|
+|35    |RAM32X1D          |     4|
+|36    |RAMB36E1          |    32|
+|37    |SRL16E            |    37|
+|38    |FDCE              | 17741|
+|39    |FDPE              |   417|
+|40    |FDRE              | 10966|
+|41    |FDSE              |    59|
+|42    |LD                |    16|
+|43    |IBUF              |    12|
+|44    |IOBUF             |    40|
+|45    |OBUF              |     9|
+|46    |OBUFDS            |     8|
+|47    |OBUFT             |     1|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:02:24 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:02:13 . Memory (MB): peak = 3933.195 ; gain = 2026.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:02:25 . Memory (MB): peak = 3933.195 ; gain = 2081.676
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.811 . Memory (MB): peak = 3933.195 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10758 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3933.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 70 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 40 instances
+  LD => LDCE: 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 8 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 46c01389
+INFO: [Common 17-83] Releasing license: Synthesis
+284 Infos, 343 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:02:38 . Memory (MB): peak = 3933.195 ; gain = 2485.316
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'E:/Xilinx/PLD/pld-repo/projects/main/main.runs/synth_1/sys_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 3933.195 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file sys_top_utilization_synth.rpt -pb sys_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 11 10:24:00 2023...

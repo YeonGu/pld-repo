@@ -423,7 +423,7 @@ module e203_subsys_perips (
 
         // * VSYS : 0x1004 2000 -- 0x1004 2FFF
         .O15_BASE_ADDR      (32'h1004_2000),
-        .O15_BASE_REGION_LSB(12)
+        .O15_BASE_REGION_LSB(8)
 
     ) u_sirv_ppi_fab (
 

@@ -1,0 +1,1 @@
+wire [7:0] post_img_red, post_img_green, post_img_blue;

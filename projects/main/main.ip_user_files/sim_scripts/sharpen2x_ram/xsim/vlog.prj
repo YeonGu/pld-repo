@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../main.gen/sources_1/ip/sharpen2x_ram/sim/sharpen2x_ram.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

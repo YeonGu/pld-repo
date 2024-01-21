@@ -70,6 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "reset_sys_synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 5
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Constraints 18-1055}  -string {{CRITICAL WARNING: [Constraints 18-1055] Clock 'system_clock' completely overrides clock 'i_clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
 New: create_clock -period 10.000 -name system_clock [get_ports i_clk], [E:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc: and 2]
 Previous: create_clock -period 10.000 [get_ports i_clk], [e:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc: and 56]

@@ -5,8 +5,8 @@ module bicubic_top_2x (
                           input          i_rstn,
                           input          i_vsync,
     // bicubic配置信息输入
-                          input  [  7:0] i_config_x,
-                          input  [  7:0] i_config_y,
+                          input  [  8:0] i_config_x,
+                          input  [  8:0] i_config_y,
     // 数据请求输出
     (*mark_debug="true"*) output [ 31:0] o_proc_unit_req_addr,  // 视频处理模块 数据请求地址
     (*mark_debug="true"*) output         o_proc_unit_req_en,    // 视频处理模块 数据请求使能
@@ -28,8 +28,12 @@ module bicubic_top_2x (
     reg [1:0] vsync;
     always @(posedge i_bicubic_clk) begin
         vsync       <= {vsync[0], i_vsync};
-        vsync_pulse <= (vsync == 2'b01);
+        vsync_pulse <= i_vsync;
     end
+
+    // wire [15:0] original_res_data;
+    // wire [15:0] original_res_wraddr;
+    // wire        original_res_wren;
 
     (*mark_debug="true"*)wire [ 8:0] raw_data_load_cnt;
 
@@ -44,6 +48,9 @@ module bicubic_top_2x (
     /** RAW DATA LOAD FIFO **/
     wire [15:0] raw_fifo_rddata;
     wire        raw_fifo_rden;
+    (*mark_debug="true"*)wire        raw_fifo_full;
+    (*mark_debug="true"*)wire        raw_fifo_empty;
+    (*mark_debug="true"*)wire        raw_fifo_wr_rst_busy;
 
     /** Bicubic CALC CACHE FIFO **/
     wire [31:0] bicubic_res_buf_wrdata[1:0];
@@ -91,12 +98,14 @@ module bicubic_top_2x (
 
     (*mark_debug="true"*) reg [3:0] state_current, state_next;
     always @(*) begin
-        state_next = state_current;
+        // state_next = state_current;
+        // if (vsync_pulse) state_next = S_IDLE;
+        // else
         case (state_current)
-            S_IDLE: state_next = S_INIT;
-            S_INIT: state_next = S_REQ;
+            S_IDLE: state_next = (vsync_pulse) ? S_IDLE : S_INIT;
+            S_INIT: state_next = (raw_fifo_wr_rst_busy) ? S_INIT : S_REQ;
             S_REQ: state_next = S_WAIT;
-            S_WAIT: state_next = (raw_data_load_cnt == 128) ? S_LOAD : S_WAIT;
+            S_WAIT: state_next = (raw_data_load_cnt >= 128) ? S_LOAD : S_WAIT;
             S_LOAD: state_next = (pixel_load_cnt == RAW_PIXEL_COUNT - 1) ? S_CALC : S_LOAD;
             S_CALC: state_next = (calc_cnt == RAW_PIXEL_COUNT - 1) ? S_WRITE_1 : S_CALC;
             S_WRITE_1: state_next = (write_cnt == 255) ? S_WRITE_SWITCH : S_WRITE_1;
@@ -109,15 +118,15 @@ module bicubic_top_2x (
                 end
             end
             S_NEXT: state_next = S_REQ;
-            S_FINAL: state_next = S_FINAL;
+            S_FINAL: state_next = (vsync_pulse) ? S_IDLE : S_FINAL;
             default: state_next = S_IDLE;
         endcase
     end
     always @(posedge i_bicubic_clk or negedge i_rstn) begin
         if (~i_rstn) state_current <= S_IDLE;
-        else if (vsync_pulse) begin
-            state_current <= S_IDLE;
-        end else state_current <= state_next;
+        // else if (vsync_pulse) state_current <= S_IDLE;
+        else
+            state_current <= state_next;
     end
 
     /******************************************************************/
@@ -125,19 +134,20 @@ module bicubic_top_2x (
     /******************************************************************/
     // VRAM READ POINTER
     wire [31:0] vram_rd_start;
-    always @(posedge i_bicubic_clk or negedge i_rstn) begin
-        if (~i_rstn || state_current == S_IDLE) vram_rd_p <= 0;
-        else if (state_current == S_INIT) vram_rd_p <= vram_rd_start;
+    always @(posedge i_bicubic_clk) begin
+        // if (~i_rstn) vram_rd_p <= vram_rd_start;
+        if (state_current == S_INIT) vram_rd_p <= vram_rd_start;
         else if (state_current == S_NEXT) vram_rd_p <= vram_rd_p + 1280;
-        else if ((state_current == S_FINAL) || (state_current == S_IDLE)) vram_rd_p <= 0;
-        else vram_rd_p <= vram_rd_p;
+        // else if ((state_current == S_FINAL) || (state_current == S_IDLE)) vram_rd_p <= vram_rd_start;
+        else
+            vram_rd_p <= vram_rd_p;
     end
 
     /** INIT **/
     wire [9:0] x_start, y_start;
     // 起始坐标
-    assign x_start              = (i_config_x + 1) + ((i_config_x + 1) >> 1);
-    assign y_start              = (i_config_y > 224) ? 224 : i_config_y;
+    assign x_start              = i_config_x;
+    assign y_start              = (i_config_y > 351) ? 351 : i_config_y;
     assign vram_rd_start        = (y_start * 1280) + (x_start << 1);
 
     // always @(posedge i_bicubic_clk or negedge i_rstn) begin
@@ -235,7 +245,7 @@ module bicubic_top_2x (
         else write_cnt <= (o_res_wren) ? write_cnt + 1 : 0;
     end
 
-    assign o_res_wren              = (calc_cnt > 3) || (state_current == S_WRITE_1) || (state_current == S_WRITE_2);
+    assign o_res_wren              = (calc_cnt > 4) || (state_current == S_WRITE_1) || (state_current == S_WRITE_2);
     assign o_res_wraddr            = res_wraddr;
     assign bicubic_res_buf_rden[0] = o_res_wren && (state_current != S_WRITE_2);
     assign bicubic_res_buf_rden[1] = o_res_wren && (state_current == S_WRITE_2);
@@ -279,26 +289,23 @@ module bicubic_top_2x (
 
 
     // 原始数据加载FIFO
-    (*mark_debug="true"*)wire         raw_fifo_full;
-    (*mark_debug="true"*)wire         raw_fifo_empty;
-    (*mark_debug="true"*)wire         raw_fifo_wr_rst_busy;
     (*mark_debug="true"*)wire         raw_fifo_rd_rst_busy;
     (*mark_debug="true"*)wire [5 : 0] wr_data_count;
     bicubic_raw_cache raw_data_fifo (
-        .rst          (~i_rstn),               // input wire rst
-        .wr_clk       (i_bypass_data_clk),     // input wire wr_clk
-        .din          (i_bypass_data),         // input wire [127 : 0] din
-        .wr_en        (i_bypass_data_en),      // input wire wr_en
+        .rst          (~i_rstn || vsync_pulse),  // input wire rst
+        .wr_clk       (i_bypass_data_clk),       // input wire wr_clk
+        .din          (i_bypass_data),           // input wire [127 : 0] din
+        .wr_en        (i_bypass_data_en),        // input wire wr_en
         /** FIFO READ PORT **/
-        .rd_clk       (i_bicubic_clk),         // input wire rd_clk
-        .rd_en        (raw_fifo_rden),         // input wire rd_en
-        .dout         (raw_fifo_rddata),       // output wire [15 : 0] dout
-        .full         (raw_fifo_full),         // output wire full
-        .empty        (raw_fifo_empty),        // output wire empty
-        .wr_rst_busy  (raw_fifo_wr_rst_busy),  // output wire wr_rst_busy
-        .rd_rst_busy  (raw_fifo_rd_rst_busy),  // output wire rd_rst_busy
-        .rd_data_count(raw_data_load_cnt),     // output wire [8 : 0] rd_data_count
-        .wr_data_count(wr_data_count)          // output wire [5 : 0] wr_data_count
+        .rd_clk       (i_bicubic_clk),           // input wire rd_clk
+        .rd_en        (raw_fifo_rden),           // input wire rd_en
+        .dout         (raw_fifo_rddata),         // output wire [15 : 0] dout
+        .full         (raw_fifo_full),           // output wire full
+        .empty        (raw_fifo_empty),          // output wire empty
+        .wr_rst_busy  (raw_fifo_wr_rst_busy),    // output wire wr_rst_busy
+        .rd_rst_busy  (raw_fifo_rd_rst_busy),    // output wire rd_rst_busy
+        .rd_data_count(raw_data_load_cnt),       // output wire [8 : 0] rd_data_count
+        .wr_data_count(wr_data_count)            // output wire [5 : 0] wr_data_count
     );
 
     // Bicubic计算缓存

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="ui_ram_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698929171">
+<GenRun Id="ui_ram_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1699547214">
   <File Type="PA-TCL" Name="ui_ram.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ui_ram_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ui_ram_reports.tcl"/>
   <File Type="RDS-RDS" Name="ui_ram.vds"/>
   <File Type="RDS-UTIL" Name="ui_ram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ui_ram_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ui_ram.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ui_ram_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ui_ram_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ui_ram">
     <File Path="$PSRCDIR/sources_1/ip/ui_ram/ui_ram.xci">
       <FileInfo>

@@ -1,78 +1,84 @@
 # Interfaces
+
 - **output** HDMI(TMDS)
-	- HDMI_M
-	- HDMI_S
+  - HDMI_M
+  - HDMI_S
 - VIDEO_REQ
-	- **output** REQ
-	- **input** DATA
+  - **output** REQ
+  - **input** DATA
 - RAW VIDEO READ
-	- CAMERA READ FIFO
-	- UI READ FIFO
-- 
-# Config RAM 配置寄存器
+  - CAMERA READ FIFO
+  - UI READ FIFO
+
+# Config IO Registers
+
 1. APB WRITE/READ
-2. Register (Video generator) READ
 
 ```
 Video Generator Config RAM
-4 bytes on E203 APB BUS.
+ bytes on E203 APB BUS.
 
 Base: 0x10042000
 
-Off
-0
-0x0 SETX [reg]
-XXXX XXXX
+Index
+Offset
 
-1
-0x4 SETY [reg]
-YYYY YYYY
+0 SEX
+0x0 SETX     [SEX reg]
+0-511 [8:0] 9bits
+U... UUUX XXXX XXXX
 
-2
-0x8 SET  [reg]
-SSSS XOOE
-|||| |  |
-|||| |  |Enable (Slave) Video Output
-|||| |// Size [Deserted]
-||||	// (0b0:256 0b1:128)
-|Select
-	0x0: bicubic 2x/4x
-	0x1: sharpen
-	0x2: defog
-	0x3: image_adj
+1 SEY
+0x4 SETY     [SEY reg]
+0-351 [8:0] 9bits (15F)
+U... UUUY YYYY YYYY
+
+2 OPT
+0x8 Options  [OPT reg]
+SSSS UMSE
+||||  |||
+||||  ||\ Enable (Slave) Video Output
+||||  |\ Slave Disp Size
+||||  |  (0b0:256 0b1:128)
+|     \ Bicubic Multiplier
+|        (0b0:2x  0b1:4x)
+
 
 3
-0xc CONF [reg]
-CCCC CCCC
-	   ||
-	   |\ Bicubic Multiplier (0:2x 1:4x)
-	   \  Bicubic Disp Size (0:256 1:128)
-	  \ Sharpen Disp Size
-	 \ Defog disp size
-   \ image adj disp size
+0x0C CONF     [CONF reg]
+UUUU SSSS
+     ||||
+     |Advanced Proc. Select
+        0x0: Only Bicubic used
+        0x1: Sharpen
+        0x2: Defog
+        0x3: Hist
+
 
 4
 0x10: CONF (RESERVED)
-CCCC CCCC
+CCCC CCCC CCCC CCCC CCCC CCCC CCCC CCCC
 [[RESERVED]]
 
 5
-0x14 WRITE ADDRESS [set]
-AAAA AAAA
-	80*30 = 240 in total. Writing 0x4 will reset the VRAMP.
+0x14 VRAM WRITE ADDRESS | [ADDR reg]
+U... AAAA AAAA AAAA [11:0]
+    80*30 = 2400 in total. Writing 0x14 will reset VRAMP.
 
 6
-0x18 WRITE DATA  [BRAM]
+0x18 VRAM WRITE DATA    | [DATA reg]
 XXDD DDDD
-	Write DATA to *VRAMP. then automatically VRAMP++.
-
+    Write DATA to *VRAMP in VRAM.
+    Then automatically VRAMP++.
 ```
 
 # 字符映射
+
 总共7bit被用于编码一些必要的字符，共计128个字符容量。
 这里使用0x20(" ")到0x7E共95个有效字符；其余字符映射至0x7F，这个会把所有的8x16像素填色。
 总共96个有效字符画。0-0x
-```
+
+```Plain
 /* [字库]：[ASC8x16E字库] [数据排列]:从左到右从上到下 [取模方式]:横向8点左高位 [正负反色]:否 [去掉重复后]共95个字符
 [总字符库]：" !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"*/
 

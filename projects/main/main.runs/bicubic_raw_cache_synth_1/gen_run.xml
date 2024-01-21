@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="bicubic_raw_cache_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698929171">
+<GenRun Id="bicubic_raw_cache_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1699547214">
   <File Type="PA-TCL" Name="bicubic_raw_cache.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="bicubic_raw_cache_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="bicubic_raw_cache_reports.tcl"/>
   <File Type="RDS-RDS" Name="bicubic_raw_cache.vds"/>
   <File Type="RDS-UTIL" Name="bicubic_raw_cache_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="bicubic_raw_cache_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="bicubic_raw_cache.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="bicubic_raw_cache_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="bicubic_raw_cache_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bicubic_raw_cache">
     <File Path="$PSRCDIR/sources_1/ip/bicubic_raw_cache/bicubic_raw_cache.xci">
       <FileInfo>

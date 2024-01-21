@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_defines.v" --include "../../../../../../rtl-srcs/e203/core" --include "../../../../../../rtl-srcs/e203/perips/apb_i2c" --include "../../../../main.srcs/sim_1/imports/imports" \
+"../../../../main.gen/sources_1/ip/sharpen2x_ram/sim/sharpen2x_ram.v" \
+"../../../../../../rtl-srcs/system/video/proc/sharpen/2x/sharpen2x_ram.v" \
+"../../../../../../rtl-srcs/system/video/proc/sharpen/2x/shram_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

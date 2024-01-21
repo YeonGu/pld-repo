@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2022.2 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7a100t_0" gui_info="dashboard1=hw_ila_1[xc7a100t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a100t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=hw_ila_2[xc7a100t_0/hw_ila_2/Waveform=ILA_WAVE_1;xc7a100t_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_2/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_2/Settings=ILA_SETTINGS_1;]"/>
+  <ObjectList object_type="hw_cfgmem" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="PROGRAM.ADDRESS_RANGE" value="use_file"/>
+      <Properties Property="PROGRAM.BLANK_CHECK" value="0"/>
+      <Properties Property="PROGRAM.CFG_PROGRAM" value="1"/>
+      <Properties Property="PROGRAM.CHECKSUM" value="0"/>
+      <Properties Property="PROGRAM.ERASE" value="1"/>
+      <Properties Property="PROGRAM.FILES" value="E:/Xilinx/PLD/pld-repo/rtl-srcs/mcs/sys-v2.5.mcs"/>
+      <Properties Property="PROGRAM.PRM_FILE" value=""/>
+      <Properties Property="PROGRAM.UNUSED_PIN_TERMINATION" value="pull-none"/>
+      <Properties Property="PROGRAM.VERIFY" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7a100t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value=""/>
+      <Properties Property="PROGRAM.HW_CFGMEM_PART" value="mt25ql128-spi-x1_x2_x4"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data_en" gui_info="Trigger Setup=0"/>
+    <Object name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[31]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[30]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[29]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[28]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[27]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[26]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[25]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[24]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[23]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[22]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[21]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[20]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[19]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[18]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[17]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[16]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[15]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[14]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[13]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[12]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[11]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[10]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[9]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[8]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[7]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[6]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[5]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[4]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[3]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[2]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[1]"/>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_ARADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/M_AXI_RVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+        <Option Id="ENUM.S_RD_DATA" value="eq2&apos;b10"/>
+        <Option Id="ENUM.S_RD_IDLE" value="eq2&apos;b00"/>
+        <Option Id="ENUM.S_RD_WA" value="eq2&apos;b01"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/state_current[1]"/>
+        <net name="video_system/memory_top/axi_read_m/state_current[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/state_next[1]"/>
+        <net name="video_system/memory_top/axi_read_m/state_next[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[8]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[7]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[6]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[5]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[4]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[3]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[2]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[1]"/>
+        <net name="video_system/memory_top/axi_read_m/video_fifo_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[31]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[30]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[29]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[28]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[27]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[26]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[25]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[24]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[23]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[22]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[21]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[20]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[19]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[18]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[17]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[16]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[15]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[14]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[13]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[12]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[11]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[10]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[9]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[8]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[7]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[6]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[5]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[4]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[3]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[2]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[1]"/>
+        <net name="video_system/memory_top/axi_read_m/video_rd_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/vs_pulse"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/memory_top/axi_read_m/vsyncs[1]"/>
+        <net name="video_system/memory_top/axi_read_m/vsyncs[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/calc_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[127:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[127]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[126]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[125]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[124]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[123]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[122]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[121]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[120]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[119]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[118]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[117]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[116]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[115]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[114]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[113]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[112]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[111]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[110]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[109]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[108]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[107]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[106]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[105]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[104]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[103]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[102]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[101]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[100]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[99]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[98]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[97]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[96]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[95]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[94]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[93]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[92]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[91]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[90]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[89]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[88]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[87]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[86]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[85]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[84]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[83]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[82]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[81]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[80]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[79]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[78]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[77]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[76]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[75]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[74]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[73]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[72]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[71]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[70]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[69]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[68]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[67]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[66]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[65]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[64]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[63]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[62]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[61]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[60]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[59]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[58]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[57]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[56]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[55]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[54]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[53]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[52]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[51]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[50]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[49]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[48]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[47]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[46]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[45]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[44]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[43]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[42]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[41]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[40]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[39]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[38]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[37]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[36]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[35]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[34]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[33]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[32]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[31]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[30]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[29]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[28]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[27]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[26]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[25]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[24]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[23]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[22]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[21]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[20]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[19]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[18]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[17]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[16]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[15]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[14]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[13]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[12]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[11]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[10]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[9]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_data_en"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/i_bypass_rlast"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[31]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[30]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[29]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[28]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[27]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[26]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[25]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[24]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[23]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[22]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[21]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[20]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[19]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[18]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[17]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[16]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[15]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[14]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[13]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[12]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[11]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[10]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[9]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_addr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_proc_unit_req_en"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[15]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[14]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[13]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[12]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[11]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[10]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[9]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wraddr[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[15]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[14]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[13]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[12]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[11]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[10]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[9]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wrdata[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/o_res_wren"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_data_load_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_empty"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_full"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_rd_rst_busy"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/raw_fifo_wr_rst_busy"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_current[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_current[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_current[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_current[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_next[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_next[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_next[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/state_next[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/v_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[31]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[30]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[29]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[28]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[27]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[26]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[25]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[24]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[23]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[22]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[21]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[20]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[19]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[18]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[17]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[16]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[15]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[14]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[13]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[12]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[11]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[10]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[9]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[8]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vram_rd_p[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/vsync_pulse"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq6&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[5:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/wr_data_count[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[7]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[6]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[5]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[4]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[3]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[2]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[1]"/>
+        <net name="video_system/video_generator_inst/vpu/bicubic_2x/write_cnt[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

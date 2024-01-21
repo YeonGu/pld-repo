@@ -70,6 +70,13 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Constraints 18-1055}  -string {{CRITICAL WARNING: [Constraints 18-1055] Clock 'system_clock' completely overrides clock 'i_clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
 New: create_clock -period 10.000 -name system_clock [get_ports i_clk], [E:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/constrs_1/new/system.xdc: and 2]
 Previous: create_clock -period 10.000 [get_ports i_clk], [e:/Xilinx/PLD/test-demos/Camera_Demo/Camera_Demo.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc: and 56]
@@ -92,6 +99,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/VideoGenerator.coe
+add_files e:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/disp/contrast_tab.coe
 read_verilog {
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/config.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/core/e203_defines.v
@@ -104,9 +112,12 @@ set_property file_type "Verilog Header" [get_files E:/Xilinx/PLD/pld-repo/rtl-sr
 read_verilog -library xil_defaultlib {
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/camera/Camera_Interface.v
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/Clock_V2.3/Clock_Interface.v}
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/defog/Defog_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/HDMI_Interface.v
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/Dependencies/IIC_V2.0/IIC_Interface.v}
   {E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v}
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/RGB2YCbCr_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/YCbCr2RGB_core.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/adv_timer_apb_if.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/apb_adv_timer.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_gpio/apb_gpio.v
@@ -174,11 +185,16 @@ read_verilog -library xil_defaultlib {
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_pllclkdiv.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/subsys/e203_subsys_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/hdmi_timing_gen.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/hist_core.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/hist/hist_top.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_bit_ctrl.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_i2c/i2c_master_byte_ctrl.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/input_stage.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_uart/io_generic_fifo.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/apb_adv_timer/prescaler.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen2x_ram.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen_core2x.v
+  E:/Xilinx/PLD/pld-repo/rtl-srcs/system/video/proc/sharpen/2x/sharpen_top2x.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/general/sirv_1cyc_sram_ctrl.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetReg.v
   E:/Xilinx/PLD/pld-repo/rtl-srcs/e203/perips/sirv_AsyncResetRegVec.v
@@ -310,6 +326,12 @@ read_ip -quiet E:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/camer
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_clocks.xdc]
 set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/camera_wr_fifo/camera_wr_fifo_ooc.xdc]
+
+read_ip -quiet e:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/sharpen2x_ram/sharpen2x_ram.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/sharpen2x_ram/sharpen2x_ram_ooc.xdc]
+
+read_ip -quiet e:/Xilinx/PLD/pld-repo/projects/main/main.srcs/sources_1/ip/contrast_func_tab/contrast_func_tab.xci
+set_property used_in_implementation false [get_files -all e:/Xilinx/PLD/pld-repo/projects/main/main.gen/sources_1/ip/contrast_func_tab/contrast_func_tab_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="shram_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="shram_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="503.340 ns"></ZoomStartTime>
+      <ZoomEndTime time="546.141 ns"></ZoomEndTime>
+      <Cursor1Time time="529.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="575"></NameColumnWidth>
+      <ValueColumnWidth column_width="276"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/shram_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_11" type="array">
+      <obj_property name="ElementShortName">o_rd_data_11[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_11[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_12" type="array">
+      <obj_property name="ElementShortName">o_rd_data_12[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_12[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_13" type="array">
+      <obj_property name="ElementShortName">o_rd_data_13[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_13[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_21" type="array">
+      <obj_property name="ElementShortName">o_rd_data_21[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_21[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_22" type="array">
+      <obj_property name="ElementShortName">o_rd_data_22[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_22[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_23" type="array">
+      <obj_property name="ElementShortName">o_rd_data_23[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_23[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_31" type="array">
+      <obj_property name="ElementShortName">o_rd_data_31[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_31[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_32" type="array">
+      <obj_property name="ElementShortName">o_rd_data_32[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_32[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/o_rd_data_33" type="array">
+      <obj_property name="ElementShortName">o_rd_data_33[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rd_data_33[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/wrdata" type="array">
+      <obj_property name="ElementShortName">wrdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wrdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/rdx" type="array">
+      <obj_property name="ElementShortName">rdx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rdx[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/swr" type="logic">
+      <obj_property name="ElementShortName">swr</obj_property>
+      <obj_property name="ObjectShortName">swr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/wren" type="logic">
+      <obj_property name="ElementShortName">wren</obj_property>
+      <obj_property name="ObjectShortName">wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="group196" type="group">
+      <obj_property name="label">ram0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/clka" type="logic">
+         <obj_property name="ElementShortName">clka</obj_property>
+         <obj_property name="ObjectShortName">clka</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/wea" type="array">
+         <obj_property name="ElementShortName">wea[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/addra" type="array">
+         <obj_property name="ElementShortName">addra[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/dina" type="array">
+         <obj_property name="ElementShortName">dina[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/douta" type="array">
+         <obj_property name="ElementShortName">douta[15:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/clkb" type="logic">
+         <obj_property name="ElementShortName">clkb</obj_property>
+         <obj_property name="ObjectShortName">clkb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/web" type="array">
+         <obj_property name="ElementShortName">web[0:0]</obj_property>
+         <obj_property name="ObjectShortName">web[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/addrb" type="array">
+         <obj_property name="ElementShortName">addrb[6:0]</obj_property>
+         <obj_property name="ObjectShortName">addrb[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/dinb" type="array">
+         <obj_property name="ElementShortName">dinb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dinb[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram0/doutb" type="array">
+         <obj_property name="ElementShortName">doutb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">doutb[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/shram_tb/sharpen2x_ram_controller/ram_b_rddata" type="array">
+      <obj_property name="ElementShortName">ram_b_rddata[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_b_rddata[3:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

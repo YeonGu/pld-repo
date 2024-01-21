@@ -1,0 +1,2 @@
+contrast_func_tab.v,verilog,xil_defaultlib,../../../../main.gen/sources_1/ip/contrast_func_tab/sim/contrast_func_tab.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

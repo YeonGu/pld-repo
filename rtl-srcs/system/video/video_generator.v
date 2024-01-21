@@ -51,11 +51,11 @@ module video_generator (
     (*mark_debug="true"*)reg     [15:0] vpu_ram_rdaddr;
     (*mark_debug="true"*)wire    [15:0] vpu_ram_rddata;
 
-    wire    [ 7:0] config_setx;
-    wire    [ 7:0] config_sety;
-    wire    [ 7:0] config_settings;
-    wire    [ 7:0] configs_1;
-    wire    [ 7:0] configs_2;
+    wire    [ 8:0] config_setx;  // 0
+    wire    [ 8:0] config_sety;  // 1
+    wire    [ 7:0] config_settings;  // 2 OPT reg
+    wire    [ 7:0] configs_1;  // 3 CONF reg; Advanced Proc. Select
+    wire    [ 7:0] configs_2;  // 4
     wire           ui_ram_wren;
     wire    [11:0] ui_ram_wraddr;
     wire    [ 7:0] ui_ram_wrdata;
@@ -66,8 +66,8 @@ module video_generator (
     /************************************************************/
     vpu_ioregs vpu_conf_ioregs (
         .HCLK             (APB_HCLK),         // input                       HCLK,
-        .HRESETn          (APB_HRESETn),      // input                       HRESETn,
-        .PADDR            (APB_PADDR),        // input  [APB_ADDR_WIDTH-1:0] PADDR,
+        .HRESETn          (APB_HRESETn),      // input  	   HRESETn,
+        .PADDR            (APB_PADDR),        // input  [11:0] PADDR,
         .PWDATA           (APB_PWDATA),       // input  [               7:0] PWDATA,
         .PWRITE           (APB_PWRITE),       // input                       PWRITE,
         .PSEL             (APB_PSEL),         // input                       PSEL,
@@ -83,6 +83,9 @@ module video_generator (
         .o_ui_ram_wrdata  (ui_ram_wrdata)     // output [               7:0] o_ui_ram_wrdata
     );
 
+    wire [11:0] size_h, size_v;
+    assign size_h = (config_settings[1]) ? 128 : 256;
+    assign size_v = (config_settings[1]) ? 128 : 256;
     /** Main Screen Output **/
     /************************************************************/
     // Main Screen
@@ -99,12 +102,39 @@ module video_generator (
 
     wire [23:0] video_data_888;
     assign video_data_888 = {i_video_fifo_data[15:11], 3'd0, i_video_fifo_data[10:5], 2'd0, i_video_fifo_data[4:0], 3'd0};
-    reg [23:0] r_video[4:0];
+    reg  [23:0] r_video     [4:0];
 
-    assign o_hdmi_video_data  = (ui_pixel != 0) && (config_settings[0]) ? ui_pixel : r_video[4];
-    assign o_hdmi_video_vde   = r_vde[4];
-    assign o_hdmi_video_hsync = r_hsync[4];
-    assign o_hdmi_video_vsync = r_vsync[4];
+
+    /* Boarder hit
+	 * config_setx, config_sety
+	*/
+    wire [ 9:0] x_r;
+    wire [ 9:0] y_b;
+    wire        l_board_hit;
+    wire        r_board_hit;
+    wire        t_board_hit;
+    wire        b_board_hit;
+    reg  [ 4:0] board_hit_r;
+
+    reg  [ 7:0] win_size;
+    assign x_r         = config_setx + win_size - 1;
+    assign y_b         = config_sety + win_size - 1;
+    assign l_board_hit = (set_x == config_setx) && (set_y >= config_sety) && (set_y <= y_b);
+    assign r_board_hit = (set_x == x_r) && (set_y >= config_sety) && (set_y <= y_b);
+    assign t_board_hit = (set_y == config_sety) && (set_x >= config_setx) && (set_x <= x_r);
+    assign b_board_hit = (set_y == y_b) && (set_x >= config_setx) && (set_x <= x_r);
+    always @(*) begin
+        if ((config_settings[2])) begin  // 4x
+            win_size = size_h / 4;
+        end else begin  // 2x
+            win_size = size_h / 2;
+        end
+    end
+    always @(posedge i_clk_hdmi_pixel) begin
+        board_hit_r[0]   <= l_board_hit || r_board_hit || t_board_hit || b_board_hit;
+        board_hit_r[4:1] <= board_hit_r[3:0];
+    end
+
 
     always @(posedge i_clk_hdmi_pixel) begin
         r_vde      <= {r_vde[3:0], vde};
@@ -117,6 +147,11 @@ module video_generator (
             r_video[i] <= r_video[i-1];
         end
     end
+
+    assign o_hdmi_video_data  = (ui_pixel != 0) && (config_settings[0]) ? ui_pixel : ((board_hit_r[4]) ? (24'h7E0) : r_video[4]);
+    assign o_hdmi_video_vde   = r_vde[4];
+    assign o_hdmi_video_hsync = r_hsync[4];
+    assign o_hdmi_video_vsync = r_vsync[4];
 
     /** UI RENDERING **/
     ui_renderer u_ui_renderer (
@@ -141,9 +176,7 @@ module video_generator (
     // Second Screen
     /************************************************************/
     /** Second Screen Output **/
-    wire [11:0] size_h, size_v;
-    assign size_h               = (config_settings[1]) ? 128 : 256;
-    assign size_v               = (config_settings[1]) ? 128 : 256;
+
 
     assign o_s_hdmi_video_vde   = r_vde[1];
     assign o_s_hdmi_video_hsync = r_hsync[1];
@@ -153,11 +186,12 @@ module video_generator (
 
     localparam SIZE_H = 256;
     localparam SIZE_V = 256;
-    assign vpu_ram_rden = vde && ((set_x < SIZE_H)) && ((set_y < SIZE_V));
+    assign vpu_ram_rden = vde && ((set_x < SIZE_H + 1)) && ((set_y < SIZE_V + 1));
     always @(posedge i_clk_hdmi_pixel or negedge i_rstn) begin
         if (~i_rstn) vpu_ram_rdaddr <= 0;
         else if (~vsync) vpu_ram_rdaddr <= 0;
         else if (vpu_ram_rden) vpu_ram_rdaddr <= vpu_ram_rdaddr + 1;
+        else vpu_ram_rdaddr <= vpu_ram_rdaddr;
     end
 
 

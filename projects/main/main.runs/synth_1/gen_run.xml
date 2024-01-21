@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698929172" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sys_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1699669260" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/sys_top.dcp">
   <File Type="PA-TCL" Name="sys_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="sys_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sys_top_reports.tcl"/>
@@ -40,6 +40,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/defog/Defog_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../rtl-srcs/system/video/HDMI_Interface.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -55,6 +62,20 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../rtl-srcs/system/video/OV5640 Driver/OV5640_Interface.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/hist/RGB2YCbCr_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/hist/YCbCr2RGB_core.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -537,6 +558,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/hist/hist_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/hist/hist_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../rtl-srcs/e203/perips/apb_i2c/i2c_master_bit_ctrl.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -566,6 +601,27 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../rtl-srcs/e203/perips/apb_adv_timer/prescaler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/sharpen/2x/sharpen2x_ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/sharpen/2x/sharpen_core2x.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/sharpen/2x/sharpen_top2x.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -1090,6 +1146,46 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/defog/Defog_core.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/defog/Defog_output.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/sharpen/2x/sharpen_top_bram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/bicubic/bicubic4x_core.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/bicubic/bicubic4x_top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../rtl-srcs/system/memc/stream_memc_axi.v">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
@@ -1137,6 +1233,28 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/proc/bicubic/bicubic_top_tb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/fifo_generator_2/fifo_generator_2.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl-srcs/system/video/disp/contrast_tab.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -1190,4 +1308,6 @@
   <BlockFileSet Type="BlockSrcs" Name="mmcm"/>
   <BlockFileSet Type="BlockSrcs" Name="vpu_result_ram"/>
   <BlockFileSet Type="BlockSrcs" Name="camera_wr_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="sharpen2x_ram"/>
+  <BlockFileSet Type="BlockSrcs" Name="contrast_func_tab"/>
 </GenRun>

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="font_rom_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1698929172">
+<GenRun Id="font_rom_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1699547214">
   <File Type="PA-TCL" Name="font_rom.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="font_rom_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="font_rom_reports.tcl"/>
   <File Type="RDS-RDS" Name="font_rom.vds"/>
   <File Type="RDS-UTIL" Name="font_rom_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="font_rom_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="font_rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="font_rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="font_rom_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/font_rom">
     <File Path="$PSRCDIR/sources_1/ip/font_rom/font_rom.xci">
       <FileInfo>

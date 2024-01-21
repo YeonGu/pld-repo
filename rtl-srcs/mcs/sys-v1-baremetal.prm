@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xC9D93203
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                              Checksum
+0x00000000    0x003A607B    Nov 10 16:17:34 2023    E:/Xilinx/PLD/pld-repo/projects/main/main.runs/impl_1/sys_top.bit    0x04FF4D87
+File Checksum Total                                                                                                      0x04FF4D87
